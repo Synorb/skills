@@ -4,7 +4,7 @@ description: Summarize what the top business and technology podcasts said this w
 license: MIT
 metadata:
   author: synorb
-  version: "1.0.0"
+  version: "1.1.0"
   homepage: https://synorb.com/skills/podcast-digest
 ---
 
@@ -20,7 +20,7 @@ Follow section 1 of the reference. If there is no connection, follow `synorb-set
 ## Step 2: Set the scope
 
 1. Default scope: the Business & Technology Podcasts starter Beacon (`tag="starter"`).
-2. If the user names shows or hosts, search each name and use those Streams instead.
+2. If the user names shows or hosts, keep the Beacon and rank those shows first. If a named show is not in the Beacon, say so.
 3. Window: 7 days (`lookback_hours=168`).
 4. Note the user's interests in one line, so you can rank episodes.
 

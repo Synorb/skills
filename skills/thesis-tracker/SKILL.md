@@ -1,10 +1,10 @@
 ---
 name: thesis-tracker
-description: Track what venture capital firms and their partners publish - investment theses, market maps, new funds, portfolio news and podcast arguments - from the firms' own essays, blogs and podcasts via Synorb Streams, and map it to the user's own thesis with citations. Use when the user asks what VCs are saying, what a16z, Sequoia or another firm published, where investors are leaning, or how VC views match their own thesis or pitch.
+description: Track what venture capital firms and their partners publish - investment theses, market maps, new funds, portfolio news and podcast arguments - from the firms' own essays, blogs and podcasts via Synorb's Venture Capital Beacon, and map it to the user's own thesis with citations. Use when the user asks what VCs are saying, what a16z, Sequoia or another firm published, where investors are leaning, or how VC views match their own thesis or pitch.
 license: MIT
 metadata:
   author: synorb
-  version: "1.0.0"
+  version: "1.1.0"
   homepage: https://synorb.com/skills/thesis-tracker
 ---
 
@@ -19,11 +19,11 @@ Follow section 1 of the reference. If there is no connection, follow `synorb-set
 
 ## Step 2: Set the scope
 
-1. **Named firms or partners.** Search each name (`synorb-stream-search` or `POST /streams/search`). Firm Streams carry the firm's essays, announcements and podcasts. Some partners have their own Stream (for example an author page or a personal blog).
-2. **All VC firms.** Use the Venture Capital recipe:
-   - MCP: `synorb-configure-beacon` with the intent "venture capital firms", then save it only after the user says yes.
-   - REST: `POST /v3/beacons/fork` with `{"pack_id": "venture-capital", "dry_run": true}` to preview, then the same call with `"status": "active"` and without `dry_run` after a yes.
+1. **The Venture Capital Beacon.** It covers 140+ VC firms' own essays, announcements and podcasts. If the account has it, use it. If not, it is a catalog Beacon (section 3 of the reference):
+   - With HTTP access: `POST /v3/beacons/fork` with `{"pack_id": "venture-capital", "dry_run": true}` to preview, then the same call with `"status": "active"` and without `dry_run` after a yes.
+   - With MCP tools only: ask the user to copy "Venture Capital" at https://synorb.com/beacons, then list Beacons again.
    Check the Beacon limit first (see the reference).
+2. **Named firms.** If the user names firms, keep the Venture Capital Beacon and rank those firms first. If a named firm is not in the Beacon, say so.
 3. **The user's thesis.** Ask for it in one or two sentences, or read it from a deck, a memo or past conversations. Skip this if the user only wants a summary.
 4. Window: 30 days (`lookback_hours=720`). Firms post less often than companies.
 

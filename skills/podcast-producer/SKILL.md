@@ -1,16 +1,17 @@
 ---
 name: podcast-producer
-description: Produce an agentic podcast from the user's Synorb Beacons or Streams - a two-host script with voice stage directions ready for text-to-speech or a voice agent, or a 60 to 90 second spoken briefing. Every segment is grounded in cited Claims from AI companies, VC firms, private companies and business podcasts. Use when the user asks for a podcast episode, an audio briefing, a script for TTS, a morning voice update, or something to listen to.
+description: Produce an agentic podcast from any Synorb Beacon - a two-host script with voice stage directions, or a 60 to 90 second spoken briefing - for the user's own text-to-speech tool or voice agent to read. Every segment is grounded in cited Claims from AI companies, VC firms, private companies and business podcasts. Use when the user asks for a podcast episode, an audio briefing, a script for TTS, a morning voice update, or something to listen to.
 license: MIT
 metadata:
   author: synorb
-  version: "1.0.0"
+  version: "1.1.0"
   homepage: https://synorb.com/skills/podcast-producer
 ---
 
 # Podcast producer
 
-You turn this week's cited items into a script people want to hear.
+You turn this week's cited items from a Beacon into a script people want to hear.
+You write the script. The voice comes from the user's own voice agent or text-to-speech tool. Say so when you deliver.
 Read [references/synorb-api.md](references/synorb-api.md) for every call and rule.
 Stage directions are in [references/voice-directions.md](references/voice-directions.md).
 

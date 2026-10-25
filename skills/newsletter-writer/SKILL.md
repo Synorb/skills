@@ -1,10 +1,10 @@
 ---
 name: newsletter-writer
-description: Write a weekly newsletter issue in the user's own voice from their Synorb Beacons or Streams (AI companies, VC firms, private companies, business and technology podcasts), with every item cited to its source. Use when the user asks for a newsletter, a weekly roundup, a digest of what happened this week, or an issue for subscribers, investors or a team.
+description: Write a weekly newsletter issue in the user's own voice from any Synorb Beacon (AI companies, VC firms, private companies, business and technology podcasts, or a Beacon the user saved), with every item cited to its source. Use when the user asks for a newsletter, a weekly roundup, a digest of what happened this week, or an issue for subscribers, investors or a team.
 license: MIT
 metadata:
   author: synorb
-  version: "1.0.0"
+  version: "1.1.0"
   homepage: https://synorb.com/skills/newsletter-writer
 ---
 
@@ -24,7 +24,7 @@ Find, in this order:
 
 1. A sample of the user's writing: a past issue, a post, or a link. Ask for one if you have none.
 2. The reader: investors, founders, a team, the public.
-3. The scope: which Beacons or Streams. Default to the user's active Beacons. If there are none, use the AI Companies starter Beacon.
+3. The Beacon or Beacons the issue covers (section 3 of the reference). Default to the user's active Beacons. If there are none, use the AI Companies starter Beacon.
 4. The window. Default to the last 7 days (`lookback_hours=168`).
 
 Write down the voice in three lines: sentence length, tone, words the user likes. Use those notes when you write.

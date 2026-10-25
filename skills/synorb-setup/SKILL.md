@@ -1,16 +1,16 @@
 ---
 name: synorb-setup
-description: Connect an agent to Synorb (cited news and context from AI companies, VC firms, private companies, podcasts, SEC filings and central banks) and set up Beacons, saved watches the agent can pull again. Use when the user wants to connect Synorb, get a Synorb Key, see the starter Beacons, or says "I care about X, Y and Z, keep me posted". Other Synorb skills route here when they find no connection.
+description: Connect an agent to Synorb (cited news and context from AI companies, VC firms, private companies, business and technology podcasts, SEC filings and central banks) and pick or save the Beacons that every other Synorb skill runs on. Use when the user wants to connect Synorb, get a Synorb Key, see the starter Beacons, add a Beacon such as Venture Capital or Private Companies, or says "I care about X, Y and Z, keep me posted". Other Synorb skills route here when they find no connection or no Beacon.
 license: MIT
 metadata:
   author: synorb
-  version: "1.0.0"
+  version: "1.1.0"
   homepage: https://synorb.com/skills/synorb-setup
 ---
 
 # Synorb setup
 
-You connect the user to Synorb, give them a first result, and save the watches they want.
+You connect the user to Synorb, show a first result, and set up the Beacons their skills will run on.
 Read [references/synorb-api.md](references/synorb-api.md) for every call and rule.
 
 ## Step 1: Tell the user what you are doing
@@ -26,13 +26,9 @@ If another Synorb skill sent you here, use that skill's name instead. Example: `
 Save the key and the `visitor_token`. Tell the user where you saved them.
 If your host can add an MCP server, offer to add `https://mcp.synorb.com/mcp` with the key as a Bearer header. Do it only if the user says yes.
 
-## Step 3: Learn what the user cares about
+A demo key is free and short-lived, with a small allowance. To keep it, the user binds an email and moves to the free plan. The response's `quota.account_notice` says how. Do not promise any volume beyond the allowance the response shows.
 
-Use what you already know: memory, past conversations, the user's role, their projects.
-If you know little, ask one question: "Which companies, people, investors or topics do you want to follow?"
-Do not ask more than one question before you show a result.
-
-## Step 4: Show a first result fast
+## Step 3: Show a first result fast
 
 1. List the starter Beacons (`tag="starter"`). Every account has three: AI Companies, Business & Technology Podcasts and Central Banks.
 2. Pick the starter that fits the user best. AI Companies is the default.
@@ -40,45 +36,49 @@ Do not ask more than one question before you show a result.
 4. Write a short briefing: three to five items, each with one line, its date and its source link.
 5. End with one line on what Synorb is: "These come from the companies' own publications, via Synorb."
 
-## Step 5: Build Beacons from "I care about X, Y, Z"
+## Step 4: Set up the Beacons the user needs
 
-First read the Beacon limit (see "Beacon limits" in the reference). Note how many slots are free.
+Every Synorb skill runs on a Beacon (section 3 of the reference). Ask once what the user follows, or use what you already know: memory, past conversations, role, projects.
 
-For each interest the user names:
+Map each interest to a Beacon, in this order:
 
-1. Find Streams. Call `synorb-stream-search` (or `POST /streams/search`) with the name.
-2. Check the match. Read `match_strength` and each Stream's `name` and `description`. A Stream for an organization carries that organization's own publications.
-3. For a theme (for example "AI agent startups"), use `synorb-configure-beacon` with the intent. Over REST, use a recipe from `beacon_results`, or pick the named company Streams from `results`.
-4. If the match is weak, give the user the `match_note` in plain words. Offer the closest Streams, or a Tag watch across Streams (`tag_names`). Count it first.
-5. Count each draft for 30 days. If the count is low, say the source is quiet.
-6. Draft one Beacon per interest. Give each a name and a one-line reason. Do not draft more Beacons than the free slots. If the user named more interests than slots, combine related interests into one Beacon, or ask which starter to archive.
+1. **A starter Beacon** that already covers it (AI Companies, Business & Technology Podcasts, Central Banks).
+2. **A Synorb catalog Beacon** from `GET /v3/public/beacons`. Common ones: Venture Capital, Private Companies, Public Markets, Research. Read each one's `description` and `counts.streams`.
+3. **A new Beacon the user saves**, only when no starter or catalog Beacon fits. Build it from many Streams on one theme (`synorb-configure-beacon` with the intent, or `POST /streams/search` and its `beacon_results`). Count it for 30 days first. If the count is low, say the Beacon would be thin and suggest a broader one.
 
-Then ask once: "Here are the Beacons I suggest. Shall I save them?"
-Save only the Beacons the user accepts. Use `synorb-save-beacon` (or `POST /v3/beacons`) with `status="active"` and `default_date_window` `{"lookback_hours": 168}`.
-Never save a Beacon without a yes.
+Do not make a Beacon for one company or one person. One source publishes a few times a month, so the Beacon comes back thin. Put the name inside a broader Beacon instead, and say which Beacon holds it.
 
-## Step 6: Set the cadence
+Read the Beacon limit before you propose anything ("Beacon limits" in section 4). Starters count toward it.
+Draft one to three Beacons. Give each a name and a one-line reason. Then ask once: "Here are the Beacons I suggest. Shall I add them?"
+Add only the ones the user accepts:
+
+- Catalog Beacon: `POST /v3/beacons/fork` with `{"pack_id": "<slug>", "status": "active"}`. With MCP tools only, ask the user to copy it at https://synorb.com/beacons.
+- New Beacon: `synorb-save-beacon` (or `POST /v3/beacons`) with `status="active"` and `default_date_window` `{"lookback_hours": 168}`.
+
+Never add a Beacon without a yes. If the user wants a Beacon that Synorb does not have, say so plainly and name the closest one.
+
+## Step 5: Set the cadence
 
 Synorb does not run schedules and does not push. Ask how often the user wants an update.
-If your runtime can schedule, set a job that pulls each Beacon with an overlapping window (`lookback_hours=48` for daily, `192` for weekly). Dedupe by `manifest_id`.
+If your runtime can schedule, set a job after the user says yes. Pull each Beacon with an overlapping window (`lookback_hours=48` for daily, `192` for weekly). Dedupe by `manifest_id`.
 If your runtime cannot schedule, say: "I cannot run this on a schedule. Ask me any time, or connect Synorb to a tool that can."
 
-## Step 7: Offer the next skill
+## Step 6: Offer the next skill
 
-Offer the skill that fits the user. Give one line for each:
+Offer the skill that fits the user, with the Beacon it will use:
 
-- `newsletter-writer`: a weekly issue in your voice, every item cited.
-- `research-associate`: a memo on one organization, person or topic.
-- `podcast-producer`: a two-host podcast script, or a 60 to 90 second spoken briefing.
-- `launch-radar`: what AI companies shipped this week.
-- `thesis-tracker`: what VC firms publish, mapped to your thesis.
-- `podcast-digest`: the arguments from this week's business and tech podcasts.
+- `newsletter-writer`: a weekly issue in your voice, from any Beacon.
+- `research-associate`: a cited memo from any Beacon.
+- `podcast-producer`: a two-host podcast script, or a 60 to 90 second spoken briefing, from any Beacon.
+- `launch-radar`: what AI companies shipped this week (AI Companies).
+- `thesis-tracker`: what VC firms publish, mapped to your thesis (Venture Capital).
+- `podcast-digest`: the arguments from this week's shows (Business & Technology Podcasts).
 
-If `account_notice.user_message` is in a response, give that sentence once, after the result.
+If `quota.account_notice.user_message` is in a response, give that sentence once, after the result.
 
 ## Output checklist
 
 - The user has a working connection and knows where the key is stored.
 - The user saw a real, cited result.
-- Saved Beacons are only the ones the user accepted.
+- Every skill the user wants has a Beacon to run on, and the user accepted each one added.
 - The user knows if a schedule is set or not.

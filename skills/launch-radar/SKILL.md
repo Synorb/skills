@@ -4,7 +4,7 @@ description: Find what AI companies launched this week - new models, products, f
 license: MIT
 metadata:
   author: synorb
-  version: "1.0.0"
+  version: "1.1.0"
   homepage: https://synorb.com/skills/launch-radar
 ---
 
@@ -20,7 +20,7 @@ Follow section 1 of the reference. If there is no connection, follow `synorb-set
 ## Step 2: Set the scope
 
 1. Default scope: the AI Companies starter Beacon (`tag="starter"`). It covers AI companies' own blogs, newsrooms and release notes. It includes AI labs and also AI infrastructure, tooling and AI security vendors.
-2. If the user names companies, search each name and use those Streams instead.
+2. If the user names companies, keep the AI Companies Beacon and rank those names first. If a named company is not in the Beacon, say so.
 3. Window: 7 days (`lookback_hours=168`). Use 72 for "the last two days".
 4. Learn the user's angle in one line if you can: a builder, an investor, a competitor, a buyer.
 

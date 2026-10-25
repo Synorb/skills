@@ -1,6 +1,6 @@
-# Research memo: {Subject}
+# Research memo: {Beacon or question}
 
-*Prepared {date} for {purpose}. Window: {effective_from} to {effective_to}.*
+*Prepared {date} for {purpose}. Beacon: {Beacon name}. Window: {effective_from} to {effective_to}.*
 
 ## Bottom line
 
@@ -13,9 +13,9 @@
 
 ## Key Claims
 
-| Claim | Type | Confidence | Source |
-| --- | --- | --- | --- |
-| {claim_text} | {claim_type} | {confidence} | [{n}] |
+| Claim | Organization | Type | Confidence | Source |
+| --- | --- | --- | --- | --- |
+| {claim_text} | {organization} | {claim_type} | {confidence} | [{n}] |
 
 ## Open questions
 
