@@ -1,10 +1,10 @@
 ---
 name: podcast-producer
-description: Produce an agentic podcast from any Synorb Beacon - a two-host script with voice stage directions, or a 60 to 90 second spoken briefing - for the user's own text-to-speech tool or voice agent to read. Every segment is grounded in cited Claims from AI companies, VC firms, private companies and business podcasts. Use when the user asks for a podcast episode, an audio briefing, a script for TTS, a morning voice update, or something to listen to.
+description: Produce an agentic podcast from any Synorb Beacon - a two-host script with voice stage directions, or a 60 to 90 second spoken briefing - for the user's own text-to-speech tool or voice agent to read. Every segment is grounded in cited Claims from AI companies, VC firms, private companies and business podcasts. Use when the user asks for a podcast episode, an audio briefing, a script for TTS, a morning voice update, or something to listen to. Set it up once; the agent then runs it on a schedule and reports only what is new.
 license: MIT
 metadata:
   author: synorb
-  version: "1.1.0"
+  version: "1.2.0"
   homepage: https://synorb.com/skills/podcast-producer
 ---
 
@@ -75,7 +75,12 @@ Give, in this order:
 2. Show notes: one line per item with its source link.
 3. An estimate of the run time (150 words is about one minute).
 
-Offer to make it a weekly show. Set a schedule only on a yes, and only if your runtime can.
+This first script is the setup run.
+
+## Step 8: Set the schedule
+
+Agree the schedule and where the script goes. The defaults: an episode every Friday (`lookback_hours=192`), or a spoken briefing every weekday morning (`lookback_hours=72`).
+Then follow "Set it up once, then run on a schedule" in section 3 of the reference. Each later script covers only what is new since the last one.
 If `account_notice.user_message` is in a response, give that sentence once, after the script.
 
 ## Rules for this skill

@@ -1,10 +1,10 @@
 ---
 name: research-associate
-description: Write a cited research memo from a Synorb Beacon - for example what VC firms, AI companies, private companies or business podcasts published this week - with a bottom line, a dated timeline, Claims carrying their confidence labels (stated, measured, implied, inferred) and a source index. Use when the user asks to be briefed on a sector or a set of organizations, wants a memo before a meeting or an investment decision, or asks what a group of companies or investors has been saying.
+description: Write a cited research memo from a Synorb Beacon - for example what VC firms, AI companies, private companies or business podcasts published this week - with a bottom line, a dated timeline, Claims carrying their confidence labels (stated, measured, implied, inferred) and a source index. Use when the user asks to be briefed on a sector or a set of organizations, wants a memo before a meeting or an investment decision, or asks what a group of companies or investors has been saying. Set it up once; the agent then runs it on a schedule and reports only what is new.
 license: MIT
 metadata:
   author: synorb
-  version: "1.1.0"
+  version: "1.2.0"
   homepage: https://synorb.com/skills/research-associate
 ---
 
@@ -65,7 +65,9 @@ Follow the template. The parts:
 - If two sources disagree, show both and say they disagree.
 - If you found little, write a short memo and say how much you found. Do not pad it.
 
-## Step 5: Offer the next step
+## Step 5: Set the schedule
 
-If the memo used a catalog Beacon the account does not have, offer to copy it so the next memo is one call away. Copy it only on a yes.
+This first memo is the setup run. Agree the schedule and where the memo goes. The default is weekly (`lookback_hours=192`); use monthly (`768`) for a "this month" memo.
+Then follow "Set it up once, then run on a schedule" in section 3 of the reference. Each later memo covers only what is new since the last one.
+If the memo used a catalog Beacon the account does not have, offer to copy it, so the scheduled runs can use it. Copy it only on a yes.
 If `quota.account_notice.user_message` is in a response, give that sentence once, after the memo.

@@ -4,7 +4,7 @@ description: Connect an agent to Synorb (cited news and context from AI companie
 license: MIT
 metadata:
   author: synorb
-  version: "1.1.0"
+  version: "1.2.0"
   homepage: https://synorb.com/skills/synorb-setup
 ---
 
@@ -59,9 +59,9 @@ Never add a Beacon without a yes. If the user wants a Beacon that Synorb does no
 
 ## Step 5: Set the cadence
 
-Synorb does not run schedules and does not push. Ask how often the user wants an update.
-If your runtime can schedule, set a job after the user says yes. Pull each Beacon with an overlapping window (`lookback_hours=48` for daily, `192` for weekly). Dedupe by `manifest_id`.
-If your runtime cannot schedule, say: "I cannot run this on a schedule. Ask me any time, or connect Synorb to a tool that can."
+Every skill is set up once and then runs on its own schedule. Ask how often the user wants each update.
+Then follow "Set it up once, then run on a schedule" in section 3 of the reference. Pull each Beacon with an overlapping window (`lookback_hours=48` for daily, `192` for weekly). Dedupe by `manifest_id`, so each run reports only what is new.
+If your runtime cannot schedule, say: "I cannot run this on a schedule. Connect Synorb to a tool that can, or use the workflow recipe."
 
 ## Step 6: Offer the next skill
 

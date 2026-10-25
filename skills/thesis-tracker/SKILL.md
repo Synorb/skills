@@ -1,10 +1,10 @@
 ---
 name: thesis-tracker
-description: Track what venture capital firms and their partners publish - investment theses, market maps, new funds, portfolio news and podcast arguments - from the firms' own essays, blogs and podcasts via Synorb's Venture Capital Beacon, and map it to the user's own thesis with citations. Use when the user asks what VCs are saying, what a16z, Sequoia or another firm published, where investors are leaning, or how VC views match their own thesis or pitch.
+description: Track what venture capital firms and their partners publish - investment theses, market maps, new funds, portfolio news and podcast arguments - from the firms' own essays, blogs and podcasts via Synorb's Venture Capital Beacon, and map it to the user's own thesis with citations. Use when the user asks what VCs are saying, what a16z, Sequoia or another firm published, where investors are leaning, or how VC views match their own thesis or pitch. Set it up once; the agent then runs it on a schedule and reports only what is new.
 license: MIT
 metadata:
   author: synorb
-  version: "1.1.0"
+  version: "1.2.0"
   homepage: https://synorb.com/skills/thesis-tracker
 ---
 
@@ -51,7 +51,8 @@ A podcast Claim often does not name the speaker. Say "on the firm's podcast" whe
 
 Say plainly that these are the firms' own publications, not outside reporting.
 
-## Step 6: Offer the next step
+## Step 6: Set the schedule
 
-Offer a monthly tracker, or a Beacon for the firms the user cares about most. Save or schedule only on a yes.
+This first tracker is the setup run. Agree the schedule and where the tracker goes. The default is the first day of each month (`lookback_hours=768`).
+Then follow "Set it up once, then run on a schedule" in section 3 of the reference. Each later tracker covers only what the firms published since the last one, and says how the picture moved.
 If `quota.account_notice.user_message` is in a response, give that sentence once, after the tracker.

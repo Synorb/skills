@@ -1,10 +1,10 @@
 ---
 name: podcast-digest
-description: Summarize what the top business and technology podcasts said this week - the arguments, predictions, numbers and guests - from Synorb's Business & Technology Podcasts Beacon, so the user gets the ideas without the hours of listening. Every point links to its episode. Use when the user asks what podcasts said, wants a podcast roundup, asks what a show or a guest argued, or wants the takeaways from episodes they missed.
+description: Summarize what the top business and technology podcasts said this week - the arguments, predictions, numbers and guests - from Synorb's Business & Technology Podcasts Beacon, so the user gets the ideas without the hours of listening. Every point links to its episode. Use when the user asks what podcasts said, wants a podcast roundup, asks what a show or a guest argued, or wants the takeaways from episodes they missed. Set it up once; the agent then runs it on a schedule and reports only what is new.
 license: MIT
 metadata:
   author: synorb
-  version: "1.1.0"
+  version: "1.2.0"
   homepage: https://synorb.com/skills/podcast-digest
 ---
 
@@ -45,7 +45,8 @@ For each of the top four to six episodes:
 Name a speaker only when a Claim, a quote or the episode title names that person. Otherwise say "a guest" or "the hosts".
 Close with **Cross-show threads**: one to three ideas that came up on more than one show, with links. Label this part as your reading.
 
-## Step 6: Offer the next step
+## Step 6: Set the schedule
 
-Offer a weekly digest, or a spoken version (the `podcast-producer` skill writes one). Schedule only on a yes.
+This first digest is the setup run. Agree the schedule and where the digest goes. The default is every Sunday evening (`lookback_hours=192`).
+Then follow "Set it up once, then run on a schedule" in section 3 of the reference. Each later digest covers only episodes you have not reported. For a spoken version, the `podcast-producer` skill writes one.
 If `quota.account_notice.user_message` is in a response, give that sentence once, after the digest.

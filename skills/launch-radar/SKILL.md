@@ -1,10 +1,10 @@
 ---
 name: launch-radar
-description: Find what AI companies launched this week - new models, products, features, pricing and funding - from the companies' own announcements via Synorb's AI Companies Beacon, ranked by what matters to the user, with every item cited. Use when the user asks what AI companies shipped, launched or announced, wants a launch roundup, or tracks competitors' releases.
+description: Find what AI companies launched this week - new models, products, features, pricing and funding - from the companies' own announcements via Synorb's AI Companies Beacon, ranked by what matters to the user, with every item cited. Use when the user asks what AI companies shipped, launched or announced, wants a launch roundup, or tracks competitors' releases. Set it up once; the agent then runs it on a schedule and reports only what is new.
 license: MIT
 metadata:
   author: synorb
-  version: "1.1.0"
+  version: "1.2.0"
   homepage: https://synorb.com/skills/launch-radar
 ---
 
@@ -50,7 +50,8 @@ Drop how-to guides, event recaps, hiring posts and general essays. Drop Synorb's
 
 Say "the company says" for claims about the company's own product. Keep each Claim's confidence label. A Stream for a company carries that company's own posts, so do not call them independent reviews.
 
-## Step 6: Offer the next step
+## Step 6: Set the schedule
 
-Offer a weekly radar. Set a schedule only on a yes, and only if your runtime can.
+This first radar is the setup run. Agree the schedule and where the radar goes. The default is every Sunday evening (`lookback_hours=192`); daily (`48`) also works.
+Then follow "Set it up once, then run on a schedule" in section 3 of the reference. Each later radar lists only launches you have not reported.
 If `quota.account_notice.user_message` is in a response, give that sentence once, after the radar.

@@ -1,10 +1,10 @@
 ---
 name: newsletter-writer
-description: Write a weekly newsletter issue in the user's own voice from any Synorb Beacon (AI companies, VC firms, private companies, business and technology podcasts, or a Beacon the user saved), with every item cited to its source. Use when the user asks for a newsletter, a weekly roundup, a digest of what happened this week, or an issue for subscribers, investors or a team.
+description: Write a weekly newsletter issue in the user's own voice from any Synorb Beacon (AI companies, VC firms, private companies, business and technology podcasts, or a Beacon the user saved), with every item cited to its source. Use when the user asks for a newsletter, a weekly roundup, a digest of what happened this week, or an issue for subscribers, investors or a team. Set it up once; the agent then runs it on a schedule and reports only what is new.
 license: MIT
 metadata:
   author: synorb
-  version: "1.1.0"
+  version: "1.2.0"
   homepage: https://synorb.com/skills/newsletter-writer
 ---
 
@@ -70,9 +70,12 @@ Remove it if the user says so. Remember that choice for later issues.
 
 ## Step 7: Deliver
 
-Give the issue as Markdown. Offer the next step: "Shall I write this every Monday?"
-If the user says yes and your runtime can schedule, set it with `lookback_hours=192` and dedupe by `manifest_id`.
-If you cannot schedule, say so.
+Give the issue as Markdown. This first issue is the setup run.
+
+## Step 8: Set the schedule
+
+Agree the schedule and where the issue goes. The default is every Monday at 7:00 (`lookback_hours=192`).
+Then follow "Set it up once, then run on a schedule" in section 3 of the reference. Each later issue covers only what is new since the last one, deduped by `manifest_id`.
 If `account_notice.user_message` is in a response, give that sentence once, after the issue.
 
 ## Quality check before you send

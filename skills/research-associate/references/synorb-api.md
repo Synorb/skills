@@ -42,6 +42,23 @@ Use the first Beacon that fits:
 To focus a broad Beacon on a theme, pull the Beacon and keep the items that fit. Say how many items you read and how many you kept.
 If no Beacon fits the request, say so. Do not build a result from one source.
 
+### Set it up once, then run on a schedule
+
+A skill is a job the user sets up once. After that, the agent runs it on a schedule and reports back. The user does not need to ask again.
+
+1. **The first run is the setup.** Pick the Beacon. Agree the cadence and the delivery place (chat, email, a file) with the user. Run the job once, so the user sees a real result.
+2. **Save the job state** in your memory or a file: the skill name, the `beacon_id`, the cadence, `lookback_hours`, the time of the last run, and the `manifest_id` values you already reported.
+3. **Schedule it** in your own runtime, after the user says yes. Synorb does not run schedules and does not push.
+4. **Every later run** pulls the Beacon with a window that overlaps the cadence, drops every `manifest_id` you already reported, and reports only what is new. If nothing is new, send one short line, or skip the run if the user asked for that.
+
+| Cadence | `lookback_hours` |
+| --- | --- |
+| Daily | 48 |
+| Weekly | 192 |
+| Monthly | 768 |
+
+If your runtime cannot schedule, say so plainly. Then offer the workflow recipe at https://synorb.com/skills/packs/workflow-recipe.md, which runs the skill from any tool with a schedule step.
+
 ## 4. The calls
 
 | Job | MCP tool | REST (base `https://api.synorb.com`) | Uses allowance |
