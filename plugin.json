@@ -1,0 +1,23 @@
+{
+  "$schema": "https://agent-plugins.org/schemas/1.0.0/plugin.schema.json",
+  "name": "synorb",
+  "version": "1.0.0",
+  "description": "Synorb Skills: cited newsletters, research memos and podcast scripts from AI company, VC firm, private company and podcast Streams.",
+  "author": {
+    "name": "Synorb",
+    "url": "https://synorb.com"
+  },
+  "homepage": "https://synorb.com/skills",
+  "repository": "https://github.com/Synorb/skills",
+  "license": "MIT",
+  "keywords": [
+    "news",
+    "research",
+    "newsletter",
+    "podcast",
+    "venture capital",
+    "ai companies",
+    "mcp",
+    "citations"
+  ]
+}

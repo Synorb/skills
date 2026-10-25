@@ -1,0 +1,26 @@
+{
+  "name": "synorb-skills",
+  "owner": {
+    "name": "Synorb",
+    "email": "team@synorb.com"
+  },
+  "metadata": {
+    "description": "Synorb Skills: cited newsletters, research memos and podcast scripts from AI company, VC firm, private company and podcast Streams.",
+    "version": "1.0.0"
+  },
+  "plugins": [
+    {
+      "name": "synorb",
+      "source": "./",
+      "description": "Synorb Skills: cited newsletters, research memos and podcast scripts from AI company, VC firm, private company and podcast Streams.",
+      "version": "1.0.0",
+      "strict": false,
+      "skills": [
+        "./skills/synorb-setup",
+        "./skills/newsletter-writer",
+        "./skills/research-associate",
+        "./skills/podcast-producer"
+      ]
+    }
+  ]
+}
