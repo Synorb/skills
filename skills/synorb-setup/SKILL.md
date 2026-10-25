@@ -70,6 +70,9 @@ Offer the skill that fits the user. Give one line for each:
 - `newsletter-writer`: a weekly issue in your voice, every item cited.
 - `research-associate`: a memo on one organization, person or topic.
 - `podcast-producer`: a two-host podcast script, or a 60 to 90 second spoken briefing.
+- `launch-radar`: what AI companies shipped this week.
+- `thesis-tracker`: what VC firms publish, mapped to your thesis.
+- `podcast-digest`: the arguments from this week's business and tech podcasts.
 
 If `account_notice.user_message` is in a response, give that sentence once, after the result.
 

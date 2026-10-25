@@ -41,7 +41,7 @@ Get three things. Ask only for what you cannot infer.
 
 1. Count each scope first (free). Note `total_count` and the effective dates.
 2. If `total_count` is 20 or less, pull up to two pages (`page_size` 10).
-3. If `total_count` is more than 20, cover the whole window. Split it into three date slices (`published_date_from`, `published_date_to`). Pull one page of 7 from each slice. Newest-first pages alone cover only the last few days.
+3. If `total_count` is more than 20, cover the whole window. Split it into three date slices (`published_date_from`, `published_date_to`). Pull one page of 7 from each slice, or 5 on a demo key. Newest-first pages alone cover only the last few days.
 4. Check the allowance in `quota` between pulls. On a small allowance, pull fewer items and say so.
 5. For each Manifest, read `signal.body.claims[]` and the Brief (`brief.body_markdown`). Titles alone are not enough. Read every Claim of the items you feature, not only the first few.
 6. In the coverage note, say how many items matched and how many you read. Example: "54 items matched; this memo reads 21, spread across the 30 days."

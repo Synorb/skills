@@ -22,15 +22,21 @@ No terminal? Paste a phrase into any agent that can read a link:
 - **Newsletter Writer**: `Read https://synorb.com/skills/newsletter-writer.md and follow it to write this week's issue of my newsletter.`
 - **Research Associate**: `Read https://synorb.com/skills/research-associate.md and follow it to write me a research memo on [a company, a person or a topic].`
 - **Podcast Producer**: `Read https://synorb.com/skills/podcast-producer.md and follow it to make this week's episode of my podcast.`
+- **Launch Radar**: `Read https://synorb.com/skills/launch-radar.md and follow it to tell me what AI companies shipped this week.`
+- **Thesis Tracker**: `Read https://synorb.com/skills/thesis-tracker.md and follow it to tell me what VC firms are saying this month about my space.`
+- **Podcast Digest**: `Read https://synorb.com/skills/podcast-digest.md and follow it to give me this week's podcast digest.`
 
 ## Skills
 
 | Skill | What it does | See it |
 | --- | --- | --- |
 | [`synorb-setup`](skills/synorb-setup/SKILL.md) | Connect Synorb in a minute, see a first cited briefing, and save the watches you care about. | [sample](samples/synorb-setup/2026-10-25-seed-investor-setup.md) · [page](https://synorb.com/skills/synorb-setup) |
-| [`newsletter-writer`](skills/newsletter-writer/SKILL.md) | A weekly issue in your own voice, every item cited to its publisher. | [sample](samples/newsletter-writer/2026-10-25-the-agent-economy.md) · [page](https://synorb.com/skills/newsletter-writer) |
+| [`newsletter-writer`](skills/newsletter-writer/SKILL.md) | A weekly issue in your own voice, every item cited to its source. | [sample](samples/newsletter-writer/2026-10-25-the-agent-economy.md) · [page](https://synorb.com/skills/newsletter-writer) |
 | [`research-associate`](skills/research-associate/SKILL.md) | A cited memo on an organization, person or topic, with a timeline and confidence-labelled Claims. | [sample](samples/research-associate/2026-10-25-andreessen-horowitz-memo.md) · [page](https://synorb.com/skills/research-associate) |
 | [`podcast-producer`](skills/podcast-producer/SKILL.md) | A two-host podcast script with voice directions, or a 60 to 90 second spoken briefing, from this week's cited items. | [sample](samples/podcast-producer/2026-10-25-signal-hour-episode.md) · [page](https://synorb.com/skills/podcast-producer) |
+| [`launch-radar`](skills/launch-radar/SKILL.md) | What AI companies shipped this week, from their own announcements, ranked for you. | [sample](samples/launch-radar/2026-10-25-ai-launch-radar.md) · [page](https://synorb.com/skills/launch-radar) |
+| [`thesis-tracker`](skills/thesis-tracker/SKILL.md) | What VC firms publish this month, mapped to your own thesis, with every point cited. | [sample](samples/thesis-tracker/2026-10-25-vc-thesis-tracker.md) · [page](https://synorb.com/skills/thesis-tracker) |
+| [`podcast-digest`](skills/podcast-digest/SKILL.md) | The arguments, predictions and numbers from this week's top business and tech podcasts, without the hours of listening. | [sample](samples/podcast-digest/2026-10-25-weekly-podcast-digest.md) · [page](https://synorb.com/skills/podcast-digest) |
 
 Every skill starts by checking the Synorb connection. With none, it follows `synorb-setup`, which gets a free demo key with no email or card.
 
@@ -54,7 +60,7 @@ Every skill starts by checking the Synorb connection. With none, it follows `syn
 
 This repo also carries manifests for agents that install plugins from a repository. They follow each tool's published format. Synorb has not yet tested every one of them; the `npx skills` path above is tested.
 
-- `.claude-plugin/marketplace.json`: a Claude Code plugin marketplace. `claude plugin marketplace add Synorb/skills`, then `claude plugin install synorb@synorb-skills`.
+- `.claude-plugin/marketplace.json` and `.claude-plugin/plugin.json`: a Claude Code plugin marketplace with one plugin. `claude plugin marketplace add Synorb/skills`, then `claude plugin install synorb@synorb-skills`.
 - `plugin.json`: a portable agent plugin (Codex and other hosts that read root `plugin.json` with `skills/`).
 - `gemini-extension.json`: a Gemini CLI extension. `gemini extensions install https://github.com/Synorb/skills`.
 
