@@ -4,7 +4,7 @@ description: Track what venture capital firms and their partners publish - inves
 license: MIT
 metadata:
   author: synorb
-  version: "1.2.0"
+  version: "1.3.0"
   homepage: https://synorb.com/skills/thesis-tracker
 ---
 
@@ -19,7 +19,7 @@ Follow section 1 of the reference. If there is no connection, follow `synorb-set
 
 ## Step 2: Set the scope
 
-1. **The Venture Capital Beacon.** It covers 140+ VC firms' own essays, announcements and podcasts. If the account has it, use it. If not, it is a catalog Beacon (section 3 of the reference):
+1. **The Venture Capital Beacon.** It covers VC firms' own essays, announcements and podcasts. New accounts have it as a starter (`tag="starter"`): use it. An account made before 2026-10-25 may not have it. Then copy the catalog Beacon (section 3 of the reference):
    - With HTTP access: `POST /v3/beacons/fork` with `{"pack_id": "venture-capital", "dry_run": true}` to preview, then the same call with `"status": "active"` and without `dry_run` after a yes.
    - With MCP tools only: ask the user to copy "Venture Capital" at https://synorb.com/beacons, then list Beacons again.
    Check the Beacon limit first (see the reference).

@@ -4,7 +4,7 @@ description: Write a cited research memo from a Synorb Beacon - for example what
 license: MIT
 metadata:
   author: synorb
-  version: "1.2.0"
+  version: "1.3.0"
   homepage: https://synorb.com/skills/research-associate
 ---
 
@@ -25,10 +25,11 @@ Follow section 1 of the reference. If there is no connection, follow `synorb-set
    | The user asks about | Beacon |
    | --- | --- |
    | AI labs, AI tools, AI infrastructure | AI Companies (starter) |
-   | VC firms, investors, funds | Venture Capital (catalog) |
-   | Startups and other private companies | Private Companies (catalog) |
+   | VC firms, investors, funds | Venture Capital (starter; catalog on older accounts) |
+   | Startups and other private companies | Private Companies (starter; catalog on older accounts) |
+   | Public-company filings, earnings, executive changes | Public Company Filings & Executive Transitions (starter) |
    | What the big shows and hosts said | Business & Technology Podcasts (starter) |
-   | Central bank policy and speeches | Central Banks (starter) |
+   | Central bank policy and speeches | Central Banks (starter on older accounts; catalog) |
    | Anything the user already saved | That Beacon |
 
 2. Get the question in one line, if there is one. Example: "What did VC firms say about AI agents?" A memo with no question covers the whole Beacon.

@@ -33,8 +33,8 @@ Do not run a skill on one company or one person. Most single sources publish a f
 Use the first Beacon that fits:
 
 1. **A Beacon the user saved.** List them with `synorb-beacons` or `GET /v3/beacons`.
-2. **A starter Beacon.** Every account has three: AI Companies, Business & Technology Podcasts and Central Banks (`tag="starter"`).
-3. **A Synorb catalog Beacon.** `GET /v3/public/beacons` lists them, for example Venture Capital (`venture-capital`), Private Companies (`private-companies`), Public Markets and Research. Copy one into the account only after the user says yes:
+2. **A starter Beacon** (`tag="starter"`). New accounts have five: AI Companies, Business & Technology Podcasts, Venture Capital, Private Companies, and Public Company Filings & Executive Transitions. Accounts made before 2026-10-25 have AI Companies, Business & Technology Podcasts and Central Banks.
+3. **A Synorb catalog Beacon.** `GET /v3/public/beacons` lists them, for example Venture Capital (`venture-capital`) and Private Companies (`private-companies`) for older accounts, Public Markets, Research and Central Banks. Copy one into the account only after the user says yes:
    - With HTTP access: `POST /v3/beacons/fork` with `{"pack_id": "<slug>", "status": "active"}`. Send `"dry_run": true` first to preview.
    - With MCP tools only: ask the user to copy it at https://synorb.com/beacons (the Beacon Library). Core MCP has no copy tool.
    Check the Beacon limit first ("Beacon limits" in section 4).
@@ -111,7 +111,7 @@ REST puts these fields under `data`.
 
 ### Beacon limits
 
-Each plan has a limit of active Beacons. The three starter Beacons count toward it.
+Each plan has a limit of active Beacons. The starter Beacons count toward it. On a 72-hour demo key the five starters fill the limit of 5.
 Before you propose new Beacons, read the limit: `synorb-profile` (`quota.beacons_limit`, `quota.beacons_used`) or `GET /account` (`usage.beacons_limit`, `usage.beacons_used`). A null limit means no limit.
 If the user wants more Beacons than the plan allows, say how many fit. Ask which ones to keep. Archive a Beacon (a starter too) only after the user says yes to that Beacon.
 

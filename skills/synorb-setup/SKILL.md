@@ -4,7 +4,7 @@ description: Connect an agent to Synorb (cited news and context from AI companie
 license: MIT
 metadata:
   author: synorb
-  version: "1.2.0"
+  version: "1.3.0"
   homepage: https://synorb.com/skills/synorb-setup
 ---
 
@@ -30,7 +30,7 @@ A demo key is free and short-lived, with a small allowance. To keep it, the user
 
 ## Step 3: Show a first result fast
 
-1. List the starter Beacons (`tag="starter"`). Every account has three: AI Companies, Business & Technology Podcasts and Central Banks.
+1. List the starter Beacons (`tag="starter"`). New accounts have five: AI Companies, Business & Technology Podcasts, Venture Capital, Private Companies, and Public Company Filings & Executive Transitions. Older accounts have AI Companies, Business & Technology Podcasts and Central Banks.
 2. Pick the starter that fits the user best. AI Companies is the default.
 3. Count it for 168 hours (free). Then pull one page with `page_size` 5. A small first pull saves allowance.
 4. Write a short briefing: three to five items, each with one line, its date and its source link.
@@ -42,8 +42,8 @@ Every Synorb skill runs on a Beacon (section 3 of the reference). Ask once what 
 
 Map each interest to a Beacon, in this order:
 
-1. **A starter Beacon** that already covers it (AI Companies, Business & Technology Podcasts, Central Banks).
-2. **A Synorb catalog Beacon** from `GET /v3/public/beacons`. Common ones: Venture Capital, Private Companies, Public Markets, Research. Read each one's `description` and `counts.streams`.
+1. **A starter Beacon** that already covers it (see step 1 for the list on this account).
+2. **A Synorb catalog Beacon** from `GET /v3/public/beacons`. Common ones: Public Markets, Research, Central Banks, and Venture Capital or Private Companies when the account has no starter for them. Read each one's `description` and `counts.streams`.
 3. **A new Beacon the user saves**, only when no starter or catalog Beacon fits. Build it from many Streams on one theme (`synorb-configure-beacon` with the intent, or `POST /streams/search` and its `beacon_results`). Count it for 30 days first. If the count is low, say the Beacon would be thin and suggest a broader one.
 
 Do not make a Beacon for one company or one person. One source publishes a few times a month, so the Beacon comes back thin. Put the name inside a broader Beacon instead, and say which Beacon holds it.

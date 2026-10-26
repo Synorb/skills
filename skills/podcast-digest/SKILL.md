@@ -4,7 +4,7 @@ description: Summarize what the top business and technology podcasts said this w
 license: MIT
 metadata:
   author: synorb
-  version: "1.2.0"
+  version: "1.3.0"
   homepage: https://synorb.com/skills/podcast-digest
 ---
 
