@@ -1,25 +1,28 @@
+<!-- Adapt sections, order, and length to the reader and evidence. This is a starting point, not a required layout. Keep private editorial context outside public copy. -->
 # {Newsletter name}: {Issue title}
 
 *{Date range, for example 18 to 24 October 2026}*
 
-{Opening: two to four sentences in the user's voice that link the top items.}
+{Opening in the user's voice, shaped around the reader's purpose and the strongest supported finding.}
 
-## {Section, for example Money}
+## {Optional section, for example Money}
 
 ### {Headline in the user's voice}
 
-{Two to four sentences from the Claims, with exact figures.} ([{Publisher}]({source_url}), {date})
+{Concise account from the Claims, with exact figures as given.} ([{Publisher}]({source_url}), {date})
 
-## {Section, for example Launches}
+## {Optional section, for example Launches}
 
 ### {Headline}
 
 {Body.} ([{Publisher}]({source_url}), {date})
 
-## Quick hits
+## {Optional quick hits, only when useful}
 
 - {One line.} ([{Publisher}]({source_url}))
 - {One line.} ([{Publisher}]({source_url}))
+
+{Optional counterpoint, uncertainty, or change since the prior issue, when material. Keep sourced facts separate from the editor's view.}
 
 ---
 

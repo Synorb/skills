@@ -27,7 +27,7 @@ To add Synorb as an MCP server, use the URL `https://mcp.synorb.com/mcp` (Stream
 
 ## 3. Pick the Beacon
 
-Every Synorb skill runs on a Beacon. A Beacon is a saved watch over many Streams. Synorb builds Beacons to carry a steady volume of Manifests, so a skill that reads a Beacon always has material.
+Every Synorb skill runs on a Beacon. A Beacon is a saved watch over many Streams. A broad Beacon can still have no items relevant to this user's question.
 Do not run a skill on one company or one person. Most single sources publish a few times a month, so the result is thin.
 
 Use the first Beacon that fits:
@@ -39,7 +39,13 @@ Use the first Beacon that fits:
    - With MCP tools only: ask the user to copy it at https://synorb.com/beacons (the Beacon Library). Core MCP has no copy tool.
    Check the Beacon limit first ("Beacon limits" in section 4).
 
-To focus a broad Beacon on a theme, pull the Beacon and keep the items that fit. Say how many items you read and how many you kept.
+To focus a broad Beacon, first use the user's job brief from `output-quality.md`.
+Inspect the available tool schema and supported filters before you narrow the pull.
+Keep the selected Beacon and its saved scope. Use a supported narrow-only filter when it fits; never invent a field or set `broaden_sources=true` to bypass a scope error.
+If narrowing is unavailable or rejected, keep the Beacon and select from bounded pages or date slices.
+Check named priorities and relevant dates within the allowance before claiming nothing matched.
+The first page is not a ranking of importance to this user. Do not call a sampled pull complete coverage.
+Say how many items matched, how many you inspected, and how many you kept. Distinguish headline screening from full Claim review.
 If no Beacon fits the request, say so. Do not build a result from one source.
 
 ### Set it up once, then run on a schedule
@@ -47,9 +53,11 @@ If no Beacon fits the request, say so. Do not build a result from one source.
 A skill is a job the user sets up once. After that, the agent runs it on a schedule and reports back. The user does not need to ask again.
 
 1. **The first run is the setup.** Pick the Beacon. Agree the cadence and the delivery place (chat, email, a file) with the user. Run the job once, so the user sees a real result.
-2. **Save the job state** in your memory or a file: the skill name, the `beacon_id`, the cadence, `lookback_hours`, the time of the last run, and the `manifest_id` values you already reported.
-3. **Schedule it** in your own runtime, after the user says yes. Synorb does not run schedules and does not push.
-4. **Every later run** pulls the Beacon with a window that overlaps the cadence, drops every `manifest_id` you already reported, and reports only what is new. If nothing is new, send one short line, or skip the run if the user asked for that.
+2. **Save the job state** in your memory or a file: the skill and version, `beacon_id`, cadence, time zone, delivery place, and `lookback_hours`. Keep the compact user brief, prior assessment, open questions, last successful effective window, and delivered `manifest_id` values too.
+3. **Schedule it** in your own runtime within the user's authorization. An existing request for this scheduled job is sufficient; do not ask again each run. Synorb does not run schedules and does not push.
+4. **Every later run** starts from the last successful coverage window. Use an overlapping window and enough supported continuation to recover a missed run within the allowance and entitlement. Disclose any gap you cannot cover.
+5. **Before drafting**, drop items already delivered for this job. Also remove repeated original articles when identifiable. Keep a substantive update that changes a previous item, and explain what changed.
+6. **After successful delivery**, commit the delivered IDs, effective window, and current assessment. Do not advance state after a failed draft or send. If nothing relevant is new, send one short line, or stay quiet if the user requested that.
 
 | Cadence | `lookback_hours` |
 | --- | --- |
@@ -84,7 +92,7 @@ A copied catalog Beacon gets its own `synorb_bcn_...` id. Pull it the same way.
 
 To cover a long window evenly, split it into date slices with `published_date_from` and `published_date_to` (`YYYY-MM-DD`). Other date field names fail with HTTP 422.
 
-To read the next page, send the same call with `page` set to 1, 2 and so on (it starts at 0).
+Use a returned opaque continuation or REST `next` URL unchanged when present. Otherwise use the supported `page` field with the same scope and dates; it starts at 0. Do not mix continuation methods or silently change the query between pages.
 
 Always count first. A count is free. Read the total at `pagination.total_count` (REST also has `data.total_count`). Ignore a top-level `count` field: it is the page size. Read the dates at `temporal.effective_from` and `temporal.effective_to`. A count returns an empty `manifests` list. That is normal. Then pull one page.
 
@@ -111,7 +119,7 @@ REST puts these fields under `data`.
 
 ### Beacon limits
 
-Each plan has a limit of active Beacons. The starter Beacons count toward it. On a 72-hour demo key the five starters fill the limit of 5.
+Each plan has a limit of active Beacons. The starter Beacons count toward it and can fill the limit on a demo key. Read the current limit from the account response.
 Before you propose new Beacons, read the limit: `synorb-profile` (`quota.beacons_limit`, `quota.beacons_used`) or `GET /account` (`usage.beacons_limit`, `usage.beacons_used`). A null limit means no limit.
 If the user wants more Beacons than the plan allows, say how many fit. Ask which ones to keep. Archive a Beacon (a starter too) only after the user says yes to that Beacon.
 

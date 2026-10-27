@@ -4,15 +4,15 @@ description: Write a cited research memo from a Synorb Beacon - for example what
 license: MIT
 metadata:
   author: synorb
-  version: "1.3.0"
+  version: "1.4.0"
   homepage: https://synorb.com/skills/research-associate
 ---
 
 # Research associate
 
 You write a memo the user can trust and check. Every fact has a source and a confidence label.
-Read [references/synorb-api.md](references/synorb-api.md) for every call and rule.
-The memo shape is in [assets/memo-template.md](assets/memo-template.md).
+Read [references/synorb-api.md](references/synorb-api.md) for every call and rule. Before choosing coverage or writing, read [references/output-quality.md](references/output-quality.md). If a visual would clarify a material comparison or sequence, read [references/visuals.md](references/visuals.md) and create and verify it when tools permit.
+The adaptable memo template is in [assets/memo-template.md](assets/memo-template.md).
 
 ## Step 1: Check the connection
 
@@ -20,7 +20,7 @@ Follow section 1 of the reference. If there is no connection, follow `synorb-set
 
 ## Step 2: Pick the Beacon and the question
 
-1. Pick the Beacon with section 3 of the reference. Match it to the request:
+1. Start with the user's decision, question or purpose and relevant available memory, files and prior feedback. Reuse known context without asking again; ask only when an unresolved choice materially changes the memo. Pick the Beacon with section 3 of the reference. Match it to the request:
 
    | The user asks about | Beacon |
    | --- | --- |
@@ -32,32 +32,31 @@ Follow section 1 of the reference. If there is no connection, follow `synorb-set
    | Central bank policy and speeches | Central Banks (starter on older accounts; catalog) |
    | Anything the user already saved | That Beacon |
 
-2. Get the question in one line, if there is one. Example: "What did VC firms say about AI agents?" A memo with no question covers the whole Beacon.
-3. Get the purpose: a meeting, an investment screen, an article, a competitive check.
+2. State the user's question and purpose from the request or available context. If no narrower question was given, make a useful Beacon-level brief without implying complete coverage.
+3. Note material audience, constraints, expertise, depth and preferred format in the job brief. Separate explicit facts from tentative inferences.
 4. Window: 7 days by default (`lookback_hours=168`). Use 30 days (`720`) when the user asks for "this month".
 
 If the user names one company or one person, use the Beacon that holds it, and keep that name as the question. Say that the memo covers the Beacon, not every source about that name.
 
 ## Step 3: Gather
 
-1. Count the Beacon first (free). Note `total_count` and the effective dates.
-2. If `total_count` is 20 or less, pull up to two pages (`page_size` 10).
-3. If `total_count` is more than 20, cover the whole window. Split it into three date slices (`published_date_from`, `published_date_to`). Pull one page of 7 from each slice, or 5 on a demo key.
-If a slice holds fewer items than its share, pull what it has.
-4. Check the allowance in `quota` between pulls. On a small allowance, pull fewer items and say so.
-5. For each Manifest, read `signal.body.claims[]` and the Brief. Titles alone are not enough. Read every Claim of the items you feature.
-6. With a question, keep the items that bear on it. Count how many you read and how many you kept.
+1. Count the chosen Beacon and window first (free). Note `total_count`, effective dates and allowance.
+2. Inspect the live tool schema and use only supported focus fields for the user's question. Never invent filters or alter the saved Beacon scope. If no supported focus field applies, inspect bounded pages or diversified date slices within the allowance; say how much you inspected and do not call a sample exhaustive.
+3. Read `signal.body.claims[]` and the Brief for each item you may use. Titles can help screen, but they do not establish the finding. Read every Claim of featured items and track matched, screened and retained counts.
+4. Dedupe repeated original items before drafting; revisit prior items when new evidence changes their meaning.
 
 ## Step 4: Write the memo
 
-Follow the template. The parts:
+Use the template as a starting point. Choose the clearest form for the decision; prose may replace a table or timeline when that serves the reader better. Do not include every section by default. The parts may include:
 
-1. **Bottom line.** Three to five sentences: what changed, and why it matters for the purpose.
+1. **Bottom line.** A concise explanation of what changed and why it matters for the purpose.
 2. **Timeline.** One line per dated event, oldest first. Each line has the date, the organization and a source link.
-3. **Key Claims.** A table: Claim, organization, type, confidence, source. Copy `confidence` exactly as given.
-4. **Open questions.** What the sources leave unresolved. Mark your own items as yours.
+3. **Evidence.** Use a Claims table when comparison or auditability benefits from it; otherwise integrate cited Claims into prose. Preserve each `confidence` label exactly when shown.
+4. **Open questions and counterevidence.** What the sources leave unresolved, disagree on, or would change the assessment. Mark your own analysis as yours.
 5. **Coverage note.** The Beacon, the window, how many items matched, how many you read and how many you kept. Say what kind of source they are. Example: "All items are the firms' own essays, blogs and podcasts. This memo has no outside reporting."
-6. **Source index.** A numbered list: title, publisher, date, URL.
+6. **Source index.** Use when it helps the reader navigate multiple sources.
+
+Lead with the finding most useful to this decision. Separate source facts from your interpretation, name material uncertainty, and compare with the prior assessment when available. Never turn an organization's forecast or claim into an independently verified fact.
 
 ## Rules for this skill
 

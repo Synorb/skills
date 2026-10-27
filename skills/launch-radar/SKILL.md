@@ -4,14 +4,14 @@ description: Find what AI companies launched this week - new models, products, f
 license: MIT
 metadata:
   author: synorb
-  version: "1.3.0"
+  version: "1.4.0"
   homepage: https://synorb.com/skills/launch-radar
 ---
 
 # Launch radar
 
 You list what AI companies shipped, from their own announcements, and say why each launch matters to this user.
-Read [references/synorb-api.md](references/synorb-api.md) for every call and rule.
+Read [references/synorb-api.md](references/synorb-api.md) for every call and rule. Before choosing coverage or writing, read [references/output-quality.md](references/output-quality.md). If a visual would explain a material comparison, read [references/visuals.md](references/visuals.md) and create and verify it when tools permit.
 
 ## Step 1: Check the connection
 
@@ -22,11 +22,11 @@ Follow section 1 of the reference. If there is no connection, follow `synorb-set
 1. Default scope: the AI Companies starter Beacon (`tag="starter"`). It covers AI companies' own blogs, newsrooms and release notes. It includes AI labs and also AI infrastructure, tooling and AI security vendors.
 2. If the user names companies, keep the AI Companies Beacon and rank those names first. If a named company is not in the Beacon, say so.
 3. Window: 7 days (`lookback_hours=168`). Use 72 for "the last two days".
-4. Learn the user's angle in one line if you can: a builder, an investor, a competitor, a buyer.
+4. Use the current request and relevant available context to identify the actual decision, priorities, constraints, expertise and depth. A role can guide relevance but is not a substitute for the user's purpose. Reuse available context; ask only when an unresolved choice changes the radar materially.
 
 ## Step 3: Gather
 
-Count first (free). Then pull one page of 10. Pages are not sorted by launch value, so if the count is above 100 and the allowance allows, also pull page 1 (`page=1`).
+Count the chosen Beacon and window first (free); note effective dates and allowance. Inspect the live schema before narrowing. Use only supported focus fields; never invent filters or alter saved Beacon scope. Pull bounded pages, or diversify by date when useful, within the allowance. Check quota before additional pulls. Disclose what you inspected; do not claim exhaustive coverage.
 
 ## Step 4: Sort into launches
 
@@ -44,11 +44,20 @@ Drop how-to guides, event recaps, hiring posts and general essays. Drop Synorb's
 
 ## Step 5: Write the radar
 
-1. **Top three.** The launches that matter most for this user's angle. Two or three sentences each, with the exact figures from the Claims and the source link.
-2. **Also shipped.** One line each: company, what, date, link.
-3. **What to watch.** One or two lines of your own reading, labelled as your view.
+Lead with the release most relevant to the user's decision. Use these sections when they help; do not force a fixed count or pad thin coverage:
+
+1. **Key launches.** A small set ranked by the user's actual priorities. Include availability status, exact supported figures and source links.
+2. **Other releases.** Brief links when useful to the request.
+3. **What to watch.** Supported next steps or implications, labelled as your view.
 
 Say "the company says" for claims about the company's own product. Keep each Claim's confidence label. A Stream for a company carries that company's own posts, so do not call them independent reviews.
+Map releases to the user's stack, roadmap, buying criteria or investment question only when that context is available. Distinguish announced, preview, waitlist and generally available status when supported. Include material counterevidence or uncertainty and what changed since the last radar, when state is available.
+Check availability for each release separately. A comparable product does not inherit another product's preview or general-availability status.
+For a multi-product decision, use a compact comparison table with a separate availability cell for each product.
+Copy that status from its own source. Write "not stated" when that source gives no status.
+Use this table to check the narrative before delivery; never combine unknown and known statuses into one group description.
+For a cost decision, suggest concrete checks for billing units, retries, failures, minimums, limits and overages when relevant.
+Present unknown terms as questions to verify. Any workload calculation needs supported inputs and clear assumptions.
 
 ## Step 6: Set the schedule
 
