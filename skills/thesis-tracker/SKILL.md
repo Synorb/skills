@@ -4,14 +4,14 @@ description: Track what venture capital firms and their partners publish - inves
 license: MIT
 metadata:
   author: synorb
-  version: "1.3.0"
+  version: "1.4.0"
   homepage: https://synorb.com/skills/thesis-tracker
 ---
 
 # Thesis tracker
 
 You read what VC firms publish and show the user where the firms agree, disagree, and point.
-Read [references/synorb-api.md](references/synorb-api.md) for every call and rule.
+Read [references/synorb-api.md](references/synorb-api.md) for every call and rule. Before choosing coverage or writing, read [references/output-quality.md](references/output-quality.md). If a visual would clarify positions or changes over time, read [references/visuals.md](references/visuals.md) and create and verify it when tools permit.
 
 ## Step 1: Check the connection
 
@@ -24,12 +24,12 @@ Follow section 1 of the reference. If there is no connection, follow `synorb-set
    - With MCP tools only: ask the user to copy "Venture Capital" at https://synorb.com/beacons, then list Beacons again.
    Check the Beacon limit first (see the reference).
 2. **Named firms.** If the user names firms, keep the Venture Capital Beacon and rank those firms first. If a named firm is not in the Beacon, say so.
-3. **The user's thesis.** Ask for it in one or two sentences, or read it from a deck, a memo or past conversations. Skip this if the user only wants a summary.
+3. **The user's thesis and decision.** Use the request and relevant available memory, deck, memo or prior assessment first. Do not ask again for an available thesis. Ask only when the user wants a comparison and the missing thesis materially changes it. Skip this if the user only wants a summary.
 4. Window: 30 days (`lookback_hours=720`). Firms post less often than companies.
 
 ## Step 3: Gather
 
-Count first (free). If the count is more than 20, split the window into three date slices (`published_date_from`, `published_date_to`) and pull 7 from each, or 5 from each on a demo key. Otherwise pull up to two pages of 10.
+Count the chosen Beacon and window first (free); note effective dates and allowance. Inspect the live schema before narrowing. Use only supported focus fields; never invent filters or alter saved Beacon scope. Pull bounded pages, or diversify date slices if needed to cover named firms or priorities, within allowance. Disclose what you inspected; do not describe a sample as complete coverage.
 The Venture Capital recipe is broad. Expect off-topic items (climate funds, accelerator portfolio news) and skip them for a focused question.
 
 ## Step 4: Extract positions
@@ -44,12 +44,17 @@ A podcast Claim often does not name the speaker. Say "on the firm's podcast" whe
 
 ## Step 5: Write the tracker
 
-1. **Headline moves.** New funds, renamed funds, programs and deadlines. Exact figures, dates and links.
-2. **Themes.** Two to four themes several firms touch. For each, list who said what, with links. Show disagreement when sources differ.
-3. **Your thesis vs the firms** (only if the user gave one). Where the firms support it, where they push against it, and what is missing. Label this part as your analysis.
-4. **Sources.** A numbered list.
+Lead with what matters to the user's decision. Use sections that fit the evidence; theme groups or tables are optional when prose is clearer. Do not force a fixed number of themes.
+
+1. **Position changes.** New funds, programs, deadlines, or meaningful changes in a firm's stated position, with dates and links.
+2. **Agreement and disagreement.** Show which firms said what and where evidence conflicts. Treat repeated reporting of one original publication as one source.
+3. **Thesis comparison** (only when the user wants it and the thesis is available). Identify supporting evidence, counterevidence, missing evidence, and what would change the assessment. Label your interpretation.
+4. **Sources.** Include a source index when useful to navigate the evidence.
 
 Say plainly that these are the firms' own publications, not outside reporting.
+Compare the current picture with the prior assessment when available; do not invent a thesis score or claim that source silence disproves it.
+If effective query dates are unavailable, show the observed item dates and say query coverage is unknown.
+Dates on individual publications do not establish complete coverage of the month.
 
 ## Step 6: Set the schedule
 

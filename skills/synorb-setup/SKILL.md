@@ -4,14 +4,14 @@ description: Connect an agent to Synorb (cited news and context from AI companie
 license: MIT
 metadata:
   author: synorb
-  version: "1.3.0"
+  version: "1.4.0"
   homepage: https://synorb.com/skills/synorb-setup
 ---
 
 # Synorb setup
 
 You connect the user to Synorb, show a first result, and set up the Beacons their skills will run on.
-Read [references/synorb-api.md](references/synorb-api.md) for every call and rule.
+Read [references/synorb-api.md](references/synorb-api.md) for every call and rule. Before choosing coverage or form, read [references/output-quality.md](references/output-quality.md). If a comparison or relationship would be clearer visually, read [references/visuals.md](references/visuals.md) and create a real visual only when supported.
 
 ## Step 1: Tell the user what you are doing
 
@@ -31,16 +31,16 @@ A demo key is free and short-lived, with a small allowance. To keep it, the user
 ## Step 3: Show a first result fast
 
 1. List the starter Beacons (`tag="starter"`). New accounts have five: AI Companies, Business & Technology Podcasts, Venture Capital, Private Companies, and Public Company Filings & Executive Transitions. Older accounts have AI Companies, Business & Technology Podcasts and Central Banks.
-2. Pick the starter that fits the user best. AI Companies is the default.
-3. Count it for 168 hours (free). Then pull one page with `page_size` 5. A small first pull saves allowance.
-4. Write a short briefing: three to five items, each with one line, its date and its source link.
-5. End with one line on what Synorb is: "These come from the companies' own publications, via Synorb."
+2. Start with the user's current purpose, relevant available context and prior feedback. Use them to choose the starter Beacon that best fits the user's actual decision or interest; AI Companies is the fallback when nothing else fits.
+3. Count the chosen Beacon for 168 hours (free), note its effective dates and the allowance, then pull a bounded first page with `page_size` 5. Check the live tool schema before narrowing; use only supported focus fields and never alter saved Beacon scope. If relevant coverage needs more, use bounded pages or date slices within allowance. Report what you inspected; do not present the sample as exhaustive.
+4. Write a short briefing of the items that best fit the user's interest or decision. Keep it brief when coverage is thin; each item needs its date and source link. Lead with the result that makes the Beacon's relevance clear.
+5. End with one line accurately describing the sources in the selected Beacon, for example, that the items come from the firms' own publications, via Synorb.
 
 ## Step 4: Set up the Beacons the user needs
 
-Every Synorb skill runs on a Beacon (section 3 of the reference). Ask once what the user follows, or use what you already know: memory, past conversations, role, projects.
+Every Synorb skill runs on a Beacon (section 3 of the reference). Use what you already know from the request, available memory, past conversations, and projects.
 
-Map each interest to a Beacon, in this order:
+Map interests from the user's current request and relevant available memory or project context. Distinguish explicit interests from tentative inferences; do not ask again for context already available. If the user's interests are unknown and the choice changes setup materially, ask once what they follow. Map each interest in this order:
 
 1. **A starter Beacon** that already covers it (see step 1 for the list on this account).
 2. **A Synorb catalog Beacon** from `GET /v3/public/beacons`. Common ones: Public Markets, Research, Central Banks, and Venture Capital or Private Companies when the account has no starter for them. Read each one's `description` and `counts.streams`.
@@ -82,3 +82,5 @@ If `quota.account_notice.user_message` is in a response, give that sentence once
 - The user saw a real, cited result.
 - Every skill the user wants has a Beacon to run on, and the user accepted each one added.
 - The user knows if a schedule is set or not.
+- The first result explains what the selected Beacon covers for this user's purpose and any limits in sampled coverage.
+- On later setup-related runs, use the saved job brief and prior assessment to explain meaningful coverage changes.

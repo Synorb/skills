@@ -32,7 +32,7 @@ No terminal? Paste a phrase into any agent that can read a link:
 | --- | --- | --- |
 | [`synorb-setup`](skills/synorb-setup/SKILL.md) | Connect Synorb once, see a first cited briefing, and set up the Beacons your skills run on. | [sample](samples/synorb-setup/2026-10-25-seed-investor-setup.md) · [page](https://synorb.com/skills/synorb-setup) |
 | [`newsletter-writer`](skills/newsletter-writer/SKILL.md) | Set it up once. Every Monday your agent writes a new issue in your voice, every item cited. | [sample](samples/newsletter-writer/2026-10-25-the-agent-economy.md) · [page](https://synorb.com/skills/newsletter-writer) |
-| [`research-associate`](skills/research-associate/SKILL.md) | Set it up once. Every week your agent sends a cited memo from any Beacon, with a timeline and open questions. | [sample](samples/research-associate/2026-10-25-vc-firms-this-week-memo.md) · [page](https://synorb.com/skills/research-associate) |
+| [`research-associate`](skills/research-associate/SKILL.md) | Set it up once. Every week your agent sends a cited memo for your question, with evidence and open questions. | [sample](samples/research-associate/2026-10-25-vc-firms-this-week-memo.md) · [page](https://synorb.com/skills/research-associate) |
 | [`podcast-producer`](skills/podcast-producer/SKILL.md) | Set it up once. Every week your agent writes a two-host episode script, or a short spoken briefing every morning. | [sample](samples/podcast-producer/2026-10-25-signal-hour-episode.md) · [page](https://synorb.com/skills/podcast-producer) |
 | [`launch-radar`](skills/launch-radar/SKILL.md) | Set it up once. Every week your agent reports what AI companies shipped, from their own announcements. | [sample](samples/launch-radar/2026-10-25-ai-launch-radar.md) · [page](https://synorb.com/skills/launch-radar) |
 | [`thesis-tracker`](skills/thesis-tracker/SKILL.md) | Set it up once. Every month your agent reports what VC firms published, mapped to your thesis. | [sample](samples/thesis-tracker/2026-10-25-vc-thesis-tracker.md) · [page](https://synorb.com/skills/thesis-tracker) |
@@ -66,7 +66,15 @@ This repo also carries manifests for agents that install plugins from a reposito
 
 ## What is inside a skill
 
-Plain Markdown: `SKILL.md`, `references/synorb-api.md` (the Synorb calls and rules, the same in every skill) and optional `assets/` templates. No scripts, no binaries. Read every file before you install it.
+Plain Markdown: `SKILL.md`, shared references for Synorb calls and output quality, conditional visual guidance, and optional `assets/` templates. No scripts, no binaries. Read every file before you install it.
+
+## How the result adapts
+
+Your agent uses relevant context it can actually access: your decision, priorities, audience, preferences and previous assessment. It chooses evidence and presentation for that job. It does not invent unavailable memory or publish private context by default.
+
+Templates are starting points. A useful chart or diagram depends on comparable evidence and a supported rendering tool. The agent keeps source claims separate from its analysis, preserves uncertainty, and explains coverage limits. Scheduling, persistent memory and audio come from your own runtime.
+
+The shared [output-quality guide](skills/research-associate/references/output-quality.md) and [visual guide](skills/research-associate/references/visuals.md) describe these decisions. Output quality still depends on the calling model and tools; instructions alone do not guarantee correctness.
 
 ## Samples
 

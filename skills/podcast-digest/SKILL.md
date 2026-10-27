@@ -4,14 +4,14 @@ description: Summarize what the top business and technology podcasts said this w
 license: MIT
 metadata:
   author: synorb
-  version: "1.3.0"
+  version: "1.4.0"
   homepage: https://synorb.com/skills/podcast-digest
 ---
 
 # Podcast digest
 
 You turn this week's episodes into the arguments worth knowing, each linked to its episode.
-Read [references/synorb-api.md](references/synorb-api.md) for every call and rule.
+Read [references/synorb-api.md](references/synorb-api.md) for every call and rule. Before choosing coverage or writing, read [references/output-quality.md](references/output-quality.md). If a visual helps explain a comparison or argument, read [references/visuals.md](references/visuals.md); a companion is optional show-note material, not a replacement for the digest.
 
 ## Step 1: Check the connection
 
@@ -22,11 +22,11 @@ Follow section 1 of the reference. If there is no connection, follow `synorb-set
 1. Default scope: the Business & Technology Podcasts starter Beacon (`tag="starter"`).
 2. If the user names shows or hosts, keep the Beacon and rank those shows first. If a named show is not in the Beacon, say so.
 3. Window: 7 days (`lookback_hours=168`).
-4. Note the user's interests in one line, so you can rank episodes.
+4. Use the current request and relevant available memory, project context and prior feedback to identify the user's interests, purpose, expertise and listening priorities. Do not ask again for known context; ask only when an unresolved choice materially changes the digest.
 
 ## Step 3: Gather
 
-Count first (free). Then pull one page of 10. Pull a second page only if the allowance allows and the first page has fewer than five episodes on the user's interests.
+Count the chosen Beacon and window first (free); note effective dates and allowance. Inspect the live schema before narrowing. Use only supported focus fields; never invent filters or alter saved Beacon scope. Pull bounded pages, or diversify by date if needed to check named shows or priorities, within allowance. Disclose what you inspected; do not claim exhaustive coverage.
 
 ## Step 4: Pick episodes
 
@@ -35,15 +35,18 @@ Skip episodes that are off-topic for the user, even when the Beacon returned the
 
 ## Step 5: Write the digest
 
-For each of the top four to six episodes:
+Choose only as many episodes as the user's listening purpose needs; four to six is a ceiling when coverage supports it, not a target. For each:
 
 - **Show and episode title**, with the date and the episode link.
-- **The argument** in two or three sentences, built from the Claims and supporting quotes.
+- **The argument** in a concise account built from the Claims and supporting quotes.
 - **Predictions** as predictions: "the guest expects", "the host predicts". Never as facts.
 - **One quote** if a supporting quote is short and strong. Quote it exactly.
 
 Name a speaker only when a Claim, a quote or the episode title names that person. Otherwise say "a guest" or "the hosts".
-Close with **Cross-show threads**: one to three ideas that came up on more than one show, with links. Label this part as your reading.
+Add cross-show threads only when evidence supports a useful connection; link episodes and label your synthesis as your reading. Include material counterarguments and uncertainty. Compare with the prior digest when state is available, and explain substantive updates instead of repeating items unchanged.
+Call speakers' positions a disagreement only when the supplied arguments conflict. Otherwise describe a possible tension or an open question.
+Before claiming a conflict, identify the two propositions that cannot both hold under the same conditions.
+If both can hold, describe different emphases. If excerpts lack the needed detail, say direct disagreement is not established.
 
 ## Step 6: Set the schedule
 
