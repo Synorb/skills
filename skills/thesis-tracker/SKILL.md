@@ -4,7 +4,7 @@ description: Track what venture capital firms and their partners publish - inves
 license: MIT
 metadata:
   author: synorb
-  version: "1.4.0"
+  version: "1.4.1"
   homepage: https://synorb.com/skills/thesis-tracker
 ---
 
@@ -44,7 +44,7 @@ A podcast Claim often does not name the speaker. Say "on the firm's podcast" whe
 
 ## Step 5: Write the tracker
 
-Lead with what matters to the user's decision. Use sections that fit the evidence; theme groups or tables are optional when prose is clearer. Do not force a fixed number of themes.
+Lead with what matters to the user's decision. For a supplied thesis, distinguish evidence that supports it from counterevidence and explain any warranted update; do not invent the thesis or a prior assessment. Use sections that fit the evidence; theme groups or tables are optional when prose is clearer. Do not force a fixed number of themes.
 
 1. **Position changes.** New funds, programs, deadlines, or meaningful changes in a firm's stated position, with dates and links.
 2. **Agreement and disagreement.** Show which firms said what and where evidence conflicts. Treat repeated reporting of one original publication as one source.

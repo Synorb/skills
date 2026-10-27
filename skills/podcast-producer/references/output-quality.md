@@ -27,6 +27,21 @@ The same evidence can serve different jobs. A builder needs compatibility and te
 criteria. A buyer needs constraints and tradeoffs. An investor needs differentiation
 and diligence questions. Use the actual decision, not a role label alone.
 
+## Preserve identity; use context without inventing it
+
+Use established user-supplied names and branding where relevant. Without one, deliver
+unbranded work; do not invent a show, newsletter, host persona, company, slogan or
+recurring series identity. A descriptive episode or article title and neutral Host A/B
+labels are ordinary editorial choices, not a new brand. Offer brand names separately
+only when naming is requested. Do not make the user repair an assumed identity.
+
+Context changes selection and interpretation; it does not automatically become the
+topic. A founder's internal launch or evaluation history is not a reason to turn every
+newsletter, launch radar or listening brief into advice about evaluating agents. Use
+only facts that bear on this job; do not assume a budget, stack, fundraising round,
+audience, commitments or prior conversations from a role label. Use harmless format
+defaults without an intake interview; leave consequential unknowns unresolved.
+
 ## Select and reason for this job
 
 Choose evidence for its bearing on the user's question, not just its publication date
@@ -47,8 +62,12 @@ Different emphases can coexist. Call positions a disagreement only when their st
 
 Keep sourced facts, your interpretation, and suggested next steps distinguishable.
 Explain which evidence supports a recommendation and what could change it.
-Offer a practical test, decision criterion, or watch point when it helps the job.
-Do not force advice into a task that only asks for a summary or publishable copy.
+Make the implication concrete: which option, constraint, change or next step follows
+from which evidence, and why it matters to this job. A recommendation should resolve
+a choice or name the evidence needed to resolve it; generic instructions to run a
+pilot, add controls or collect feedback are not a substitute for the requested work.
+Do not force advice into a summary or public draft, or invent different conclusions
+merely to make two skills seem varied.
 
 ## Choose the form that explains the finding
 
@@ -59,7 +78,17 @@ in natural language. Keep exact source labels in any evidence table or appendix.
 
 Skill templates are defaults. Change sections, order, and length when the question needs it.
 Use fewer items when the evidence is thin. Do not pad a quiet update.
-Put detailed evidence or coverage notes after the main narrative when that improves readability.
+Complete the requested deliverable before discussing how it was produced. State a
+material limitation where it changes a decision; ordinary attribution such as
+“Oracle says” usually suffices for a company announcement. Do not repeat a disclaimer
+after every source. Keep one concise scope note after the narrative; keep full
+retrieval counts, tool failures, evaluation history and diagnostics in a separate
+receipt unless the reader asks for methodology. Preserve all material limits there.
+
+Edit the draft for one clear through-line, useful specificity and economy. Remove
+repeated facts, conclusions, caveats and generic next steps. Vary depth and structure
+to the actual job rather than making every skill a decision memo. Retain substantive
+counterevidence or risk when it affects the work; brevity must not hide uncertainty.
 
 Decide whether a visual explains a material relationship better than prose alone.
 If so, read `visuals.md` and create it with available tools. A useful table is enough
@@ -96,7 +125,10 @@ If a capability is absent, explain the limit and deliver the useful part you can
 
 Before delivery, verify that:
 
-- The selection and implications serve this user's actual job.
+- The selection and implications serve this user's actual job and complete its deliverable.
+- Names, identity, preferences and commitments come from available context, not invention.
+- The draft adds a supported insight or useful synthesis beyond restating its sources.
+- Repetition and boilerplate are removed without hiding a material limitation.
 - Numbers, dates, quotes, source links, hedges, and attribution match the evidence read.
 - Your conclusions do not turn inference or a vendor claim into verified fact.
 - Material conflicts, missing evidence, and coverage limits remain visible.

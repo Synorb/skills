@@ -4,7 +4,7 @@ description: Write a weekly newsletter issue in the user's own voice from any Sy
 license: MIT
 metadata:
   author: synorb
-  version: "1.4.0"
+  version: "1.4.1"
   homepage: https://synorb.com/skills/newsletter-writer
 ---
 
@@ -55,7 +55,7 @@ Use the template as a default and change its sections, order or length when the 
 - The source link inline, with the publisher and the date.
 - If a Claim is `implied` or `inferred`, say so in plain words ("the company suggests").
 
-Lead with the most useful connection between items, when one is supported. Keep source facts distinct from your analysis; include material counterevidence, uncertainty and the change from the last issue when relevant. Use `briefing.scaffold.recipe` as a guide. Keep the private editorial brief separate from public copy.
+Build a public editorial argument from the strongest supported connection between items, when one exists; explain its concrete significance to the reader. Use an established newsletter name only if supplied; otherwise use a descriptive issue title, and offer naming ideas only when asked. Do not carry private project or evaluation details into subscriber copy merely because they are available. Keep source facts distinct from your analysis; include material counterevidence, uncertainty and the change from the last issue when relevant. Use `briefing.scaffold.recipe` as a guide. Keep the private editorial brief separate from public copy.
 
 ## Step 6: Footer
 

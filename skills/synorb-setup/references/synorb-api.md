@@ -145,7 +145,7 @@ Use these fields:
 ## 6. Rules for every result
 
 - Use only facts from the Manifests you read. Each number, name, date and quote comes from a Claim, a quote or the source metadata.
-- Put the source link next to each fact. End with a source index.
+- Put the source link next to each fact. Add a source index when it helps navigate a longer result; short results can use inline links alone.
 - Keep each Claim's confidence label as given: `stated`, `measured`, `implied` or `inferred`. Do not raise `implied` or `inferred` to `stated`.
 - `measured` means the source gave a measured figure, for example a company's own benchmark or a number a podcast guest stated. It does not mean someone else checked it. Say "the company reports" or "the guest said".
 - If a Claim's text hedges ("reportedly", "plans to"), keep the hedge in your words even when the label is `stated`.

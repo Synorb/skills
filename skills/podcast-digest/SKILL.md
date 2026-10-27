@@ -4,7 +4,7 @@ description: Summarize what the top business and technology podcasts said this w
 license: MIT
 metadata:
   author: synorb
-  version: "1.4.0"
+  version: "1.4.1"
   homepage: https://synorb.com/skills/podcast-digest
 ---
 
@@ -43,7 +43,7 @@ Choose only as many episodes as the user's listening purpose needs; four to six 
 - **One quote** if a supporting quote is short and strong. Quote it exactly.
 
 Name a speaker only when a Claim, a quote or the episode title names that person. Otherwise say "a guest" or "the hosts".
-Add cross-show threads only when evidence supports a useful connection; link episodes and label your synthesis as your reading. Include material counterarguments and uncertainty. Compare with the prior digest when state is available, and explain substantive updates instead of repeating items unchanged.
+Explain each episode's distinctive argument and why it merits listening for this user. Do not turn available internal project or evaluation context into the digest unless requested. Add cross-show threads only when evidence supports a useful connection; link episodes and label your synthesis as your reading. Include material counterarguments and uncertainty. Compare with the prior digest when state is available, and explain substantive updates instead of repeating items unchanged.
 Call speakers' positions a disagreement only when the supplied arguments conflict. Otherwise describe a possible tension or an open question.
 Before claiming a conflict, identify the two propositions that cannot both hold under the same conditions.
 If both can hold, describe different emphases. If excerpts lack the needed detail, say direct disagreement is not established.

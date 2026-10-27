@@ -4,7 +4,7 @@ description: Find what AI companies launched this week - new models, products, f
 license: MIT
 metadata:
   author: synorb
-  version: "1.4.0"
+  version: "1.4.1"
   homepage: https://synorb.com/skills/launch-radar
 ---
 
@@ -44,7 +44,7 @@ Drop how-to guides, event recaps, hiring posts and general essays. Drop Synorb's
 
 ## Step 5: Write the radar
 
-Lead with the release most relevant to the user's decision. Use these sections when they help; do not force a fixed count or pad thin coverage:
+Lead with the release most relevant to the user's decision. Prioritize concrete fit, access and what changed, supported by each announcement; avoid turning a general roundup into a generic governance or evaluation plan. Use these sections when they help; do not force a fixed count or pad thin coverage:
 
 1. **Key launches.** A small set ranked by the user's actual priorities. Include availability status, exact supported figures and source links.
 2. **Other releases.** Brief links when useful to the request.
