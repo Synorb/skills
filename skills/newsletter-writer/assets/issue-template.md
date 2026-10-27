@@ -1,5 +1,7 @@
 <!-- Adapt sections, order, and length to the reader and evidence. This is a starting point, not a required layout. Keep private editorial context outside public copy. -->
-# {Newsletter name}: {Issue title}
+# {Issue title}
+
+<!-- Include an established newsletter name only when supplied; the issue title can be descriptive. -->
 
 *{Date range, for example 18 to 24 October 2026}*
 

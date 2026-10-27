@@ -4,13 +4,13 @@ description: Write a cited research memo from a Synorb Beacon - for example what
 license: MIT
 metadata:
   author: synorb
-  version: "1.4.0"
+  version: "1.4.1"
   homepage: https://synorb.com/skills/research-associate
 ---
 
 # Research associate
 
-You write a memo the user can trust and check. Every fact has a source and a confidence label.
+You write a memo the user can trust and check. Cite facts and use natural attribution in prose; preserve exact confidence labels in an evidence table or ledger when used.
 Read [references/synorb-api.md](references/synorb-api.md) for every call and rule. Before choosing coverage or writing, read [references/output-quality.md](references/output-quality.md). If a visual would clarify a material comparison or sequence, read [references/visuals.md](references/visuals.md) and create and verify it when tools permit.
 The adaptable memo template is in [assets/memo-template.md](assets/memo-template.md).
 
@@ -56,7 +56,7 @@ Use the template as a starting point. Choose the clearest form for the decision;
 5. **Coverage note.** The Beacon, the window, how many items matched, how many you read and how many you kept. Say what kind of source they are. Example: "All items are the firms' own essays, blogs and podcasts. This memo has no outside reporting."
 6. **Source index.** Use when it helps the reader navigate multiple sources.
 
-Lead with the finding most useful to this decision. Separate source facts from your interpretation, name material uncertainty, and compare with the prior assessment when available. Never turn an organization's forecast or claim into an independently verified fact.
+Answer the actual research question, compare plausible alternatives where the evidence permits, and explain the decision implications. Do not assume a company, stack, budget, fundraising status or prior assessment. Lead with the finding most useful to this decision. Separate source facts from your interpretation, name material uncertainty, and compare with the prior assessment when available. Never turn an organization's forecast or claim into an independently verified fact.
 
 ## Rules for this skill
 

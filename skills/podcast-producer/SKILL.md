@@ -4,7 +4,7 @@ description: Produce an agentic podcast from any Synorb Beacon - a two-host scri
 license: MIT
 metadata:
   author: synorb
-  version: "1.4.0"
+  version: "1.4.1"
   homepage: https://synorb.com/skills/podcast-producer
 ---
 
@@ -48,10 +48,10 @@ Two hosts:
 
 Use this as a flexible default structure; adjust segment count and order to the evidence and listener's purpose:
 
-Choose one through-line for this listener. Each segment should advance it, not repeat a generic roundup.
+Choose a compelling, evidence-backed through-line for this listener. Build a spoken story with concrete detail and natural transitions; each segment should advance it. Keep internal project or evaluation context out unless the requested episode is about it.
 
 1. Cold open: one line that hooks on the best item.
-2. Intro: show name, date, what is coming. Keep it to 20 seconds.
+2. Intro: date and what is coming; include a show name only if the user supplied or established one. Otherwise keep it unbranded. Host A and Host B are usable roles; suggest names separately only if requested. A descriptive episode title is fine. Keep the intro to 20 seconds.
 3. Segments: one per item. The lead states what happened with the figure. The analyst explains why it matters. Name the source aloud ("Higgsfield said on its blog...").
 4. Wrap: one sentence per segment, then a sign-off.
 
