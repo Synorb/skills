@@ -45,7 +45,7 @@ Keep the selected Beacon and its saved scope. Use a supported narrow-only filter
 If narrowing is unavailable or rejected, keep the Beacon and select from bounded pages or date slices.
 Check named priorities and relevant dates within the allowance before claiming nothing matched.
 The first page is not a ranking of importance to this user. Do not call a sampled pull complete coverage.
-Say how many items matched, how many you inspected, and how many you kept. Distinguish headline screening from full Claim review.
+Track how many items matched, how many you inspected, and how many you kept; distinguish headline screening from full Claim review. Put these counts in a receipt when requested, or report them when needed to understand coverage. Always disclose a material sampling limitation in the result, without making routine retrieval totals part of every deliverable.
 If no Beacon fits the request, say so. Do not build a result from one source.
 
 ### Set it up once, then run on a schedule
@@ -128,6 +128,11 @@ If the user wants more Beacons than the plan allows, say how many fit. Ask which
 - MCP: the text content starts with the briefing Markdown. The structured result has `briefing`, `presentation_items` and `manifests`.
 - REST: read `data.briefing.markdown`, `data.briefing.scaffold`, `data.presentation_items` and `data.manifests`.
 
+Response `render` hints and briefing scaffolds are presentation defaults, not a
+replacement for the user's requested deliverable. Use the evidence in the skill's
+own format; do not copy a generic briefing, repeated disclaimers or retrieval
+diagnostics into a newsletter, script or concise decision result.
+
 Use these fields:
 
 | Field | Use |
@@ -147,6 +152,7 @@ Use these fields:
 - Base coverage on the Manifests you read. Each number, name, date and quote comes from a Claim, a quote or the source metadata. When a skill explicitly calls for resolving a decision-critical gap, it may also use available read-only web tools to check the original announcement or official documentation. Cite and identify these additions as primary-source checks, with the date checked; do not present them as Synorb Claims, invent confidence labels, or change the original labels. A Brief is a lead to verify, not independent source evidence. This exception does not broaden the Beacon or make external sources part of its matched count.
 - Put the source link next to each fact. Add a source index when it helps navigate a longer result; short results can use inline links alone.
 - Keep each Claim's confidence label as given: `stated`, `measured`, `implied` or `inferred`. Do not raise `implied` or `inferred` to `stated`.
+- Preserve exact confidence in evidence records. In finished prose, natural attribution and the original hedge can communicate it without repeating parenthetical labels after every statement. Keep decision-changing uncertainty adjacent to the claim; consolidate routine scope qualifications into one brief note, with full retrieval diagnostics in a receipt when requested.
 - `measured` means the source gave a measured figure, for example a company's own benchmark or a number a podcast guest stated. It does not mean someone else checked it. Say "the company reports" or "the guest said".
 - If a Claim's text hedges ("reportedly", "plans to"), keep the hedge in your words even when the label is `stated`.
 - Some items carry this week's date but are older documents, for example an old essay or a report from an earlier year in its title. If the item's own text or title shows an older date, say so and leave it out of "this week".

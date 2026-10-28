@@ -1,151 +1,147 @@
-# Make the result useful to this user
+# Deliver the result this user needs
 
-Apply this reference to every Synorb skill. Synorb supplies cited outside evidence.
-Your available user context tells you which evidence matters and how to explain it.
-Keep personal context and job state in the user's runtime, not in Synorb.
+Synorb supplies cited outside evidence. The calling runtime supplies the user's
+authorized context, reasoning and delivery tools. Use both to finish the requested
+work. Deliver one result for the current job and audience; create alternatives or
+audience variants only when requested.
 
-## Understand the job before you choose items
+## Make context change the choices
 
-Use the current request first. Then use relevant available memory, project files,
-past feedback, and the last run's assessment. Use only context you can actually access.
-Do not claim to remember something that the user has not supplied or your runtime cannot retrieve.
-Prefer recent explicit preferences over older inferences. Check a material conflict before relying on it.
+Before selecting stories, recover relevant available memory, project state, prior
+assessments and feedback. The current explicit request takes precedence. Use only
+context actually accessible; do not claim missing memory or infer a private budget,
+stack, account entitlement or commitment from a role. Ask only when a consequential
+missing fact prevents useful work; otherwise proceed with a brief necessary assumption.
 
-Keep a compact job brief. Include only fields that change this job:
+Keep a compact private job brief: the outcome the user wants, the intended reader,
+the constraints that change the answer, and any prior assessment relevant to this job.
+Use it to choose evidence, priority, technical depth, tone and next action. A role
+label or the user's company name repeated in generic advice is not personalization.
+For a proposed priority, identify the relevant user constraint and the source-backed
+reason it beats the plausible alternative. Do not add recommendations to a job that
+only asks for a summary or public copy. Ignore available context unrelated to the
+current deliverable. A prior assessment of a product or thesis is not a required
+caveat in a news, research or listening brief about a different question.
 
-- The question, decision, or purpose, and any deadline.
-- Current priorities, projects, named organizations, and relevant constraints.
-- The reader or listener, their expertise, preferred depth, tone, and format.
-- The delivery place and available memory, scheduling, rendering, and voice tools.
-- The previous conclusion, open questions, and feedback that still apply.
+Use established user-supplied identity and branding. Otherwise deliver unbranded
+work; do not invent a show, newsletter, host persona, company or recurring identity.
+A descriptive article/episode title and neutral Host A/B labels are ordinary
+editorial choices. Offer brand names separately only when naming is requested.
+Private context guides relevance; it is not automatically the subject of public copy.
 
-Distinguish user statements from your tentative inferences. Ask only when missing
-context changes the work materially. Otherwise make a useful first pass and state
-a consequential assumption briefly. Do not require a long intake form.
+## Do the skill's job, not a generic briefing
 
-The same evidence can serve different jobs. A builder needs compatibility and test
-criteria. A buyer needs constraints and tradeoffs. An investor needs differentiation
-and diligence questions. Use the actual decision, not a role label alone.
+Let the skill-specific outcome in SKILL.md govern selection and structure. Lead
+with the finding, decision or editorial angle that earns this reader's attention.
+Develop the strongest supported connection: what changed, why it matters here,
+and the concrete implication. Make your interpretation distinguishable from the
+source's statement. Distinctiveness comes from the question and evidence, not a
+forced contrarian claim or a new label for the same advice.
 
-## Preserve identity; use context without inventing it
+When action is requested, finish the choice at the level the evidence permits:
+name the option, the next usable step, and the condition that would change it.
+Account for capabilities the user already has. A generic instruction to build a
+demo, run a pilot, add controls or collect feedback does not finish a substantive
+job. If a test is genuinely the next decision, specify the unresolved choice,
+the comparison to make and how the result changes the action; keep the actual
+research, argument, update or listening recommendation central.
 
-Use established user-supplied names and branding where relevant. Without one, deliver
-unbranded work; do not invent a show, newsletter, host persona, company, slogan or
-recurring series identity. A descriptive episode or article title and neutral Host A/B
-labels are ordinary editorial choices, not a new brand. Offer brand names separately
-only when naming is requested. Do not make the user repair an assumed identity.
+Complete the small useful next piece when it fits the request: include the
+shortlist, comparison, proposed boundary or question the user can use, rather than
+only telling them to create one. Label a proposed design as your recommendation;
+do not invent the user's implementation or take an unauthorized external action.
 
-Context changes selection and interpretation; it does not automatically become the
-topic. A founder's internal launch or evaluation history is not a reason to turn every
-newsletter, launch radar or listening brief into advice about evaluating agents. Use
-only facts that bear on this job; do not assume a budget, stack, fundraising round,
-audience, commitments or prior conversations from a role label. Use harmless format
-defaults without an intake interview; leave consequential unknowns unresolved.
+Choose evidence for this purpose, not just recency, a large benchmark number or
+the easiest first page. Check named priorities before calling them absent. Connect
+sources only where supported; silence is missing evidence, not disagreement, and
+several copies of an announcement are not independent corroboration. Do not infer
+market consensus or adoption from a sampled publication count.
 
-## Select and reason for this job
+## Keep qualification proportional to the decision
 
-Choose evidence for its bearing on the user's question, not just its publication date
-or a large number. Follow the Beacon retrieval rules in `synorb-api.md`.
-Check named priorities before saying they are absent. Disclose what you sampled.
-Do not infer an entire market's direction from the items you happened to read.
+Use precise attribution: "the company reports", "the authors found in their test",
+or "the guest argues". Preserve hedges, measurement conditions and each Claim's
+confidence; do not upgrade implied/inferred statements. Keep exact confidence
+labels in an evidence ledger or table when present. Natural attribution usually
+communicates them better in public prose than repeated parenthetical labels.
 
-Build the narrative from the evidence. Explain what changed and why it matters here.
-Connect important findings across sources when the connection is supported.
-Include a material counterpoint, conflict, or unresolved assumption when present.
-Treat silence as missing evidence, not disagreement. Shared reporting of one original
-announcement is not independent corroboration.
+Put uncertainty beside the claim when it changes the choice: preview versus
+general availability, incompatible metrics, an unverified price or a missing
+critical source. Explain its consequence once. Retain meaningful counterevidence.
+Omit routine negative-proof commentary after an already-attributed claim. Keep a
+sentence saying something is not established, proved or guaranteed only when it
+identifies a limitation that changes this user's choice; explain that consequence.
+Apply this editing test: after attribution and the actual measurement conditions,
+would deleting the additional caution change the decision or overstate the claim?
+If not, delete it. Explain the material issue itself (for example, "tech preview"
+or "legal intake only") rather than attaching a generic warning to every source.
 
-Check headings and synthesis against the same evidence standard as the body.
-Keep each organization's availability status and qualifiers separate; unknown stays unknown.
-A stated priority does not establish a purchase, payment, or willingness to pay more.
-Different emphases can coexist. Call positions a disagreement only when their stated claims conflict.
+Finish the deliverable before methodology. Use one short coverage/source note
+after it when needed. Keep retrieval totals, paging failures, tool diagnostics,
+evaluation history and full limitations in a separate receipt unless requested
+or necessary to understand an incomplete answer. A public article or spoken
+script should read as an article or script, not as an audit log.
 
-Keep sourced facts, your interpretation, and suggested next steps distinguishable.
-Explain which evidence supports a recommendation and what could change it.
-Make the implication concrete: which option, constraint, change or next step follows
-from which evidence, and why it matters to this job. A recommendation should resolve
-a choice or name the evidence needed to resolve it; generic instructions to run a
-pilot, add controls or collect feedback are not a substitute for the requested work.
-Do not force advice into a summary or public draft, or invent different conclusions
-merely to make two skills seem varied.
+Keep source links near the claims they support. Match length and vocabulary to
+the reader and medium. Templates are defaults, not a requirement to fill every
+section. Thin evidence warrants a shorter answer, not padding or invented certainty.
 
-## Choose the form that explains the finding
+## Use a visual to make the insight easier to use
 
-Lead with the most useful finding for this reader. Set depth, language, and tone from
-the job brief. A writing sample guides style; it does not prove its example thesis.
-Keep source links near the claims they support. Preserve confidence and attribution
-in natural language. Keep exact source labels in any evidence table or appendix.
+Ask which relationship the reader needs to see. Read visuals.md when a visual
+would clarify it. Comparable numbers can support a chart; qualitative evidence
+can support a comparison matrix, timeline or small labelled process map. Lack of
+a comparable numeric series is not, by itself, a reason to reject every visual.
+Use prose when it explains the result more efficiently. Do not force a picture,
+invent scores or promise an artifact you did not create. For audio, make the
+argument work aloud and put any useful companion visual in the notes.
 
-Skill templates are defaults. Change sections, order, and length when the question needs it.
-Use fewer items when the evidence is thin. Do not pad a quiet update.
-Complete the requested deliverable before discussing how it was produced. State a
-material limitation where it changes a decision; ordinary attribution such as
-“Oracle says” usually suffices for a company announcement. Do not repeat a disclaimer
-after every source. Keep one concise scope note after the narrative; keep full
-retrieval counts, tool failures, evaluation history and diagnostics in a separate
-receipt unless the reader asks for methodology. Preserve all material limits there.
+## Preserve private context and delivery state
 
-Edit the draft for one clear through-line, useful specificity and economy. Remove
-repeated facts, conclusions, caveats and generic next steps. Vary depth and structure
-to the actual job rather than making every skill a decision memo. Retain substantive
-counterevidence or risk when it affects the work; brevity must not hide uncertainty.
+Keep job state in the user's runtime, not in Synorb. Publish private details only
+when intended for that audience. Never include credentials, secret-store contents
+or a full Synorb Key. Keep the private editorial brief out of public deliverables.
 
-Decide whether a visual explains a material relationship better than prose alone.
-If so, read `visuals.md` and create it with available tools. A useful table is enough
-when rendering is unavailable. Do not promise an artifact you did not create.
-For audio, explain the relationship aloud and put any useful companion visual in notes.
+When persistent state exists, retain the compact brief with its source/date,
+prior assessment, open questions, useful recommendations and feedback. Update
+stale preferences. Filter already delivered items before drafting; revisit one
+when new evidence changes its meaning and explain the change. Record the skill
+version, effective window and items successfully delivered. Commit delivery
+state after successful delivery, not after a failed draft. Use the last successful
+coverage window to recover missed runs within access; disclose a material gap.
 
-## Keep private context out of public copy
-
-Use private context to prioritize evidence. Publish private details only when the
-user intends them for that audience. Do not put private project names, constraints,
-or personal facts into a newsletter, podcast, or shared memo by default.
-Keep the private editorial brief separate from the finished public deliverable.
-Never include credentials, secret-store contents, or a full Synorb Key.
-
-## Make the next run smarter
-
-When persistent state is available, retain the compact job brief and its source/date.
-Also keep the prior assessment, unresolved questions, useful recommendations, and user feedback.
-Update stale preferences and drop context that no longer serves the job.
-Record the skill version, effective coverage window, and items successfully delivered.
-
-Filter already delivered items before drafting. Revisit an old item when new evidence
-changes its meaning, and explain the change. Compare the current assessment with the
-previous one; do not just replace yesterday's list with today's list.
-Commit delivery state after successful delivery. Do not mark a failed draft as sent.
-Use the last successful coverage window to recover missed runs within available access.
-Say when a retrieval or entitlement gap prevents full catch-up.
-
-Use the user's existing authorization for a saved job. Do not ask for it again each run.
-Create a schedule, save a Beacon, or send to another person only within that authorization.
-If a capability is absent, explain the limit and deliver the useful part you can complete.
+Use existing authorization for a saved job. Schedule, save a Beacon or send to
+another person only within that authorization. Do not ask for the same permission
+each run. If a capability is absent, deliver the useful part and state the limit.
 
 ## Required refinement before delivery
 
-The calling agent performs this procedure itself in the same invocation, without a
-separate editor, model, service, or manual cleanup. Do not expose intermediate work
-to the customer unless requested. Do not request or save hidden chain-of-thought.
+The calling agent performs this in the same invocation, without a separate editor,
+model, service or manual cleanup. Do not expose intermediate work unless requested
+or request/save hidden chain-of-thought.
 
-1. **Draft** the complete requested deliverable from the selected evidence and
-   available context, preserving private context boundaries.
-2. **Critique** it against the actual request and current known state: check the
-   skill-specific focus in SKILL.md, unsupported assumptions or invented identity,
-   concrete insight rather than generic advice, reader tone, repeated caveats, and
-   source fidelity (including dates, figures, attribution, uncertainty and links).
-   Inspect any actual visual for correctness and legibility; check spoken work for
-   natural pace and the requested duration. Do not create a visual just to pass this check.
-3. **Revise** substantive weaknesses, not just sentences. If selection or evidence
-   is weak, reconsider it and retrieve or replace evidence within the permitted scope
-   and allowance; if the gap remains, qualify the result honestly. Retain material
-   limitations and counterevidence. Make no gratuitous change when the draft is sound.
-4. **Verify** the revised deliverable against the request, evidence, privacy and
-   delivery constraints. If a material defect remains, repeat critique, revision and
-   verification at most once (two revision cycles total). Remove unsupported assertions
-   and unauthorized private details. If a material gap prevents a correct complete
-   deliverable, return a bounded partial result with the specific limit. State honest
-   stylistic or evidence limitations without claiming that unresolved checks passed.
+1. **Draft** the complete deliverable from the evidence and available user context.
+2. **Critique** the result against this skill's job: does it deliver a specific
+   insight or finished artifact, or retreat into generic advice? Does the actual
+   profile change its selection and implication? Check source fidelity, invented
+   identity, repetitive caveats and the requested tone. Inspect any actual visual
+   for accuracy and legibility; check spoken work for pace and duration.
+3. **Revise** substantive weaknesses, including selection and reasoning. When
+   needed, reconsider it and retrieve or replace evidence within the permitted
+   scope and allowance. Remove repeated qualifications; keep decision-changing
+   uncertainty and counterevidence. Explicitly remove routine negative proof
+   disclaimers that repeat an already-attributed source's limitations. Replace a
+   vague next-step instruction with the useful specific choice or small artifact
+   when the request permits. Leave a sound draft unchanged.
+4. **Verify** the revised result against the request, evidence, privacy and delivery
+   constraints. If a material defect remains, repeat at most once
+   (two revision cycles total). Remove unsupported assertions. If a critical evidence gap still
+   prevents completion, deliver the bounded useful result and its specific limit.
 
-Deliver only the final result. If an audit artifact is requested, record observable
-draft, critique findings, revision summary, final result and supported references;
-never include hidden reasoning or private context the recipient is not authorized to see.
+Deliver only the final result. When an audit artifact is requested, retain the
+observable draft, concise critique findings, revision summary, final and supporting
+references; never hidden reasoning or unauthorized private context. A successful
+check receipt does not establish that the customer received a useful result.
+Capture an audit draft when first complete, before critique or revision. Never
+reconstruct a draft from the final or substitute an outline for a complete draft.
+Record missing artifacts honestly; a retrospective file is not workflow evidence.

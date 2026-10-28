@@ -4,13 +4,13 @@ description: Produce an agentic podcast from any Synorb Beacon - a two-host scri
 license: MIT
 metadata:
   author: synorb
-  version: "1.5.2"
+  version: "1.5.3"
   homepage: https://synorb.com/skills/podcast-producer
 ---
 
 # Podcast producer
 
-You turn this week's cited items from a Beacon into a script people want to hear.
+Create one finished script for the intended listener, unless the user explicitly asks for variants. Give it a source-grounded story, tension and takeaway that reward listening; use the listener’s actual interests to select and interpret evidence, without inventing private facts.
 You write the script. The voice comes from the user's own voice agent or text-to-speech tool. Say so when you deliver.
 Read [references/synorb-api.md](references/synorb-api.md) for every call and rule. Before choosing coverage or writing, read [references/output-quality.md](references/output-quality.md). Read [references/voice-directions.md](references/voice-directions.md) only when stage directions are useful. If a visual would clarify a comparison, read [references/visuals.md](references/visuals.md); use a companion visual only when it helps and the host can create and verify it.
 
@@ -50,7 +50,7 @@ Two hosts:
 
 Use this as a flexible default structure; adjust segment count and order to the evidence and listener's purpose:
 
-Choose a compelling, evidence-backed through-line for this listener. Build a spoken story with concrete detail and natural transitions; each segment should advance it. Keep internal project or evaluation context out unless the requested episode is about it.
+Choose a compelling, evidence-backed through-line for this listener. Build a spoken story with concrete detail, a real tension or question, and natural transitions; each segment should advance it. Avoid repetitive generic advice and audit narration. Attribute naturally aloud, keep material qualifications near the claim once, and put routine coverage and operational diagnostics in the show notes or a separate receipt. Keep internal project or evaluation context out unless the requested episode is about it.
 
 1. Cold open: one line that hooks on the best item.
 2. Intro: date and what is coming; include a show name only if the user supplied or established one. Otherwise keep it unbranded. Host A and Host B are usable roles; suggest names separately only if requested. A descriptive episode title is fine. Keep the intro to 20 seconds.
@@ -95,3 +95,4 @@ If `account_notice.user_message` is in a response, give that sentence once, afte
 - Say who the source is. Organization Streams are the organization's own publications, so say "Anthropic announced", not "reports say".
 - Keep confidence in the words: "the company says", "the data shows", "they suggest".
 - Keep sourced facts distinct from host interpretation. Include material disagreement or uncertainty in plain speech, and make clear what changed from the previous script when prior state is available.
+- Read the script aloud in the refinement pass: does its story have a listener-specific payoff and sound like speech, with source details easy to find in the notes?
