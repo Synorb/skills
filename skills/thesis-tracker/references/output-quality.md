@@ -121,18 +121,31 @@ Use the user's existing authorization for a saved job. Do not ask for it again e
 Create a schedule, save a Beacon, or send to another person only within that authorization.
 If a capability is absent, explain the limit and deliver the useful part you can complete.
 
-## Check the finished result
+## Required refinement before delivery
 
-Before delivery, verify that:
+The calling agent performs this procedure itself in the same invocation, without a
+separate editor, model, service, or manual cleanup. Do not expose intermediate work
+to the customer unless requested. Do not request or save hidden chain-of-thought.
 
-- The selection and implications serve this user's actual job and complete its deliverable.
-- Names, identity, preferences and commitments come from available context, not invention.
-- The draft adds a supported insight or useful synthesis beyond restating its sources.
-- Repetition and boilerplate are removed without hiding a material limitation.
-- Numbers, dates, quotes, source links, hedges, and attribution match the evidence read.
-- Your conclusions do not turn inference or a vendor claim into verified fact.
-- Material conflicts, missing evidence, and coverage limits remain visible.
-- The form and any visual help explain the finding at the right depth.
-- The final copy follows explicit delivery constraints, including time limits and language preferences.
-- Public copy does not disclose private context, and capability claims are true.
+1. **Draft** the complete requested deliverable from the selected evidence and
+   available context, preserving private context boundaries.
+2. **Critique** it against the actual request and current known state: check the
+   skill-specific focus in SKILL.md, unsupported assumptions or invented identity,
+   concrete insight rather than generic advice, reader tone, repeated caveats, and
+   source fidelity (including dates, figures, attribution, uncertainty and links).
+   Inspect any actual visual for correctness and legibility; check spoken work for
+   natural pace and the requested duration. Do not create a visual just to pass this check.
+3. **Revise** substantive weaknesses, not just sentences. If selection or evidence
+   is weak, reconsider it and retrieve or replace evidence within the permitted scope
+   and allowance; if the gap remains, qualify the result honestly. Retain material
+   limitations and counterevidence. Make no gratuitous change when the draft is sound.
+4. **Verify** the revised deliverable against the request, evidence, privacy and
+   delivery constraints. If a material defect remains, repeat critique, revision and
+   verification at most once (two revision cycles total). Remove unsupported assertions
+   and unauthorized private details. If a material gap prevents a correct complete
+   deliverable, return a bounded partial result with the specific limit. State honest
+   stylistic or evidence limitations without claiming that unresolved checks passed.
 
+Deliver only the final result. If an audit artifact is requested, record observable
+draft, critique findings, revision summary, final result and supported references;
+never include hidden reasoning or private context the recipient is not authorized to see.
