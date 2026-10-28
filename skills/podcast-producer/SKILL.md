@@ -4,7 +4,7 @@ description: Produce an agentic podcast from any Synorb Beacon - a two-host scri
 license: MIT
 metadata:
   author: synorb
-  version: "1.5.3"
+  version: "1.5.4"
   homepage: https://synorb.com/skills/podcast-producer
 ---
 
@@ -37,7 +37,7 @@ Default to the episode. Use the spoken briefing when the user mentions a voice a
 
 1. Scope: the user's active Beacons that fit the request. If there are none, use the AI Companies starter Beacon as a fallback and say what it covers.
 2. Window: 7 days for an episode (`lookback_hours=168`), the last two days for a spoken briefing (`lookback_hours=72`, because windows round to whole days).
-3. Count the chosen Beacon and window first (free); check dates and allowance. Inspect the live schema and use only supported focus fields; never invent filters or change saved scope. If needed, diversify bounded pages or date slices within allowance. Disclose what you inspected; do not claim exhaustive coverage.
+3. Count the chosen Beacon and window first (free); check dates and allowance. Inspect the live schema and use only supported focus fields; never invent filters or change saved scope. If needed, diversify bounded pages or date slices within allowance. Disclose material coverage limits when needed; do not claim exhaustive coverage.
 4. Pick items that fit this listener and are easy to say aloud. Skip off-topic items, how-to guides and items that require a visual to understand when a spoken explanation would not work.
 5. Use `presentation_items[].supporting_quotes` to check each line a host says.
 
@@ -50,12 +50,12 @@ Two hosts:
 
 Use this as a flexible default structure; adjust segment count and order to the evidence and listener's purpose:
 
-Choose a compelling, evidence-backed through-line for this listener. Build a spoken story with concrete detail, a real tension or question, and natural transitions; each segment should advance it. Avoid repetitive generic advice and audit narration. Attribute naturally aloud, keep material qualifications near the claim once, and put routine coverage and operational diagnostics in the show notes or a separate receipt. Keep internal project or evaluation context out unless the requested episode is about it.
+Choose a compelling, evidence-backed through-line for this listener. Build a spoken story with concrete detail, a real tension or question, and natural transitions; each segment should advance it toward a substantive payoff rather than merely repeat the prompt as a question. Avoid repetitive generic advice and audit narration. Attribute naturally aloud, keep material qualifications near the claim once, and put routine coverage and operational diagnostics in the show notes or a separate receipt. Keep internal project or evaluation context out unless the requested episode is about it.
 
 1. Cold open: one line that hooks on the best item.
 2. Intro: date and what is coming; include a show name only if the user supplied or established one. Otherwise keep it unbranded. Host A and Host B are usable roles; suggest names separately only if requested. A descriptive episode title is fine. Keep the intro to 20 seconds.
 3. Segments: one per item. The lead states what happened with the figure. The analyst explains why it matters. Name the source aloud ("Higgsfield said on its blog...").
-4. Wrap: one sentence per segment, then a sign-off.
+4. Wrap: resolve the story or leave the listener with its supported implication, then sign off.
 
 Write numbers the way a person says them: "one billion dollars", not "$1B". Spell out abbreviations on first use.
 Each segment ends with a source line in brackets. It is for the show notes, not for reading aloud.

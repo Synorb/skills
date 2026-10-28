@@ -4,13 +4,13 @@ description: Track what venture capital firms and their partners publish - inves
 license: MIT
 metadata:
   author: synorb
-  version: "1.5.3"
+  version: "1.5.4"
   homepage: https://synorb.com/skills/thesis-tracker
 ---
 
 # Thesis tracker
 
-Update the user’s actual thesis against their prior assessment when available: say what changed, what did not, and a specific observable condition that would move the assessment. Select and interpret evidence for the user’s decision and priorities, without inventing a thesis, prior assessment or private facts. When no thesis is requested, summarize the firms’ positions instead.
+Update the user’s actual business or investment thesis against a prior assessment of that same thesis when available: say what changed, what did not, and a specific observable condition that would move the assessment. Select and interpret evidence for the user’s decision and priorities, without inventing a thesis, prior assessment or private facts. Explain competing positions and their implications for the user’s decision. When no thesis is requested, summarize the firms’ positions instead.
 Read [references/synorb-api.md](references/synorb-api.md) for every call and rule. Before choosing coverage or writing, read [references/output-quality.md](references/output-quality.md). If a visual would clarify positions or changes over time, read [references/visuals.md](references/visuals.md) and create and verify it when tools permit.
 
 Before delivering, the calling agent must complete the same-invocation draft → critique → revise → verify procedure in [references/output-quality.md](references/output-quality.md), checking the supplied thesis, attributed positions, counterevidence and any supported change in assessment. Deliver only the final result.
@@ -26,12 +26,12 @@ Follow section 1 of the reference. If there is no connection, follow `synorb-set
    - With MCP tools only: ask the user to copy "Venture Capital" at https://synorb.com/beacons, then list Beacons again.
    Check the Beacon limit first (see the reference).
 2. **Named firms.** If the user names firms, keep the Venture Capital Beacon and rank those firms first. If a named firm is not in the Beacon, say so.
-3. **The user's thesis and decision.** Use the request and relevant available memory, deck, memo or prior assessment first. Do not ask again for an available thesis. Ask only when the user wants a comparison and the missing thesis materially changes it. Skip this if the user only wants a summary.
+3. **The user's thesis and decision.** Use the request and relevant available memory, deck, memo or prior assessment of the same thesis. Do not ask again for an available thesis. Ask only when the user wants a comparison and the missing thesis materially changes it. Skip this if the user only wants a summary.
 4. Window: 30 days (`lookback_hours=720`). Firms post less often than companies.
 
 ## Step 3: Gather
 
-Count the chosen Beacon and window first (free); note effective dates and allowance. Inspect the live schema before narrowing. Use only supported focus fields; never invent filters or alter saved Beacon scope. Pull bounded pages, or diversify date slices if needed to cover named firms or priorities, within allowance. Disclose what you inspected; do not describe a sample as complete coverage.
+Count the chosen Beacon and window first (free); note effective dates and allowance. Inspect the live schema before narrowing. Use only supported focus fields; never invent filters or alter saved Beacon scope. Pull bounded pages, or diversify date slices if needed to cover named firms or priorities, within allowance. Disclose material coverage limits when needed; do not describe a sample as complete coverage.
 The Venture Capital recipe is broad. Expect off-topic items (climate funds, accelerator portfolio news) and skip them for a focused question.
 
 ## Step 4: Extract positions
@@ -54,7 +54,7 @@ Lead with what matters to the user's decision. For a supplied thesis, distinguis
 4. **Sources.** Include a source index when useful to navigate the evidence.
 
 Say plainly that these are the firms' own publications, not outside reporting.
-Compare the current picture with the actual prior assessment when available; identify the specific new evidence and how far it moves the assessment, or explain why it does not. Give a meaningful observable condition that would strengthen or weaken the belief. A proposed study may be relevant, but must not replace the update or become a generic testing plan. Do not invent a thesis score or claim that source silence disproves it.
+Compare the current picture with an actual prior assessment of the same thesis when available; identify the specific new evidence and how far it moves the assessment, or explain why it does not. Give a meaningful observable condition that would strengthen or weaken the belief. A proposed study may be relevant, but must not replace the update or become a generic testing plan. Do not invent a thesis score or claim that source silence disproves it.
 If effective query dates are unavailable, show the observed item dates and say query coverage is unknown.
 Dates on individual publications do not establish complete coverage of the month. When tracking a thesis, check before delivery that the update and belief-changing condition are specific to this thesis and decision, not interchangeable with an unrelated one.
 

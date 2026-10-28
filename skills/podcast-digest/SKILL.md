@@ -4,13 +4,13 @@ description: Summarize what the top business and technology podcasts said this w
 license: MIT
 metadata:
   author: synorb
-  version: "1.5.3"
+  version: "1.5.4"
   homepage: https://synorb.com/skills/podcast-digest
 ---
 
 # Podcast digest
 
-Help this listener allocate listening time: rank episodes by the actual argument, moment or question worth hearing, and link each episode. Use the user’s interests and constraints to change selection and interpretation, without inventing private facts or timestamps.
+Give this user the useful ideas, arguments and takeaways they asked for, linked to each episode. When listening choices are requested, rank episodes by the argument, moment or question worth hearing. Use the user’s interests and constraints to change selection and interpretation, without inventing private facts or timestamps.
 Read [references/synorb-api.md](references/synorb-api.md) for every call and rule. Before choosing coverage or writing, read [references/output-quality.md](references/output-quality.md). If a visual helps explain a comparison or argument, read [references/visuals.md](references/visuals.md); a companion is optional show-note material, not a replacement for the digest.
 
 Before delivering, the calling agent must complete the same-invocation draft → critique → revise → verify procedure in [references/output-quality.md](references/output-quality.md), checking the actual speakers and arguments, listener usefulness and any disagreement supported by sources. Deliver only the final result.
@@ -28,7 +28,7 @@ Follow section 1 of the reference. If there is no connection, follow `synorb-set
 
 ## Step 3: Gather
 
-Count the chosen Beacon and window first (free); note effective dates and allowance. Inspect the live schema before narrowing. Use only supported focus fields; never invent filters or alter saved Beacon scope. Pull bounded pages, or diversify by date if needed to check named shows or priorities, within allowance. Disclose what you inspected; do not claim exhaustive coverage.
+Count the chosen Beacon and window first (free); note effective dates and allowance. Inspect the live schema before narrowing. Use only supported focus fields; never invent filters or alter saved Beacon scope. Pull bounded pages, or diversify by date if needed to check named shows or priorities, within allowance. Disclose material coverage limits when needed; do not claim exhaustive coverage.
 
 ## Step 4: Pick episodes
 
@@ -37,7 +37,7 @@ Skip episodes that are off-topic for the user, even when the Beacon returned the
 
 ## Step 5: Write the digest
 
-Choose only as many episodes as the user's listening purpose needs; four to six is a ceiling when coverage supports it, not a target. For each:
+Choose only as many episodes as the user's purpose and evidence need. For each:
 
 - **Show and episode title**, with the date and the episode link.
 - **The argument** in a concise account built from the Claims and supporting quotes.
@@ -45,10 +45,10 @@ Choose only as many episodes as the user's listening purpose needs; four to six 
 - **One quote** if a supporting quote is short and strong. Quote it exactly.
 
 Name a speaker only when a Claim, a quote or the episode title names that person. Otherwise say "a guest" or "the hosts".
-Explain each episode's distinctive argument and why it merits listening for this user. Identify the source-supported argument, moment or question to listen for, and give an ordered recommendation when useful; do not invent timestamps or turn every item into a generic implementation plan. Do not turn available internal project or evaluation context into the digest unless requested. Add cross-show threads only when evidence supports a useful connection; link episodes and label your synthesis as your reading. Include material counterarguments and uncertainty. Compare with the prior digest when state is available, and explain substantive updates instead of repeating items unchanged.
+Explain each episode's distinctive argument and what the user can learn from it. When useful to the request, identify a source-supported moment or question to listen for and give an ordered recommendation; do not invent timestamps or turn every item into a generic implementation plan. Do not turn available internal project or evaluation context into the digest unless requested. Add cross-show threads only when evidence supports a useful connection; link episodes and label your synthesis as your reading. Include material counterarguments and uncertainty. Compare with the prior digest when state is available, and explain substantive updates instead of repeating items unchanged.
 Call speakers' positions a disagreement only when the supplied arguments conflict. Describe a useful connection when one exists; do not manufacture a tension or open question for variety.
 Before claiming a conflict, identify the two propositions that cannot both hold under the same conditions.
-If both can hold, describe their useful connection or different emphases without adding a disclaimer about a conflict nobody claimed. If the user specifically asks whether the speakers disagree and excerpts are insufficient, state that limit. Before delivery, check that the listening order and reasons reflect this user’s priorities and that each recommended moment is supported by the available source.
+If both can hold, describe their useful connection or different emphases without adding a disclaimer about a conflict nobody claimed. If the user specifically asks whether the speakers disagree and excerpts are insufficient, state that limit. Before delivery, check that the ideas and any listening recommendations reflect this user’s priorities and that each recommended moment is supported by the available source.
 
 ## Step 6: Set the schedule
 

@@ -4,13 +4,13 @@ description: Find what AI companies launched this week - new models, products, f
 license: MIT
 metadata:
   author: synorb
-  version: "1.5.3"
+  version: "1.5.4"
   homepage: https://synorb.com/skills/launch-radar
 ---
 
 # Launch radar
 
-Help this user decide which relevant releases to adopt, test, or ignore, as the evidence permits. Rank company announcements by actual fit, access and economics for the user’s stated decision and constraints; do not infer private facts or force a recommendation where evidence is insufficient.
+Give this user a clear fit judgment on relevant releases, as the request and evidence permit: adoption, a targeted test, deferral or another supported conclusion. Rank company announcements by actual fit, access and economics for the user’s stated decision and constraints; do not infer private facts or force a recommendation where evidence is insufficient.
 Read [references/synorb-api.md](references/synorb-api.md) for every call and rule. Before choosing coverage or writing, read [references/output-quality.md](references/output-quality.md). If a visual would explain a material comparison, read [references/visuals.md](references/visuals.md) and create and verify it when tools permit.
 
 Before delivering, the calling agent must complete the same-invocation draft → critique → revise → verify procedure in [references/output-quality.md](references/output-quality.md), including the decision-critical evidence checks below, current availability, user relevance and source-specific qualifiers. Deliver only the final result.
@@ -28,7 +28,7 @@ Follow section 1 of the reference. If there is no connection, follow `synorb-set
 
 ## Step 3: Gather
 
-Count the chosen Beacon and window first (free); note effective dates and allowance. Inspect the live schema before narrowing. Use only supported focus fields; never invent filters or alter saved Beacon scope. Pull bounded pages, or diversify by date when useful, within the allowance. Check quota before additional pulls. Disclose what you inspected; do not claim exhaustive coverage.
+Count the chosen Beacon and window first (free); note effective dates and allowance. Inspect the live schema before narrowing. Use only supported focus fields; never invent filters or alter saved Beacon scope. Pull bounded pages, or diversify by date when useful, within the allowance. Check quota before additional pulls. Disclose material coverage limits when needed; do not claim exhaustive coverage.
 
 ## Step 4: Sort into launches
 
@@ -97,7 +97,7 @@ or total workload cost.
 
 ## Step 5: Write the radar
 
-Lead with the release most relevant to the user's decision. Prioritize concrete fit, access and what changed, supported by each announcement; give an adopt, test or ignore judgment with a specific reason when the user’s decision and evidence permit. Explain material tradeoffs and avoid turning a general roundup into a generic governance or evaluation plan. Use these sections when they help; do not force a fixed count or pad thin coverage:
+Lead with the release most relevant to the user's decision. Prioritize concrete fit, access and what changed, supported by each announcement; give a fit judgment and specific reason when the user’s decision and evidence permit. Explain material tradeoffs and avoid turning a general roundup into a generic governance or evaluation plan. Use these sections when they help; do not force a fixed count or pad thin coverage:
 
 1. **Key launches.** A small set ranked by the user's actual priorities. Include availability status, exact supported figures and source links.
 2. **Other releases.** Brief links when useful to the request.
