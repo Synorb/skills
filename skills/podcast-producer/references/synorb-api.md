@@ -144,7 +144,7 @@ Use these fields:
 
 ## 6. Rules for every result
 
-- Use only facts from the Manifests you read. Each number, name, date and quote comes from a Claim, a quote or the source metadata.
+- Base coverage on the Manifests you read. Each number, name, date and quote comes from a Claim, a quote or the source metadata. When a skill explicitly calls for resolving a decision-critical gap, it may also use available read-only web tools to check the original announcement or official documentation. Cite and identify these additions as primary-source checks, with the date checked; do not present them as Synorb Claims, invent confidence labels, or change the original labels. A Brief is a lead to verify, not independent source evidence. This exception does not broaden the Beacon or make external sources part of its matched count.
 - Put the source link next to each fact. Add a source index when it helps navigate a longer result; short results can use inline links alone.
 - Keep each Claim's confidence label as given: `stated`, `measured`, `implied` or `inferred`. Do not raise `implied` or `inferred` to `stated`.
 - `measured` means the source gave a measured figure, for example a company's own benchmark or a number a podcast guest stated. It does not mean someone else checked it. Say "the company reports" or "the guest said".

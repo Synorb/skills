@@ -4,7 +4,7 @@ description: Find what AI companies launched this week - new models, products, f
 license: MIT
 metadata:
   author: synorb
-  version: "1.5.0"
+  version: "1.5.1"
   homepage: https://synorb.com/skills/launch-radar
 ---
 
@@ -13,7 +13,7 @@ metadata:
 You list what AI companies shipped, from their own announcements, and say why each launch matters to this user.
 Read [references/synorb-api.md](references/synorb-api.md) for every call and rule. Before choosing coverage or writing, read [references/output-quality.md](references/output-quality.md). If a visual would explain a material comparison, read [references/visuals.md](references/visuals.md) and create and verify it when tools permit.
 
-Before delivering, the calling agent must complete the same-invocation draft → critique → revise → verify procedure in [references/output-quality.md](references/output-quality.md), checking each launch’s current shipped or availability state, user relevance and source-specific qualifiers. Deliver only the final result.
+Before delivering, the calling agent must complete the same-invocation draft → critique → revise → verify procedure in [references/output-quality.md](references/output-quality.md), including the decision-critical evidence checks below, current availability, user relevance and source-specific qualifiers. Deliver only the final result.
 
 ## Step 1: Check the connection
 
@@ -44,6 +44,40 @@ Keep only items where the company itself announces something new:
 
 Drop how-to guides, event recaps, hiring posts and general essays. Drop Synorb's own posts. For a roll-up page of release notes, use only the entries dated inside the window.
 
+### Resolve decision-critical gaps before writing
+
+For shortlisted launches, resolve a missing fact when it could change the ranking or
+the user's next action: for example the access route, release stage, price, license
+or compatibility. A short Claim list is not the boundary of the available evidence.
+
+1. Read the full retained Claims and supporting quotes, then the complete Brief.
+   Treat the Brief's takeaways and unresolved questions as leads, not new source
+   facts; check whether the evidence already answers them.
+2. If the answer is still missing or conflicting, use available read-only web tools
+   to open the original announcement and, when needed, its official product docs,
+   pricing, release notes or model card. Search within the publisher's official
+   sites to locate the exact product/version if a link fails or is ambiguous.
+   Do this yourself before assigning a publicly answerable check to the user.
+3. Record the source URL, date checked, exact product/version, supported answer and
+   any relevant plan, region or rollout qualifier. Keep web-verified additions
+   visibly distinct from Synorb Claims; never assign them a Synorb confidence label
+   or silently rewrite the original Claim. Prefer current official terms for a
+   current-access decision, explaining a material change since the announcement.
+4. Reassess the recommendation and any table or visual with the resolved facts.
+   Public API availability, an enterprise admin toggle, and future open weights are
+   separate access routes; one does not determine the others. Published availability
+   does not prove this user's account, credits or permissions are configured.
+
+Keep this investigation proportional: at most two targeted lookup rounds within
+the existing refinement budget, focused on facts that change the decision. A round
+may inspect the relevant official pages for the shortlisted products. Stop when
+the material question is answered, the tools or allowance prevent further checks,
+or those rounds are exhausted. Do not sign up, buy, log in, change accounts or make
+a paid test call to establish access. If the fact remains unresolved, state what
+was checked and the specific remaining limitation briefly; make the recommendation
+conditional or choose an actionable alternative. Do not repeat a resolved question
+as a caveat or use a search snippet alone as verified evidence.
+
 ## Step 5: Write the radar
 
 Lead with the release most relevant to the user's decision. Prioritize concrete fit, access and what changed, supported by each announcement; avoid turning a general roundup into a generic governance or evaluation plan. Use these sections when they help; do not force a fixed count or pad thin coverage:
@@ -56,10 +90,14 @@ Say "the company says" for claims about the company's own product. Keep each Cla
 Map releases to the user's stack, roadmap, buying criteria or investment question only when that context is available. Distinguish announced, preview, waitlist and generally available status when supported. Include material counterevidence or uncertainty and what changed since the last radar, when state is available.
 Check availability for each release separately. A comparable product does not inherit another product's preview or general-availability status.
 For a multi-product decision, use a compact comparison table with a separate availability cell for each product.
-Copy that status from its own source. Write "not stated" when that source gives no status.
+Use the status supported by that product's own sources after the checks above.
+Write "not established after checking [sources]" only for a material unresolved status;
+do not call a fact unknown merely because it is absent from the selected Claims.
 Use this table to check the narrative before delivery; never combine unknown and known statuses into one group description.
 For a cost decision, suggest concrete checks for billing units, retries, failures, minimums, limits and overages when relevant.
-Present unknown terms as questions to verify. Any workload calculation needs supported inputs and clear assumptions.
+Resolve material public terms before delivery. Reserve questions for facts that
+remain unavailable or require the user's private account or intended workload.
+Any workload calculation needs supported inputs and clear assumptions.
 
 ## Step 6: Set the schedule
 
