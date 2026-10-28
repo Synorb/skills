@@ -4,7 +4,7 @@ description: Find what AI companies launched this week - new models, products, f
 license: MIT
 metadata:
   author: synorb
-  version: "1.5.1"
+  version: "1.5.2"
   homepage: https://synorb.com/skills/launch-radar
 ---
 
@@ -78,6 +78,23 @@ was checked and the specific remaining limitation briefly; make the recommendati
 conditional or choose an actionable alternative. Do not repeat a resolved question
 as a caveat or use a search snippet alone as verified evidence.
 
+### Check the actual pricing route
+
+A product site, membership plan and developer API can have different billing
+pages. A localized price card is not evidence that other public API prices are
+unknown. When region or currency affects the decision, follow the publisher's
+official links or search its official international or regional developer platform
+for the exact model/version and access route before deferring that question.
+Include this check within the targeted lookup rounds above.
+
+If the user's region is unspecified, do not infer it from a time zone, name or
+language. Report the relevant published route with its currency, billing units
+and qualifiers; private eligibility remains a separate question. Prefer published
+rates in the same currency for a comparison when available. Do not invent an
+exchange rate or treat a domestic rate as an international quote. Public list
+prices can be compared without pretending to know the user's negotiated terms
+or total workload cost.
+
 ## Step 5: Write the radar
 
 Lead with the release most relevant to the user's decision. Prioritize concrete fit, access and what changed, supported by each announcement; avoid turning a general roundup into a generic governance or evaluation plan. Use these sections when they help; do not force a fixed count or pad thin coverage:
@@ -98,6 +115,21 @@ For a cost decision, suggest concrete checks for billing units, retries, failure
 Resolve material public terms before delivery. Reserve questions for facts that
 remain unavailable or require the user's private account or intended workload.
 Any workload calculation needs supported inputs and clear assumptions.
+
+### Compare what is actually comparable
+
+Use a comparable priced subset when it explains the decision. A protocol,
+unpriced release or differently billed product need not appear in the same
+numeric chart. Before rejecting a useful price visual for mixed currencies,
+complete the public pricing-route checks above; use the supported common units
+and route, and identify omissions. Do not turn token-price bars into a quality
+ranking or an estimate of the user's bill. Choose prose or a table when a chart
+still adds no useful explanation.
+
+Once public terms are verified, give their answers directly. Keep residual private
+eligibility or workload unknowns in one concise place where they affect the next
+action. Do not repeat the same caution in the lead, comparison and closing, or
+present a resolved public question as still open.
 
 ## Step 6: Set the schedule
 

@@ -4,7 +4,7 @@ description: Produce an agentic podcast from any Synorb Beacon - a two-host scri
 license: MIT
 metadata:
   author: synorb
-  version: "1.5.1"
+  version: "1.5.2"
   homepage: https://synorb.com/skills/podcast-producer
 ---
 
