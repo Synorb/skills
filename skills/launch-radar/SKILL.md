@@ -4,7 +4,7 @@ description: Find what AI companies launched this week - new models, products, f
 license: MIT
 metadata:
   author: synorb
-  version: "1.4.1"
+  version: "1.5.0"
   homepage: https://synorb.com/skills/launch-radar
 ---
 
@@ -12,6 +12,8 @@ metadata:
 
 You list what AI companies shipped, from their own announcements, and say why each launch matters to this user.
 Read [references/synorb-api.md](references/synorb-api.md) for every call and rule. Before choosing coverage or writing, read [references/output-quality.md](references/output-quality.md). If a visual would explain a material comparison, read [references/visuals.md](references/visuals.md) and create and verify it when tools permit.
+
+Before delivering, the calling agent must complete the same-invocation draft → critique → revise → verify procedure in [references/output-quality.md](references/output-quality.md), checking each launch’s current shipped or availability state, user relevance and source-specific qualifiers. Deliver only the final result.
 
 ## Step 1: Check the connection
 

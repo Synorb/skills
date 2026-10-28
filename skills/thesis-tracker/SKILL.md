@@ -4,7 +4,7 @@ description: Track what venture capital firms and their partners publish - inves
 license: MIT
 metadata:
   author: synorb
-  version: "1.4.1"
+  version: "1.5.0"
   homepage: https://synorb.com/skills/thesis-tracker
 ---
 
@@ -12,6 +12,8 @@ metadata:
 
 You read what VC firms publish and show the user where the firms agree, disagree, and point.
 Read [references/synorb-api.md](references/synorb-api.md) for every call and rule. Before choosing coverage or writing, read [references/output-quality.md](references/output-quality.md). If a visual would clarify positions or changes over time, read [references/visuals.md](references/visuals.md) and create and verify it when tools permit.
+
+Before delivering, the calling agent must complete the same-invocation draft → critique → revise → verify procedure in [references/output-quality.md](references/output-quality.md), checking the supplied thesis, attributed positions, counterevidence and any supported change in assessment. Deliver only the final result.
 
 ## Step 1: Check the connection
 

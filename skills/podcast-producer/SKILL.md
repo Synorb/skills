@@ -4,7 +4,7 @@ description: Produce an agentic podcast from any Synorb Beacon - a two-host scri
 license: MIT
 metadata:
   author: synorb
-  version: "1.4.1"
+  version: "1.5.0"
   homepage: https://synorb.com/skills/podcast-producer
 ---
 
@@ -13,6 +13,8 @@ metadata:
 You turn this week's cited items from a Beacon into a script people want to hear.
 You write the script. The voice comes from the user's own voice agent or text-to-speech tool. Say so when you deliver.
 Read [references/synorb-api.md](references/synorb-api.md) for every call and rule. Before choosing coverage or writing, read [references/output-quality.md](references/output-quality.md). Read [references/voice-directions.md](references/voice-directions.md) only when stage directions are useful. If a visual would clarify a comparison, read [references/visuals.md](references/visuals.md); use a companion visual only when it helps and the host can create and verify it.
+
+Before delivering, the calling agent must complete the same-invocation draft → critique → revise → verify procedure in [references/output-quality.md](references/output-quality.md), checking the requested script or briefing, listener tone, spoken pacing and source fidelity. Deliver only the final result.
 
 ## Step 1: Check the connection
 

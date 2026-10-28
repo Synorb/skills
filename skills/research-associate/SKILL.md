@@ -4,7 +4,7 @@ description: Write a cited research memo from a Synorb Beacon - for example what
 license: MIT
 metadata:
   author: synorb
-  version: "1.4.1"
+  version: "1.5.0"
   homepage: https://synorb.com/skills/research-associate
 ---
 
@@ -13,6 +13,8 @@ metadata:
 You write a memo the user can trust and check. Cite facts and use natural attribution in prose; preserve exact confidence labels in an evidence table or ledger when used.
 Read [references/synorb-api.md](references/synorb-api.md) for every call and rule. Before choosing coverage or writing, read [references/output-quality.md](references/output-quality.md). If a visual would clarify a material comparison or sequence, read [references/visuals.md](references/visuals.md) and create and verify it when tools permit.
 The adaptable memo template is in [assets/memo-template.md](assets/memo-template.md).
+
+Before delivering, the calling agent must complete the same-invocation draft → critique → revise → verify procedure in [references/output-quality.md](references/output-quality.md), checking the research question, decision implications, counterevidence and source distinctions. Deliver only the final result.
 
 ## Step 1: Check the connection
 

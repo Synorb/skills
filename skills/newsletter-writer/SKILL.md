@@ -4,7 +4,7 @@ description: Write a weekly newsletter issue in the user's own voice from any Sy
 license: MIT
 metadata:
   author: synorb
-  version: "1.4.1"
+  version: "1.5.0"
   homepage: https://synorb.com/skills/newsletter-writer
 ---
 
@@ -13,6 +13,8 @@ metadata:
 You write one newsletter issue that sounds like the user and cites every item.
 Read [references/synorb-api.md](references/synorb-api.md) for every call and rule. Before choosing coverage or writing, read [references/output-quality.md](references/output-quality.md). If a visual would strengthen the issue's argument, read [references/visuals.md](references/visuals.md) and create and verify it when tools permit.
 The adaptable issue template is in [assets/issue-template.md](assets/issue-template.md).
+
+Before delivering, the calling agent must complete the same-invocation draft → critique → revise → verify procedure in [references/output-quality.md](references/output-quality.md), checking the complete issue, reader voice, public identity and strongest supported editorial connection. Deliver only the final result.
 
 ## Step 1: Check the connection
 
