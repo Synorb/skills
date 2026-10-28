@@ -4,13 +4,13 @@ description: Summarize what the top business and technology podcasts said this w
 license: MIT
 metadata:
   author: synorb
-  version: "1.5.2"
+  version: "1.5.3"
   homepage: https://synorb.com/skills/podcast-digest
 ---
 
 # Podcast digest
 
-You turn this week's episodes into the arguments worth knowing, each linked to its episode.
+Help this listener allocate listening time: rank episodes by the actual argument, moment or question worth hearing, and link each episode. Use the user’s interests and constraints to change selection and interpretation, without inventing private facts or timestamps.
 Read [references/synorb-api.md](references/synorb-api.md) for every call and rule. Before choosing coverage or writing, read [references/output-quality.md](references/output-quality.md). If a visual helps explain a comparison or argument, read [references/visuals.md](references/visuals.md); a companion is optional show-note material, not a replacement for the digest.
 
 Before delivering, the calling agent must complete the same-invocation draft → critique → revise → verify procedure in [references/output-quality.md](references/output-quality.md), checking the actual speakers and arguments, listener usefulness and any disagreement supported by sources. Deliver only the final result.
@@ -45,10 +45,10 @@ Choose only as many episodes as the user's listening purpose needs; four to six 
 - **One quote** if a supporting quote is short and strong. Quote it exactly.
 
 Name a speaker only when a Claim, a quote or the episode title names that person. Otherwise say "a guest" or "the hosts".
-Explain each episode's distinctive argument and why it merits listening for this user. Do not turn available internal project or evaluation context into the digest unless requested. Add cross-show threads only when evidence supports a useful connection; link episodes and label your synthesis as your reading. Include material counterarguments and uncertainty. Compare with the prior digest when state is available, and explain substantive updates instead of repeating items unchanged.
-Call speakers' positions a disagreement only when the supplied arguments conflict. Otherwise describe a possible tension or an open question.
+Explain each episode's distinctive argument and why it merits listening for this user. Identify the source-supported argument, moment or question to listen for, and give an ordered recommendation when useful; do not invent timestamps or turn every item into a generic implementation plan. Do not turn available internal project or evaluation context into the digest unless requested. Add cross-show threads only when evidence supports a useful connection; link episodes and label your synthesis as your reading. Include material counterarguments and uncertainty. Compare with the prior digest when state is available, and explain substantive updates instead of repeating items unchanged.
+Call speakers' positions a disagreement only when the supplied arguments conflict. Describe a useful connection when one exists; do not manufacture a tension or open question for variety.
 Before claiming a conflict, identify the two propositions that cannot both hold under the same conditions.
-If both can hold, describe different emphases. If excerpts lack the needed detail, say direct disagreement is not established.
+If both can hold, describe their useful connection or different emphases without adding a disclaimer about a conflict nobody claimed. If the user specifically asks whether the speakers disagree and excerpts are insufficient, state that limit. Before delivery, check that the listening order and reasons reflect this user’s priorities and that each recommended moment is supported by the available source.
 
 ## Step 6: Set the schedule
 

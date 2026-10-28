@@ -4,13 +4,13 @@ description: Connect an agent to Synorb (cited news and context from AI companie
 license: MIT
 metadata:
   author: synorb
-  version: "1.5.2"
+  version: "1.5.3"
   homepage: https://synorb.com/skills/synorb-setup
 ---
 
 # Synorb setup
 
-You connect the user to Synorb, show a first result, and set up the Beacons their skills will run on.
+The first result should answer a question or illuminate a decision the user actually cares about, with a relevant next action. Connect the user and set up the Beacons their skills will run on. Use the user’s stated priorities and constraints to choose and interpret evidence, not merely to label the audience; do not invent private facts.
 Read [references/synorb-api.md](references/synorb-api.md) for every call and rule. Before choosing coverage or form, read [references/output-quality.md](references/output-quality.md). If a comparison or relationship would be clearer visually, read [references/visuals.md](references/visuals.md) and create a real visual only when supported.
 
 Before delivering, the calling agent must complete the same-invocation draft → critique → revise → verify procedure in [references/output-quality.md](references/output-quality.md), checking the connection and first cited result, Beacon fit and actual setup state. Deliver only the final result.
@@ -35,7 +35,7 @@ A demo key is free and short-lived, with a small allowance. To keep it, the user
 1. List the starter Beacons (`tag="starter"`). New accounts have five: AI Companies, Business & Technology Podcasts, Venture Capital, Private Companies, and Public Company Filings & Executive Transitions. Older accounts have AI Companies, Business & Technology Podcasts and Central Banks.
 2. Start with the user's current purpose, relevant available context and prior feedback. Use them to choose the starter Beacon that best fits the user's actual decision or interest; AI Companies is the fallback when nothing else fits.
 3. Count the chosen Beacon for 168 hours (free), note its effective dates and the allowance, then pull a bounded first page with `page_size` 5. Check the live tool schema before narrowing; use only supported focus fields and never alter saved Beacon scope. If relevant coverage needs more, use bounded pages or date slices within allowance. Report what you inspected; do not present the sample as exhaustive.
-4. Write a short, useful first briefing of the items that best fit the user's interest or decision, with concrete takeaways from the sources. Do not make available internal evaluation context the subject unless the user asks. Keep it brief when coverage is thin; each item needs its date and source link. Lead with the result that makes the Beacon's relevance clear.
+4. Write a short, useful first briefing of the items that best fit the user's interest or decision, with concrete takeaways from the sources. Do not make available internal evaluation context the subject unless the user asks. Keep it brief when coverage is thin; each item needs its date and source link. Lead with the result that makes the Beacon's relevance clear, and give a next action specific to the finding and user’s purpose when warranted. Do not substitute a generic demonstration or testing plan for the result.
 5. End with one line accurately describing the sources in the selected Beacon, for example, that the items come from the firms' own publications, via Synorb.
 
 ## Step 4: Set up the Beacons the user needs
@@ -84,5 +84,5 @@ If `quota.account_notice.user_message` is in a response, give that sentence once
 - The user saw a real, cited result.
 - Every skill the user wants has a Beacon to run on, and the user accepted each one added.
 - The user knows if a schedule is set or not.
-- The first result explains what the selected Beacon covers for this user's purpose and any limits in sampled coverage.
+- The first result is useful on its own for the user’s purpose; its next action follows from the finding, and its coverage limit is concise.
 - On later setup-related runs, use the saved job brief and prior assessment to explain meaningful coverage changes.

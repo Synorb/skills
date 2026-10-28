@@ -4,13 +4,13 @@ description: Find what AI companies launched this week - new models, products, f
 license: MIT
 metadata:
   author: synorb
-  version: "1.5.2"
+  version: "1.5.3"
   homepage: https://synorb.com/skills/launch-radar
 ---
 
 # Launch radar
 
-You list what AI companies shipped, from their own announcements, and say why each launch matters to this user.
+Help this user decide which relevant releases to adopt, test, or ignore, as the evidence permits. Rank company announcements by actual fit, access and economics for the user’s stated decision and constraints; do not infer private facts or force a recommendation where evidence is insufficient.
 Read [references/synorb-api.md](references/synorb-api.md) for every call and rule. Before choosing coverage or writing, read [references/output-quality.md](references/output-quality.md). If a visual would explain a material comparison, read [references/visuals.md](references/visuals.md) and create and verify it when tools permit.
 
 Before delivering, the calling agent must complete the same-invocation draft → critique → revise → verify procedure in [references/output-quality.md](references/output-quality.md), including the decision-critical evidence checks below, current availability, user relevance and source-specific qualifiers. Deliver only the final result.
@@ -97,13 +97,13 @@ or total workload cost.
 
 ## Step 5: Write the radar
 
-Lead with the release most relevant to the user's decision. Prioritize concrete fit, access and what changed, supported by each announcement; avoid turning a general roundup into a generic governance or evaluation plan. Use these sections when they help; do not force a fixed count or pad thin coverage:
+Lead with the release most relevant to the user's decision. Prioritize concrete fit, access and what changed, supported by each announcement; give an adopt, test or ignore judgment with a specific reason when the user’s decision and evidence permit. Explain material tradeoffs and avoid turning a general roundup into a generic governance or evaluation plan. Use these sections when they help; do not force a fixed count or pad thin coverage:
 
 1. **Key launches.** A small set ranked by the user's actual priorities. Include availability status, exact supported figures and source links.
 2. **Other releases.** Brief links when useful to the request.
 3. **What to watch.** Supported next steps or implications, labelled as your view.
 
-Say "the company says" for claims about the company's own product. Keep each Claim's confidence label. A Stream for a company carries that company's own posts, so do not call them independent reviews.
+Say "the company says" for claims about the company's own product. Preserve exact Claim confidence in evidence records; natural attribution in prose must retain the original certainty and hedges. A company Stream carries its own posts: do not represent these as independent reviews, and avoid repeating that qualification after every item.
 Map releases to the user's stack, roadmap, buying criteria or investment question only when that context is available. Distinguish announced, preview, waitlist and generally available status when supported. Include material counterevidence or uncertainty and what changed since the last radar, when state is available.
 Check availability for each release separately. A comparable product does not inherit another product's preview or general-availability status.
 For a multi-product decision, use a compact comparison table with a separate availability cell for each product.
@@ -126,7 +126,7 @@ and route, and identify omissions. Do not turn token-price bars into a quality
 ranking or an estimate of the user's bill. Choose prose or a table when a chart
 still adds no useful explanation.
 
-Once public terms are verified, give their answers directly. Keep residual private
+Before delivery, check that each recommendation follows from this user’s priorities and the product’s own resolved access and economic terms, and that a different priority could change the ranking. Once public terms are verified, give their answers directly. Keep residual private
 eligibility or workload unknowns in one concise place where they affect the next
 action. Do not repeat the same caution in the lead, comparison and closing, or
 present a resolved public question as still open.

@@ -1,16 +1,16 @@
 ---
 name: research-associate
-description: Write a cited research memo from a Synorb Beacon - for example what VC firms, AI companies, private companies or business podcasts published this week - with a bottom line, a dated timeline, Claims carrying their confidence labels (stated, measured, implied, inferred) and a source index. Use when the user asks to be briefed on a sector or a set of organizations, wants a memo before a meeting or an investment decision, or asks what a group of companies or investors has been saying. Set it up once; the agent then runs it on a schedule and reports only what is new.
+description: Answer a research question or support a decision with a cited memo from a Synorb Beacon, comparing relevant evidence, alternatives and tradeoffs for the user. Use for a sector or organization-group briefing, preparation for a meeting or investment decision, or analysis of what companies and investors are publishing. Adapt the memo to the question; recurring delivery can be set up when requested.
 license: MIT
 metadata:
   author: synorb
-  version: "1.5.2"
+  version: "1.5.3"
   homepage: https://synorb.com/skills/research-associate
 ---
 
 # Research associate
 
-You write a memo the user can trust and check. Cite facts and use natural attribution in prose; preserve exact confidence labels in an evidence table or ledger when used.
+Answer the user’s research question with a useful assessment. When the question involves a decision, compare relevant competing options and tradeoffs, then identify a specific action or trigger supported by the evidence. Adapt selection and interpretation to the user’s actual priorities and constraints without inventing private facts. Cite facts and use natural attribution in prose; preserve exact confidence labels in an evidence table or ledger when used.
 Read [references/synorb-api.md](references/synorb-api.md) for every call and rule. Before choosing coverage or writing, read [references/output-quality.md](references/output-quality.md). If a visual would clarify a material comparison or sequence, read [references/visuals.md](references/visuals.md) and create and verify it when tools permit.
 The adaptable memo template is in [assets/memo-template.md](assets/memo-template.md).
 
@@ -43,7 +43,7 @@ If the user names one company or one person, use the Beacon that holds it, and k
 ## Step 3: Gather
 
 1. Count the chosen Beacon and window first (free). Note `total_count`, effective dates and allowance.
-2. Inspect the live tool schema and use only supported focus fields for the user's question. Never invent filters or alter the saved Beacon scope. If no supported focus field applies, inspect bounded pages or diversified date slices within the allowance; say how much you inspected and do not call a sample exhaustive.
+2. Inspect the live tool schema and use only supported focus fields for the user's question. Never invent filters or alter the saved Beacon scope. If no supported focus field applies, inspect bounded pages or diversified date slices within the allowance; track inspected scope and counts in the receipt, and give them in the answer when requested or needed to explain a material sampling limitation. Never call a sample exhaustive.
 3. Read `signal.body.claims[]` and the Brief for each item you may use. Titles can help screen, but they do not establish the finding. Read every Claim of featured items and track matched, screened and retained counts.
 4. Dedupe repeated original items before drafting; revisit prior items when new evidence changes their meaning.
 
@@ -55,10 +55,10 @@ Use the template as a starting point. Choose the clearest form for the decision;
 2. **Timeline.** One line per dated event, oldest first. Each line has the date, the organization and a source link.
 3. **Evidence.** Use a Claims table when comparison or auditability benefits from it; otherwise integrate cited Claims into prose. Preserve each `confidence` label exactly when shown.
 4. **Open questions and counterevidence.** What the sources leave unresolved, disagree on, or would change the assessment. Mark your own analysis as yours.
-5. **Coverage note.** The Beacon, the window, how many items matched, how many you read and how many you kept. Say what kind of source they are. Example: "All items are the firms' own essays, blogs and podcasts. This memo has no outside reporting."
+5. **Coverage note.** Briefly give the relevant window, source type and any material sampling limitation. Keep matched/read/retained totals and retrieval diagnostics in a receipt unless requested or necessary to understand the finding.
 6. **Source index.** Use when it helps the reader navigate multiple sources.
 
-Answer the actual research question, compare plausible alternatives where the evidence permits, and explain the decision implications. Do not assume a company, stack, budget, fundraising status or prior assessment. Lead with the finding most useful to this decision. Separate source facts from your interpretation, name material uncertainty, and compare with the prior assessment when available. Never turn an organization's forecast or claim into an independently verified fact.
+Answer the actual research question, compare plausible alternatives where the evidence permits, and explain why the tradeoffs favor a particular action or a concrete condition for changing it. Do not default to a demo, pilot or user test when the evidence supports a more specific decision. Do not assume a company, stack, budget, fundraising status or prior assessment. Lead with the finding most useful to this decision. Separate source facts from your interpretation, name material uncertainty, and compare with the prior assessment when available. Never turn an organization's forecast or claim into an independently verified fact.
 
 ## Rules for this skill
 
@@ -66,6 +66,7 @@ Answer the actual research question, compare plausible alternatives where the ev
 - Do not merge two Claims into one stronger Claim.
 - If two sources disagree, show both and say they disagree.
 - If you found little, write a short memo and say how much you found. Do not pad it.
+- Before delivery, check that decision options, tradeoffs and next action reflect the user’s stated priorities when relevant; keep material uncertainty next to the affected conclusion.
 
 ## Step 5: Set the schedule
 

@@ -1,51 +1,56 @@
-# Create a visual when it helps explain the evidence
+# Show the relationship that carries the finding
 
-Use a visual to explain an important comparison, sequence, pattern, or relationship.
-Do not add one just to decorate a result. Keep it tied to the narrative's main finding.
+Use a visual when it makes an important choice, comparison, sequence or relationship
+easier to understand than prose alone. Choose the message first, then the form.
+Do not add a decorative image or require a visual for every result.
 
-## Choose the relationship first
+| Reader's question | Useful form | Evidence required |
+| --- | --- | --- |
+| How do comparable values differ? | Bar/dot chart or compact data table | Actual values, units, periods and comparable conditions |
+| What changed over time? | Line chart or annotated timeline | Actual observations or dated events; no invented intermediate points |
+| Which option fits this constraint? | Comparison matrix | Sourced capabilities/availability and explicit user criteria; unknown is not absent |
+| Where does the work or evidence go? | Small labelled process/dependency map | Supported steps and relationships; identify proposed steps as your recommendation |
+| Which evidence changes the thesis? | Evidence map/matrix | Specific claims connected to support, challenge or unresolved questions; no invented confidence score |
 
-| Evidence and question | Useful form |
-| --- | --- |
-| Comparable values across organizations or products | Bar or dot chart; a table when details matter more |
-| Comparable observations across dates | Line chart with actual observations |
-| Dated events or changes in availability | Annotated timeline |
-| Capabilities, arguments, positions, or thesis evidence | Comparison or evidence matrix |
-| A supported dependency or process | Small labelled diagram |
-| One fact, thin evidence, or incompatible figures | Prose or a small table; no quantitative chart |
+Qualitative visuals do not need a numeric series. A useful workflow map or option
+matrix can explain a relationship that incompatible benchmarks cannot chart.
+Conversely, a few unrelated facts are not a reason to manufacture a diagram.
 
-Use real units, periods, populations, and measurement conditions. Different funding
-rounds are not revenue. Different vendor benchmark tests are not a controlled comparison.
-Different output-token and character prices are not comparable without a supported conversion.
-Do not invent a score, denominator, trend, timestamp, or missing observation.
-Do not treat a sampled count of publications as market share, adoption, or consensus.
-Mark forecasts, uncertainty, missing values, and source-reported results clearly.
+## Build from the evidence you actually used
 
-## Create and verify the artifact
+For a quantitative chart, keep a source-data table with values, units, dates,
+conditions and source links from the Claims or explicitly cited primary-source
+checks. Verify calculations. Different funding rounds are not revenue; different
+vendor benchmarks are not a controlled model comparison. Token and character
+prices need a supported conversion before comparison. Do not turn publication
+counts into market share, adoption or consensus. Never invent a value, denominator,
+score, trend, timestamp or missing observation.
 
-1. Build a small source-data table from the Claims you read. Keep each row's source
-   link, date, metric, value, unit, and relevant caveat. Check derived calculations.
-2. Use the host's available chart, spreadsheet, code, or diagram tool. Prefer an
-   inspectable data-driven chart over an illustrative generated image for quantitative evidence.
-3. Label axes and units. Use a truthful scale, legible labels, and accessible contrast.
-   Do not rely on color alone to distinguish meanings.
-4. Give the chart a takeaway that its evidence supports. Include source links and a
-   concise coverage or methodology note. Add a text description or accessible data table.
-5. Open or render the artifact when tools allow. Check labels, clipping, plotted
-   values, and consistency with the narrative. Fix visible errors before delivery.
-6. Deliver the actual rendered artifact or supported inline visual. Include its
-   underlying data when useful. Say what you verified; do not claim unseen rendering checks.
+For a qualitative visual, keep the source-backed entries, steps or links between
+them. Separate source facts, authorized user constraints and your proposed action.
+Label a hypothesis, recommendation or unresolved relationship as such; do not draw
+an unsupported causal arrow or make a speculative step look like a shipped feature.
+Keep private user context out of public graphics unless intended for that audience.
 
-If the host cannot create or display a visual, use the source-data table and a clear
-explanation. A plan or code block is not a completed rendered chart.
-Do not add dependencies or change the user's environment solely to force a chart.
+## Create, inspect and deliver
 
-## Match the medium
+Use available chart, code, spreadsheet or diagram tools. Prefer inspectable
+data-driven graphics for quantitative evidence. A small supported inline diagram
+or an accessible table can be the finished visual; it need not be a raster image.
+Do not install dependencies or change the user's environment just to force one.
 
-Keep public charts free of private user context unless it is intended for that audience.
-For a newsletter, use a chart only when it strengthens the editorial argument.
-For research, put complex evidence detail after the main decision narrative.
-For a radar or tracker, distinguish unknown capability from confirmed absence.
-For a spoken briefing, explain the comparison naturally. Add a companion visual to
-the notes only when useful and supported; never require listeners to see it.
+Use honest scales, clear units/route labels, readable text and accessible contrast.
+Do not rely on color alone. Keep the visual focused on the narrative's takeaway;
+use a concise caption/source note and a text description or accessible data table.
 
+Render or open the actual artifact when the host permits. Inspect labels, clipping,
+values, relationships and consistency with the text. Fix errors before delivery.
+Deliver that artifact or supported inline visual, not a promise or unrendered
+chart-building script. Keep its underlying data when useful. If rendering is
+unavailable, deliver the readable table/description and accurately state what was
+verified. Do not claim to have inspected an unseen image.
+
+For newsletters, use a visual that advances the editorial argument. For research
+and radars, make tradeoffs or availability easy to compare. For trackers, show
+which evidence changes which proposition. For a spoken result, explain the finding
+aloud; any companion visual belongs in the notes and is optional for listeners.

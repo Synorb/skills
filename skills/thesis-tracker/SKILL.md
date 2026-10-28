@@ -4,13 +4,13 @@ description: Track what venture capital firms and their partners publish - inves
 license: MIT
 metadata:
   author: synorb
-  version: "1.5.2"
+  version: "1.5.3"
   homepage: https://synorb.com/skills/thesis-tracker
 ---
 
 # Thesis tracker
 
-You read what VC firms publish and show the user where the firms agree, disagree, and point.
+Update the user’s actual thesis against their prior assessment when available: say what changed, what did not, and a specific observable condition that would move the assessment. Select and interpret evidence for the user’s decision and priorities, without inventing a thesis, prior assessment or private facts. When no thesis is requested, summarize the firms’ positions instead.
 Read [references/synorb-api.md](references/synorb-api.md) for every call and rule. Before choosing coverage or writing, read [references/output-quality.md](references/output-quality.md). If a visual would clarify positions or changes over time, read [references/visuals.md](references/visuals.md) and create and verify it when tools permit.
 
 Before delivering, the calling agent must complete the same-invocation draft → critique → revise → verify procedure in [references/output-quality.md](references/output-quality.md), checking the supplied thesis, attributed positions, counterevidence and any supported change in assessment. Deliver only the final result.
@@ -54,9 +54,9 @@ Lead with what matters to the user's decision. For a supplied thesis, distinguis
 4. **Sources.** Include a source index when useful to navigate the evidence.
 
 Say plainly that these are the firms' own publications, not outside reporting.
-Compare the current picture with the prior assessment when available; do not invent a thesis score or claim that source silence disproves it.
+Compare the current picture with the actual prior assessment when available; identify the specific new evidence and how far it moves the assessment, or explain why it does not. Give a meaningful observable condition that would strengthen or weaken the belief. A proposed study may be relevant, but must not replace the update or become a generic testing plan. Do not invent a thesis score or claim that source silence disproves it.
 If effective query dates are unavailable, show the observed item dates and say query coverage is unknown.
-Dates on individual publications do not establish complete coverage of the month.
+Dates on individual publications do not establish complete coverage of the month. When tracking a thesis, check before delivery that the update and belief-changing condition are specific to this thesis and decision, not interchangeable with an unrelated one.
 
 ## Step 6: Set the schedule
 

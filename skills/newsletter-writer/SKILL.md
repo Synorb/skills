@@ -4,13 +4,13 @@ description: Write a weekly newsletter issue in the user's own voice from any Sy
 license: MIT
 metadata:
   author: synorb
-  version: "1.5.2"
+  version: "1.5.3"
   homepage: https://synorb.com/skills/newsletter-writer
 ---
 
 # Newsletter writer
 
-You write one newsletter issue that sounds like the user and cites every item.
+Write one finished issue for the known audience: make a compelling, source-grounded argument that matters to those readers and sounds like the user. Produce audience variants only when explicitly requested. Use actual reader priorities and constraints to select, interpret and frame evidence; do not invent private facts.
 Read [references/synorb-api.md](references/synorb-api.md) for every call and rule. Before choosing coverage or writing, read [references/output-quality.md](references/output-quality.md). If a visual would strengthen the issue's argument, read [references/visuals.md](references/visuals.md) and create and verify it when tools permit.
 The adaptable issue template is in [assets/issue-template.md](assets/issue-template.md).
 
@@ -57,7 +57,7 @@ Use the template as a default and change its sections, order or length when the 
 - The source link inline, with the publisher and the date.
 - If a Claim is `implied` or `inferred`, say so in plain words ("the company suggests").
 
-Build a public editorial argument from the strongest supported connection between items, when one exists; explain its concrete significance to the reader. Use an established newsletter name only if supplied; otherwise use a descriptive issue title, and offer naming ideas only when asked. Do not carry private project or evaluation details into subscriber copy merely because they are available. Keep source facts distinct from your analysis; include material counterevidence, uncertainty and the change from the last issue when relevant. Use `briefing.scaffold.recipe` as a guide. Keep the private editorial brief separate from public copy.
+Build one public editorial argument from the strongest supported connection between items, when one exists; explain its concrete significance to this reader. Make it an issue readers would want to read, not a consulting memo about the author’s internal project. If the evidence does not support a connection, let the strongest item carry the issue rather than manufacture one. Use an established newsletter name only if supplied; otherwise use a descriptive issue title, and offer naming ideas only when asked. Do not carry private project or evaluation details into subscriber copy merely because they are available. Keep source facts distinct from your analysis; include material counterevidence, uncertainty and the change from the last issue when relevant. Use `briefing.scaffold.recipe` as a guide. Keep the private editorial brief separate from public copy.
 
 ## Step 6: Footer
 
@@ -82,4 +82,5 @@ If `account_notice.user_message` is in a response, give that sentence once, afte
 - Every item has a working source link from the data.
 - Every figure matches a Claim.
 - No item says a company was covered by others when the source is the company itself.
+- The reader’s interests visibly change the selection and interpretation, and the issue develops an argument rather than a generic action plan.
 - The issue reads like the user, not like a press release.
