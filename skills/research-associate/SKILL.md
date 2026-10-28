@@ -4,7 +4,7 @@ description: Write a cited research memo from a Synorb Beacon - for example what
 license: MIT
 metadata:
   author: synorb
-  version: "1.5.1"
+  version: "1.5.2"
   homepage: https://synorb.com/skills/research-associate
 ---
 
