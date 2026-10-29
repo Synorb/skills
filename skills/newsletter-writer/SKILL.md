@@ -4,7 +4,7 @@ description: Write a weekly newsletter issue in the user's own voice from any Sy
 license: MIT
 metadata:
   author: synorb
-  version: "1.5.6"
+  version: "1.5.7"
   homepage: https://synorb.com/skills/newsletter-writer
 ---
 

@@ -25,13 +25,21 @@ belongs in public work only when intended for that audience.
 Lead with the finding, decision or editorial angle. Develop what changed, why it matters
 for this reader and the usable implication. For a decision, identify the actual commitment
 being chosen and compare the strongest feasible rival. Apply the user's responsibilities,
-existing capabilities and decision horizon before constructing the options. Make a scale
-or effort difference explicit when it matters; a small action should not win merely because
-its foils are whole new products or business pivots. Explain what outside evidence adds and
-establish any assumed gap. A justified decision to maintain or defer is valid, with the
-condition that would change it. A communication,
-demo or test can be the right next step when the job or evidence supports it; specify
-what decision a test resolves. Complete a useful small comparison or artifact when it fits.
+existing capabilities and decision horizon before constructing the options. Compare
+commitments at a similar decision level: a small package is not a fair win over a whole
+new product. If the available options differ in scale, make that tradeoff explicit; when
+the relevant gap or eligibility is unknown, keep the comparison conditional or bounded.
+Explain what outside evidence adds and establish any assumed gap. A justified decision to
+maintain or defer is valid, with the condition that would change it. A communication, demo
+or test can be the right next step when the job or evidence supports it; specify what
+decision a test resolves. Complete a useful small comparison or artifact when it fits.
+
+Keep these route facts distinct: an offering's compatibility, a connection in this runtime,
+an application submitted for review, and verified public availability through a specific
+distribution route. A working connection does not establish public discoverability through
+a directory. Match availability and eligibility claims to the exact offering and route, and
+check available current user context before treating that route as feasible. Submission or
+missing approval evidence leaves public status unknown.
 
 Choose evidence for the question, check named priorities, deduplicate original sources,
 and connect them only where supported. Separate source facts from interpretation; do not
