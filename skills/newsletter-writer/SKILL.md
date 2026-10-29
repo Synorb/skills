@@ -4,7 +4,7 @@ description: Write a weekly newsletter issue in the user's own voice from any Sy
 license: MIT
 metadata:
   author: synorb
-  version: "1.5.7"
+  version: "1.5.8"
   homepage: https://synorb.com/skills/newsletter-writer
 ---
 
@@ -15,6 +15,8 @@ Read [references/synorb-api.md](references/synorb-api.md) for every call and rul
 The adaptable issue template is in [assets/issue-template.md](assets/issue-template.md).
 
 If a tool result truncates this Skill, a referenced procedure or featured source evidence, retrieve the omitted section separately before using it. Read the complete refinement procedure before drafting.
+
+After gathering, return to the reader-payoff check in references/output-quality.md before drafting; assess that payoff before the source and delivery checks during refinement.
 
 Before delivering, the calling agent must complete the same-invocation draft → critique → revise → verify procedure in [references/output-quality.md](references/output-quality.md), checking the complete issue, reader voice, public identity and strongest supported editorial connection. Deliver only the final result.
 
@@ -76,6 +78,8 @@ If `account_notice.user_message` is in a response, give that sentence once, afte
 
 ## Quality check before you send
 
+- The chosen angle earns a specific insight or practical consequence for these readers; each retained fact advances it.
+- A connection between stories is explained through a supported mechanism or meaningful contrast. If there is no useful connection, the strongest item carries the issue.
 - Every item has a working source link from the data.
 - Every figure matches a Claim.
 - No item says a company was covered by others when the source is the company itself.

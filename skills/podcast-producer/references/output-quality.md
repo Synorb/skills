@@ -20,6 +20,21 @@ established identity and branding; otherwise use neutral roles and descriptive t
 A writing sample guides voice, not the conclusion. Private context guides relevance and
 belongs in public work only when intended for that audience.
 
+## Check the reader payoff
+
+After gathering, return to this check before drafting. Identify the specific
+understanding, choice or useful experience this reader should gain, the evidence
+that earns it, and its concrete consequence. Match the reader's expertise: a clear
+basic explanation can serve a newcomer, while an experienced reader may need the
+tradeoff or implication beyond a familiar truth.
+
+Make the retained facts do work in that argument. For a synthesis, explain the
+mechanism or meaningful contrast connecting items; a broad theme that could join
+almost any relevant news is weak editorial support. A strong single item can carry
+the result. A decision to maintain course can be useful when the evidence explains
+why and what would change it. Do not manufacture novelty or a connection when the
+evidence is genuinely thin; narrow the claim and deliver the useful part.
+
 ## Finish the skill's job
 
 Lead with the finding, decision or editorial angle. Develop what changed, why it matters
@@ -82,15 +97,23 @@ service or manual cleanup. Do not expose intermediate work unless requested or r
 hidden chain-of-thought.
 
 1. **Draft** the complete deliverable from evidence and available user context.
-2. **Critique** the actual passages against the job. Does the artifact add a specific
-   supported insight? For a decision, could a reasonable user choose the strongest rival
+2. **Critique** the actual passages against two separate conditions. First check the
+   reader payoff: what specific understanding or choice does the evidence add for
+   this reader, and where does the draft develop its consequence? If the answer is
+   only a familiar principle, a restatement of a source or a broad theme, identify
+   that substantive weakness before polishing. Check that the selected facts
+   advance the chosen argument. Then check source and delivery fidelity. For a
+   decision, could a reasonable user choose the strongest rival
    at the stated horizon, after applying the profile and existing capabilities? If the
    rival is only a distant pivot or an implausible foil, repair the comparison. Does each
    judgment match the exact offering and evidence scope, including relevant variants?
    Check source fidelity, privacy, identity, tone and visual accuracy; check spoken pace
    and duration. A generic statement that the draft was checked is not this verification.
-3. **Revise** substantive weaknesses, retrieving or replacing evidence within the permitted
-   scope and allowance when needed. Reread the revised final as the recipient: identify
+3. **Revise** the interpretation, connection or reader consequence when that check
+   found it weak; remove facts that do not serve the result, or retrieve better
+   evidence within the permitted scope and allowance when needed. Check the
+   reader payoff again after revision as well as the factual corrections.
+   Reread the revised final as the recipient: identify
    the distinct conditions that affect its use, keep them, and combine duplicates. Remove
    audit narration and routine disclaimers that add no new decision information. Check
    the final comparison and wording, not only the first draft.
@@ -102,3 +125,7 @@ Deliver only the final result. When an audit artifact is requested, capture the 
 first draft before critique, then retain the concise critique, revision summary, final and
 supporting references, never hidden reasoning or unauthorized private context. Record
 missing artifacts honestly rather than reconstructing a draft from the final.
+When a critique artifact is requested, briefly identify a concrete evidence-linked
+reader payoff or the actual passage where it is missing, separately from factual
+and wording checks. This is an observable assessment of the deliverable, not a
+request for hidden reasoning.

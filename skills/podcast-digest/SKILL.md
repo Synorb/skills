@@ -4,7 +4,7 @@ description: Summarize what the top business and technology podcasts said this w
 license: MIT
 metadata:
   author: synorb
-  version: "1.5.7"
+  version: "1.5.8"
   homepage: https://synorb.com/skills/podcast-digest
 ---
 
@@ -14,6 +14,8 @@ Give this user the useful ideas, arguments and takeaways they asked for, linked 
 Read [references/synorb-api.md](references/synorb-api.md) for every call and rule. Before choosing coverage or writing, read [references/output-quality.md](references/output-quality.md). If a visual helps explain a comparison or argument, read [references/visuals.md](references/visuals.md); a companion is optional show-note material, not a replacement for the digest.
 
 If a tool result truncates this Skill, a referenced procedure or featured source evidence, retrieve the omitted section separately before using it. Read the complete refinement procedure before drafting.
+
+After gathering, return to the reader-payoff check in references/output-quality.md before drafting; assess that payoff before the source and delivery checks during refinement.
 
 Before delivering, the calling agent must complete the same-invocation draft → critique → revise → verify procedure in [references/output-quality.md](references/output-quality.md), checking the actual speakers and arguments, listener usefulness and any disagreement supported by sources. Deliver only the final result.
 
