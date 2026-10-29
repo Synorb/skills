@@ -96,6 +96,8 @@ Use a returned opaque continuation or REST `next` URL unchanged when present. Ot
 
 Always count first. A count is free. Read the total at `pagination.total_count` (REST also has `data.total_count`). Ignore a top-level `count` field: it is the page size. Read the dates at `temporal.effective_from` and `temporal.effective_to`. A count returns an empty `manifests` list. That is normal. Then pull one page.
 
+If the count request fails but authentication and allowance are clearly valid, try at most one small pull using the same documented selectors and window, within the remaining allowance. Use it only if the server confirms success for the requested scope and returns actual pagination and temporal coverage. A count error does not mean zero matches. Stop on authentication or quota errors, or if the pull's success or coverage is unverified. Do not broaden the scope, use `force` or `allow_partial`, invent or alter proof tokens, or override authorization or quota.
+
 Windows round to whole days and end at the latest available day. On a demo key that is the previous calendar day. For "the last two days", use `lookback_hours=72`.
 
 ### Size of a pull
@@ -146,6 +148,8 @@ Use these fields:
 | `manifests[].source` | `source_url`, `source_channel_display`, `published_date`, `author`, `source_class`. |
 | `quota.quota_remaining` (REST) or `quota.manifests_remaining` (MCP) | Allowance left. Plan the next pull with it. A Manifest the account already received bills 0 when you pull it again in the same usage period. |
 | `quota.account_notice.user_message` | Give this sentence to the user once, after the result. Do nothing else with it unless the user says yes. REST puts it at `data.quota.account_notice`. |
+
+Read the full Claims and quotes you feature, plus the relevant complete Brief context; `body.unresolved` alone is not the whole Brief. A saved or hashed archive is not evidence that you read it. Use bounded, separate source displays. If a result clips the Skill, procedure, Brief or source evidence, retrieve the omitted section before relying on it. Save a requested large query archive directly as files and read the relevant portions there; avoid giant terminal dumps. Narrow coverage if you cannot read the evidence needed for the result.
 
 ## 6. Rules for every result
 

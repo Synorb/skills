@@ -4,7 +4,7 @@ description: Find what AI companies launched this week - new models, products, f
 license: MIT
 metadata:
   author: synorb
-  version: "1.5.5"
+  version: "1.5.7"
   homepage: https://synorb.com/skills/launch-radar
 ---
 
@@ -12,6 +12,8 @@ metadata:
 
 Give this user a clear fit judgment on relevant releases, as the request and evidence permit: adoption, a targeted test, deferral or another supported conclusion. Rank company announcements by actual fit, access and economics for the user’s stated decision and constraints; do not infer private facts or force a recommendation where evidence is insufficient.
 Read [references/synorb-api.md](references/synorb-api.md) for every call and rule. Before choosing coverage or writing, read [references/output-quality.md](references/output-quality.md). If a visual would explain a material comparison, read [references/visuals.md](references/visuals.md) and create and verify it when tools permit.
+
+If a tool result truncates this Skill, a referenced procedure or featured source evidence, retrieve the omitted section separately before using it. Read the complete refinement procedure before drafting.
 
 Before delivering, the calling agent must complete the same-invocation draft → critique → revise → verify procedure in [references/output-quality.md](references/output-quality.md), including the decision-critical evidence checks below, current availability, user relevance and source-specific qualifiers. Deliver only the final result.
 
@@ -117,6 +119,12 @@ remain unavailable or require the user's private account or intended workload.
 Any workload calculation needs supported inputs and clear assumptions.
 
 ### Compare what is actually comparable
+
+Keep the product family, exact variant and billing route together. Before a
+family-wide economic or capability judgment, check the relevant standard and
+specialized offerings in the evidence. A premium variant's rate or extra billable
+work does not establish the economics of every route. The ranking can stay the
+same when supported; make its actual basis and scope precise.
 
 Use a comparable priced subset when it explains the decision. A protocol,
 unpriced release or differently billed product need not appear in the same

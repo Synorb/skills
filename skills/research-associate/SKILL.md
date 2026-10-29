@@ -4,7 +4,7 @@ description: Answer a research question or support a decision with a cited memo 
 license: MIT
 metadata:
   author: synorb
-  version: "1.5.5"
+  version: "1.5.7"
   homepage: https://synorb.com/skills/research-associate
 ---
 
@@ -13,6 +13,8 @@ metadata:
 Answer the user’s research question with a useful assessment. When the question involves a decision, compare relevant competing options and tradeoffs, then identify a specific action or trigger supported by the evidence. Adapt selection and interpretation to the user’s actual priorities and constraints without inventing private facts. Cite facts and use natural attribution in prose; preserve exact confidence labels in an evidence table or ledger when used.
 Read [references/synorb-api.md](references/synorb-api.md) for every call and rule. Before choosing coverage or writing, read [references/output-quality.md](references/output-quality.md). If a visual would clarify a material comparison or sequence, read [references/visuals.md](references/visuals.md) and create and verify it when tools permit.
 The adaptable memo template is in [assets/memo-template.md](assets/memo-template.md).
+
+If a tool result truncates this Skill, a referenced procedure or featured source evidence, retrieve the omitted section separately before using it. Read the complete refinement procedure before drafting.
 
 Before delivering, the calling agent must complete the same-invocation draft → critique → revise → verify procedure in [references/output-quality.md](references/output-quality.md), checking the research question, decision implications, counterevidence and source distinctions. Deliver only the final result.
 
@@ -53,12 +55,12 @@ Use the template as a starting point. Choose the clearest form for the decision;
 
 1. **Bottom line.** A concise explanation of what changed and why it matters for the purpose.
 2. **Timeline.** One line per dated event, oldest first. Each line has the date, the organization and a source link.
-3. **Evidence.** Use a Claims table when comparison or auditability benefits from it; otherwise integrate cited Claims into prose. Preserve each `confidence` label exactly when shown.
+3. **Evidence and choices.** Integrate cited facts into the argument. For a decision, a table can compare feasible commitments, user fit and tradeoffs. Keep an audit-oriented Claims table in the evidence ledger unless the reader needs it; preserve each `confidence` label exactly when shown.
 4. **Open questions and counterevidence.** What the sources leave unresolved, disagree on, or would change the assessment. Mark your own analysis as yours.
-5. **Coverage note.** Briefly give the relevant window, source type and any material sampling limitation. Keep matched/read/retained totals and retrieval diagnostics in a receipt unless requested or necessary to understand the finding.
+5. **Scope condition.** Include a short condition beside the finding only when coverage changes its interpretation or use. Keep routine window/source metadata, matched/read/retained totals and retrieval diagnostics in the receipt unless requested.
 6. **Source index.** Use when it helps the reader navigate multiple sources.
 
-Answer the actual research question, compare plausible alternatives where the evidence permits, and explain why the tradeoffs favor a particular action or a concrete condition for changing it. Make clear what the outside evidence adds to the decision, compare credible near-term alternatives at comparable scope, and check the proposed change against the supplied profile and relevant loaded instructions. Establish any assumed gap; if no new priority is supported, a justified decision to maintain or defer is valid. Do not default to a demo, pilot or user test when the evidence supports a more specific decision. Do not assume a company, stack, budget, fundraising status or prior assessment. Lead with the finding most useful to this decision. Separate source facts from your interpretation, name material uncertainty, and compare with a prior assessment only when it addresses the same research question or thesis. Never turn an organization's forecast or claim into an independently verified fact.
+Answer the actual research question and explain why the tradeoffs favor an action or a concrete condition for changing it. Test that recommendation against the strongest alternative the user could reasonably choose now, not merely a much larger or poorly fitting product pivot. Describe the commitments at a comparable decision horizon; if their scale differs, make that tradeoff part of the analysis. Apply the supplied profile and existing capabilities before treating an option as viable. Make clear what outside evidence adds and establish any assumed gap. A justified decision to maintain or defer is valid. Do not default to a demo, pilot or user test when the evidence supports a more specific decision. Do not assume a company, stack, budget, fundraising status or prior assessment. Separate source facts from interpretation; retain material uncertainty and use a prior assessment only for the same question or thesis. Never turn an organization's forecast or claim into an independently verified fact.
 
 ## Rules for this skill
 

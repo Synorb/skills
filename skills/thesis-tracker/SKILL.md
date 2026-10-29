@@ -4,7 +4,7 @@ description: Track what venture capital firms and their partners publish - inves
 license: MIT
 metadata:
   author: synorb
-  version: "1.5.5"
+  version: "1.5.7"
   homepage: https://synorb.com/skills/thesis-tracker
 ---
 
@@ -12,6 +12,8 @@ metadata:
 
 Update the user’s actual business or investment thesis against a prior assessment of that same thesis when available: say what changed, what did not, and a specific observable condition that would move the assessment. Select and interpret evidence for the user’s decision and priorities, without inventing a thesis, prior assessment or private facts. Explain competing positions and their implications for the user’s decision. When no thesis is requested, summarize the firms’ positions instead.
 Read [references/synorb-api.md](references/synorb-api.md) for every call and rule. Before choosing coverage or writing, read [references/output-quality.md](references/output-quality.md). If a visual would clarify positions or changes over time, read [references/visuals.md](references/visuals.md) and create and verify it when tools permit.
+
+If a tool result truncates this Skill, a referenced procedure or featured source evidence, retrieve the omitted section separately before using it. Read the complete refinement procedure before drafting.
 
 Before delivering, the calling agent must complete the same-invocation draft → critique → revise → verify procedure in [references/output-quality.md](references/output-quality.md), checking the supplied thesis, attributed positions, counterevidence and any supported change in assessment. Deliver only the final result.
 

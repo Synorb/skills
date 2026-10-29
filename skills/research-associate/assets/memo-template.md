@@ -1,37 +1,20 @@
-<!-- Adapt sections, order, depth, and format to the user's decision. Use a table only when it improves comparison. -->
-# Research memo: {Beacon or question}
+<!-- Adapt this to the actual question. A narrative, timeline or table is optional; do not fill every section by default. Put routine coverage and exact Claim certainty in the evidence ledger. -->
+# {The decision or question this memo resolves}
 
-*Prepared {date} for {purpose}. Beacon: {Beacon name}. Window: {effective_from} to {effective_to}.*
+**{Finding or recommendation, with the concrete reason it matters to this user.}**
 
-## {Bottom line or decision finding}
+{What changed outside the user's organization, with natural attribution and a source link. Explain the connection to the user's actual goal and existing capabilities.}
 
-{Concise finding shaped around the decision and evidence.}
+{Develop the specific implication. Keep any measurement condition or counterevidence that changes this recommendation beside the affected claim.}
 
-## {Optional timeline}
+<!-- For a decision, compare the strongest feasible rival. The rows represent commitments at the same decision horizon, not a small action against an unrelated business pivot. Use prose instead if clearer. -->
+| Feasible choice | Fit and evidence for this user | Important tradeoff |
+| --- | --- | --- |
+| {Recommended commitment} | {Actual user fact and cited outside evidence} | {What the user gives up or depends on} |
+| {Strongest feasible alternative, or maintain/defer} | {Why a reasonable user could choose it} | {Why the evidence favors or limits it} |
 
-- **{YYYY-MM-DD}**: {Event in one line.} [{n}]
-- **{YYYY-MM-DD}**: {Event.} [{n}]
+{The next usable action or bounded conclusion. State the specific condition that would change it when useful.}
 
-## {Evidence}
-
-| Claim | Organization | Type | Confidence | Source |
-| --- | --- | --- | --- | --- |
-| {claim_text} | {organization} | {claim_type} | {confidence} | [{n}] |
-
-## {Open questions, counterevidence, or what would change the assessment}
-
-- {Question from the sources' Unresolved items.}
-- {Your own question.} *(analyst view)*
-
-## Coverage note
-
-{Which Streams, the window, and what kind of source they are.}
-
-## {Optional source index}
-
-1. {Title}, {Publisher}, {date}. {URL}
-2. {Title}, {Publisher}, {date}. {URL}
-
----
+<!-- Include a timeline, source index or scope note only when it helps this reader use the result. Routine retrieval totals, tool failures and repeated generic qualifications belong in the receipt. Do not invent a missing customer fact or voice preference. -->
 
 Sources via [Synorb](https://synorb.com).

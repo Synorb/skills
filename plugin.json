@@ -1,7 +1,7 @@
 {
   "$schema": "https://agent-plugins.org/schemas/1.0.0/plugin.schema.json",
   "name": "synorb",
-  "version": "1.5.5",
+  "version": "1.5.7",
   "description": "Synorb Skills: cited newsletters, research memos and podcast scripts from AI company, VC firm, private company and podcast Streams.",
   "author": {
     "name": "Synorb",
