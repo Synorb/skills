@@ -4,7 +4,7 @@ description: Answer a research question or support a decision with a cited memo 
 license: MIT
 metadata:
   author: synorb
-  version: "1.5.7"
+  version: "1.5.8"
   homepage: https://synorb.com/skills/research-associate
 ---
 
@@ -15,6 +15,8 @@ Read [references/synorb-api.md](references/synorb-api.md) for every call and rul
 The adaptable memo template is in [assets/memo-template.md](assets/memo-template.md).
 
 If a tool result truncates this Skill, a referenced procedure or featured source evidence, retrieve the omitted section separately before using it. Read the complete refinement procedure before drafting.
+
+After gathering, return to the reader-payoff check in references/output-quality.md before drafting; assess that payoff before the source and delivery checks during refinement.
 
 Before delivering, the calling agent must complete the same-invocation draft → critique → revise → verify procedure in [references/output-quality.md](references/output-quality.md), checking the research question, decision implications, counterevidence and source distinctions. Deliver only the final result.
 

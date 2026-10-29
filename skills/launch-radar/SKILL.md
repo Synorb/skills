@@ -4,7 +4,7 @@ description: Find what AI companies launched this week - new models, products, f
 license: MIT
 metadata:
   author: synorb
-  version: "1.5.7"
+  version: "1.5.8"
   homepage: https://synorb.com/skills/launch-radar
 ---
 
@@ -14,6 +14,8 @@ Give this user a clear fit judgment on relevant releases, as the request and evi
 Read [references/synorb-api.md](references/synorb-api.md) for every call and rule. Before choosing coverage or writing, read [references/output-quality.md](references/output-quality.md). If a visual would explain a material comparison, read [references/visuals.md](references/visuals.md) and create and verify it when tools permit.
 
 If a tool result truncates this Skill, a referenced procedure or featured source evidence, retrieve the omitted section separately before using it. Read the complete refinement procedure before drafting.
+
+After gathering, return to the reader-payoff check in references/output-quality.md before drafting; assess that payoff before the source and delivery checks during refinement.
 
 Before delivering, the calling agent must complete the same-invocation draft → critique → revise → verify procedure in [references/output-quality.md](references/output-quality.md), including the decision-critical evidence checks below, current availability, user relevance and source-specific qualifiers. Deliver only the final result.
 

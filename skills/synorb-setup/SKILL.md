@@ -4,7 +4,7 @@ description: Connect an agent to Synorb (cited news and context from AI companie
 license: MIT
 metadata:
   author: synorb
-  version: "1.5.7"
+  version: "1.5.8"
   homepage: https://synorb.com/skills/synorb-setup
 ---
 
@@ -14,6 +14,8 @@ The first result should answer a question or illuminate a decision the user actu
 Read [references/synorb-api.md](references/synorb-api.md) for every call and rule. Before choosing coverage or form, read [references/output-quality.md](references/output-quality.md). If a comparison or relationship would be clearer visually, read [references/visuals.md](references/visuals.md) and create a real visual only when supported.
 
 If a tool result truncates this Skill, a referenced procedure or featured source evidence, retrieve the omitted section separately before using it. Read the complete refinement procedure before drafting.
+
+After gathering, return to the reader-payoff check in references/output-quality.md before drafting; assess that payoff before the source and delivery checks during refinement.
 
 Before delivering, the calling agent must complete the same-invocation draft → critique → revise → verify procedure in [references/output-quality.md](references/output-quality.md), checking the connection and first cited result, Beacon fit and actual setup state. Deliver only the final result.
 
