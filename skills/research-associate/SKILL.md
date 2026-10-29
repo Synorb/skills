@@ -4,7 +4,7 @@ description: Answer a research question or support a decision with a cited memo 
 license: MIT
 metadata:
   author: synorb
-  version: "1.5.3"
+  version: "1.5.5"
   homepage: https://synorb.com/skills/research-associate
 ---
 
@@ -38,12 +38,12 @@ Follow section 1 of the reference. If there is no connection, follow `synorb-set
 3. Note material audience, constraints, expertise, depth and preferred format in the job brief. Separate explicit facts from tentative inferences.
 4. Window: 7 days by default (`lookback_hours=168`). Use 30 days (`720`) when the user asks for "this month".
 
-If the user names one company or one person, use the Beacon that holds it, and keep that name as the question. Say that the memo covers the Beacon, not every source about that name.
+If the user names one company or one person, use a Beacon that holds it, and retain the actual question about that name. Say that the memo covers the Beacon, not every source about that name.
 
 ## Step 3: Gather
 
-1. Count the chosen Beacon and window first (free). Note `total_count`, effective dates and allowance.
-2. Inspect the live tool schema and use only supported focus fields for the user's question. Never invent filters or alter the saved Beacon scope. If no supported focus field applies, inspect bounded pages or diversified date slices within the allowance; track inspected scope and counts in the receipt, and give them in the answer when requested or needed to explain a material sampling limitation. Never call a sample exhaustive.
+1. Before gathering, derive plausible competing approaches from the user’s decision and identify what evidence would distinguish them. Count the chosen Beacon and window first (free); note `total_count`, effective dates and allowance.
+2. Inspect the live tool schema and use only supported focus fields for the user's question. Never invent filters or alter the saved Beacon scope. Use focused checks and bounded, diversified pages or date slices within the allowance to examine those approaches, so the first page does not determine the theme; track inspected scope and counts in the receipt, and give them in the answer when requested or needed to explain a material sampling limitation. Never call a sample exhaustive.
 3. Read `signal.body.claims[]` and the Brief for each item you may use. Titles can help screen, but they do not establish the finding. Read every Claim of featured items and track matched, screened and retained counts.
 4. Dedupe repeated original items before drafting; revisit prior items when new evidence changes their meaning.
 
@@ -58,14 +58,14 @@ Use the template as a starting point. Choose the clearest form for the decision;
 5. **Coverage note.** Briefly give the relevant window, source type and any material sampling limitation. Keep matched/read/retained totals and retrieval diagnostics in a receipt unless requested or necessary to understand the finding.
 6. **Source index.** Use when it helps the reader navigate multiple sources.
 
-Answer the actual research question, compare plausible alternatives where the evidence permits, and explain why the tradeoffs favor a particular action or a concrete condition for changing it. Do not default to a demo, pilot or user test when the evidence supports a more specific decision. Do not assume a company, stack, budget, fundraising status or prior assessment. Lead with the finding most useful to this decision. Separate source facts from your interpretation, name material uncertainty, and compare with the prior assessment when available. Never turn an organization's forecast or claim into an independently verified fact.
+Answer the actual research question, compare plausible alternatives where the evidence permits, and explain why the tradeoffs favor a particular action or a concrete condition for changing it. Make clear what the outside evidence adds to the decision, compare credible near-term alternatives at comparable scope, and check the proposed change against the supplied profile and relevant loaded instructions. Establish any assumed gap; if no new priority is supported, a justified decision to maintain or defer is valid. Do not default to a demo, pilot or user test when the evidence supports a more specific decision. Do not assume a company, stack, budget, fundraising status or prior assessment. Lead with the finding most useful to this decision. Separate source facts from your interpretation, name material uncertainty, and compare with a prior assessment only when it addresses the same research question or thesis. Never turn an organization's forecast or claim into an independently verified fact.
 
 ## Rules for this skill
 
 - Keep each organization's own words apart from your analysis. Quote only text that is in a Claim `quote` or a supporting quote.
 - Do not merge two Claims into one stronger Claim.
 - If two sources disagree, show both and say they disagree.
-- If you found little, write a short memo and say how much you found. Do not pad it.
+- If evidence is thin, write a short memo and explain any material coverage limit. Do not pad it.
 - Before delivery, check that decision options, tradeoffs and next action reflect the user’s stated priorities when relevant; keep material uncertainty next to the affected conclusion.
 
 ## Step 5: Set the schedule

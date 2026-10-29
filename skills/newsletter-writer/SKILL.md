@@ -4,7 +4,7 @@ description: Write a weekly newsletter issue in the user's own voice from any Sy
 license: MIT
 metadata:
   author: synorb
-  version: "1.5.3"
+  version: "1.5.5"
   homepage: https://synorb.com/skills/newsletter-writer
 ---
 
@@ -34,17 +34,12 @@ Keep a compact private job brief with the reader, purpose, relevant priorities, 
 ## Step 3: Gather
 
 1. Count each chosen Beacon and window first (free); note `total_count`, effective dates and allowance. Inspect the live tool schema before narrowing. Use only supported focus fields; never invent filters or change saved Beacon scope.
-2. Pull bounded pages, or diversify with date slices if needed to check the user's named priorities, within the allowance. Check quota before each additional pull. Disclose what was inspected; a sampled pull is not exhaustive coverage.
+2. Pull bounded pages, or diversify with date slices if needed to check the user's named priorities, within the allowance. Check quota before each additional pull. Disclose material coverage limits when needed; a sampled pull is not exhaustive coverage.
 3. Before drafting, dedupe by `manifest_id` and repeated original articles when identifiable. Drop items already delivered unless new evidence materially changes their meaning.
 
 ## Step 4: Choose
 
-Choose only as many items as the reader's purpose needs; five to eight is a loose guide, not a target. Rank them for this reader:
-
-- Money and deals: funding rounds, acquisitions, revenue figures.
-- Launches: products, models, features.
-- People: hires, departures, new roles.
-- Ideas: a strong essay or podcast argument.
+Choose only as many items as the reader's purpose needs; five to eight is a loose guide, not a target. Rank candidates by their significance to this reader and the issue’s purpose; choose the kinds of stories the evidence and audience warrant.
 
 Drop items with no Claim the reader can use. Drop items that are off-topic for this reader. Drop near-duplicates. Keep one item per story.
 
