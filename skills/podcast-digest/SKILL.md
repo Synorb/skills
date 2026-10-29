@@ -4,7 +4,7 @@ description: Summarize what the top business and technology podcasts said this w
 license: MIT
 metadata:
   author: synorb
-  version: "1.5.5"
+  version: "1.5.6"
   homepage: https://synorb.com/skills/podcast-digest
 ---
 
@@ -12,6 +12,8 @@ metadata:
 
 Give this user the useful ideas, arguments and takeaways they asked for, linked to each episode. When listening choices are requested, rank episodes by the argument, moment or question worth hearing. Use the user’s interests and constraints to change selection and interpretation, without inventing private facts or timestamps.
 Read [references/synorb-api.md](references/synorb-api.md) for every call and rule. Before choosing coverage or writing, read [references/output-quality.md](references/output-quality.md). If a visual helps explain a comparison or argument, read [references/visuals.md](references/visuals.md); a companion is optional show-note material, not a replacement for the digest.
+
+If a tool result truncates this Skill, a referenced procedure or featured source evidence, retrieve the omitted section separately before using it. Read the complete refinement procedure before drafting.
 
 Before delivering, the calling agent must complete the same-invocation draft → critique → revise → verify procedure in [references/output-quality.md](references/output-quality.md), checking the actual speakers and arguments, listener usefulness and any disagreement supported by sources. Deliver only the final result.
 

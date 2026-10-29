@@ -4,7 +4,7 @@ description: Produce an agentic podcast from any Synorb Beacon - a two-host scri
 license: MIT
 metadata:
   author: synorb
-  version: "1.5.5"
+  version: "1.5.6"
   homepage: https://synorb.com/skills/podcast-producer
 ---
 
@@ -13,6 +13,8 @@ metadata:
 Create one finished script for the intended listener, unless the user explicitly asks for variants. Give it a source-grounded story, tension and takeaway that reward listening; use the listener’s actual interests to select and interpret evidence, without inventing private facts.
 You write the script. The voice comes from the user's own voice agent or text-to-speech tool. Say so when you deliver.
 Read [references/synorb-api.md](references/synorb-api.md) for every call and rule. Before choosing coverage or writing, read [references/output-quality.md](references/output-quality.md). Read [references/voice-directions.md](references/voice-directions.md) only when stage directions are useful. If a visual would clarify a comparison, read [references/visuals.md](references/visuals.md); use a companion visual only when it helps and the host can create and verify it.
+
+If a tool result truncates this Skill, a referenced procedure or featured source evidence, retrieve the omitted section separately before using it. Read the complete refinement procedure before drafting.
 
 Before delivering, the calling agent must complete the same-invocation draft → critique → revise → verify procedure in [references/output-quality.md](references/output-quality.md), checking the requested script or briefing, listener tone, spoken pacing and source fidelity. Deliver only the final result.
 

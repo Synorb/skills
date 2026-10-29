@@ -4,7 +4,7 @@ description: Connect an agent to Synorb (cited news and context from AI companie
 license: MIT
 metadata:
   author: synorb
-  version: "1.5.5"
+  version: "1.5.6"
   homepage: https://synorb.com/skills/synorb-setup
 ---
 
@@ -12,6 +12,8 @@ metadata:
 
 The first result should answer a question or illuminate a decision the user actually cares about, with a relevant next action. Connect the user and set up the Beacons their skills will run on. Use the user’s stated priorities and constraints to choose and interpret evidence, not merely to label the audience; do not invent private facts.
 Read [references/synorb-api.md](references/synorb-api.md) for every call and rule. Before choosing coverage or form, read [references/output-quality.md](references/output-quality.md). If a comparison or relationship would be clearer visually, read [references/visuals.md](references/visuals.md) and create a real visual only when supported.
+
+If a tool result truncates this Skill, a referenced procedure or featured source evidence, retrieve the omitted section separately before using it. Read the complete refinement procedure before drafting.
 
 Before delivering, the calling agent must complete the same-invocation draft → critique → revise → verify procedure in [references/output-quality.md](references/output-quality.md), checking the connection and first cited result, Beacon fit and actual setup state. Deliver only the final result.
 
