@@ -4,7 +4,7 @@ description: Connect an agent to Synorb (cited news and context from AI companie
 license: MIT
 metadata:
   author: synorb
-  version: "1.5.4"
+  version: "1.5.5"
   homepage: https://synorb.com/skills/synorb-setup
 ---
 

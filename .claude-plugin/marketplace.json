@@ -6,14 +6,14 @@
   },
   "metadata": {
     "description": "Synorb Skills: cited newsletters, research memos and podcast scripts from AI company, VC firm, private company and podcast Streams.",
-    "version": "1.5.4"
+    "version": "1.5.5"
   },
   "plugins": [
     {
       "name": "synorb",
       "source": "./",
       "description": "Synorb Skills: cited newsletters, research memos and podcast scripts from AI company, VC firm, private company and podcast Streams.",
-      "version": "1.5.4",
+      "version": "1.5.5",
       "category": "productivity",
       "tags": [
         "news",

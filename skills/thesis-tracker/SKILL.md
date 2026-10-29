@@ -4,7 +4,7 @@ description: Track what venture capital firms and their partners publish - inves
 license: MIT
 metadata:
   author: synorb
-  version: "1.5.4"
+  version: "1.5.5"
   homepage: https://synorb.com/skills/thesis-tracker
 ---
 

@@ -4,7 +4,7 @@ description: Answer a research question or support a decision with a cited memo 
 license: MIT
 metadata:
   author: synorb
-  version: "1.5.4"
+  version: "1.5.5"
   homepage: https://synorb.com/skills/research-associate
 ---
 
@@ -42,8 +42,8 @@ If the user names one company or one person, use a Beacon that holds it, and ret
 
 ## Step 3: Gather
 
-1. Count the chosen Beacon and window first (free). Note `total_count`, effective dates and allowance.
-2. Inspect the live tool schema and use only supported focus fields for the user's question. Never invent filters or alter the saved Beacon scope. If no supported focus field applies, inspect bounded pages or diversified date slices within the allowance; track inspected scope and counts in the receipt, and give them in the answer when requested or needed to explain a material sampling limitation. Never call a sample exhaustive.
+1. Before gathering, derive plausible competing approaches from the user’s decision and identify what evidence would distinguish them. Count the chosen Beacon and window first (free); note `total_count`, effective dates and allowance.
+2. Inspect the live tool schema and use only supported focus fields for the user's question. Never invent filters or alter the saved Beacon scope. Use focused checks and bounded, diversified pages or date slices within the allowance to examine those approaches, so the first page does not determine the theme; track inspected scope and counts in the receipt, and give them in the answer when requested or needed to explain a material sampling limitation. Never call a sample exhaustive.
 3. Read `signal.body.claims[]` and the Brief for each item you may use. Titles can help screen, but they do not establish the finding. Read every Claim of featured items and track matched, screened and retained counts.
 4. Dedupe repeated original items before drafting; revisit prior items when new evidence changes their meaning.
 
