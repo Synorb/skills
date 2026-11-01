@@ -18,7 +18,6 @@ npx skills add Synorb/skills --skill newsletter-writer
 
 No terminal? Paste a phrase into any agent that can read a link:
 
-- **Synorb Setup**: `Read https://synorb.com/skills/synorb-setup.md and follow it to connect Synorb for me.`
 - **Newsletter Writer**: `Read https://synorb.com/skills/newsletter-writer.md and follow it to set up my weekly newsletter.`
 - **Research Associate**: `Read https://synorb.com/skills/research-associate.md and follow it to set up a weekly memo on what VC firms publish.`
 - **Podcast Producer**: `Read https://synorb.com/skills/podcast-producer.md and follow it to set up my weekly podcast episode.`
@@ -32,7 +31,6 @@ No terminal? Paste a phrase into any agent that can read a link:
 
 | Skill | What it does | See it |
 | --- | --- | --- |
-| [`synorb-setup`](skills/synorb-setup/SKILL.md) | Connect Synorb once, see a first cited briefing, and set up the Beacons your skills run on. | [sample](samples/synorb-setup/2026-10-25-seed-investor-setup.md) · [page](https://synorb.com/skills/synorb-setup) |
 | [`newsletter-writer`](skills/newsletter-writer/SKILL.md) | Set it up once. Every Monday your agent writes a new issue in your voice, every item cited. | [sample](samples/newsletter-writer/2026-10-25-the-agent-economy.md) · [page](https://synorb.com/skills/newsletter-writer) |
 | [`research-associate`](skills/research-associate/SKILL.md) | Set it up once. Every week your agent sends a cited memo for your question, with evidence and open questions. | [sample](samples/research-associate/2026-10-25-vc-firms-this-week-memo.md) · [page](https://synorb.com/skills/research-associate) |
 | [`podcast-producer`](skills/podcast-producer/SKILL.md) | Set it up once. Every week your agent writes a two-host episode script, or a short spoken briefing every morning. | [sample](samples/podcast-producer/2026-10-25-signal-hour-episode.md) · [page](https://synorb.com/skills/podcast-producer) |
