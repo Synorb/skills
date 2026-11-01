@@ -4,7 +4,7 @@ description: Answer a research question or support a decision with a cited memo 
 license: MIT
 metadata:
   author: synorb
-  version: "1.5.8"
+  version: "1.6.0"
   homepage: https://synorb.com/skills/research-associate
 ---
 

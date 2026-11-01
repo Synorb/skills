@@ -4,7 +4,7 @@ description: Find what AI companies launched this week - new models, products, f
 license: MIT
 metadata:
   author: synorb
-  version: "1.5.8"
+  version: "1.6.0"
   homepage: https://synorb.com/skills/launch-radar
 ---
 
