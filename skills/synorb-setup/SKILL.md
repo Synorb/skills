@@ -4,7 +4,7 @@ description: Connect an agent to Synorb (cited news and context from AI companie
 license: MIT
 metadata:
   author: synorb
-  version: "1.5.8"
+  version: "1.6.0"
   homepage: https://synorb.com/skills/synorb-setup
 ---
 
@@ -79,6 +79,8 @@ Offer the skill that fits the user, with the Beacon it will use:
 - `launch-radar`: what AI companies shipped this week (AI Companies).
 - `thesis-tracker`: what VC firms publish, mapped to your thesis (Venture Capital).
 - `podcast-digest`: the arguments from this week's shows (Business & Technology Podcasts).
+- `portfolio-watch`: what your portfolio companies and their competitors announced (a Portfolio and a Competitors Beacon).
+- `ambient-knowledge`: daily background reading, used in your everyday tasks (any Beacon).
 
 If `quota.account_notice.user_message` is in a response, give that sentence once, after the result.
 

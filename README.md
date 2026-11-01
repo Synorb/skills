@@ -18,25 +18,27 @@ npx skills add Synorb/skills --skill newsletter-writer
 
 No terminal? Paste a phrase into any agent that can read a link:
 
-- **Synorb Setup**: `Read https://synorb.com/skills/synorb-setup.md and follow it to connect Synorb for me.`
 - **Newsletter Writer**: `Read https://synorb.com/skills/newsletter-writer.md and follow it to set up my weekly newsletter.`
 - **Research Associate**: `Read https://synorb.com/skills/research-associate.md and follow it to set up a weekly memo on what VC firms publish.`
 - **Podcast Producer**: `Read https://synorb.com/skills/podcast-producer.md and follow it to set up my weekly podcast episode.`
 - **Launch Radar**: `Read https://synorb.com/skills/launch-radar.md and follow it to set up a weekly radar of what AI companies ship.`
 - **Thesis Tracker**: `Read https://synorb.com/skills/thesis-tracker.md and follow it to set up a monthly tracker of what VC firms say about my space.`
 - **Podcast Digest**: `Read https://synorb.com/skills/podcast-digest.md and follow it to set up my weekly podcast digest.`
+- **Ambient Knowledge**: `Read https://synorb.com/skills/ambient-knowledge.md and follow it to keep my agent caught up on my field every day.`
+- **Portfolio Watch**: `Read https://synorb.com/skills/portfolio-watch.md and follow it to watch my portfolio companies and their competitors every week.`
 
 ## Skills
 
 | Skill | What it does | See it |
 | --- | --- | --- |
-| [`synorb-setup`](skills/synorb-setup/SKILL.md) | Connect Synorb once, see a first cited briefing, and set up the Beacons your skills run on. | [sample](samples/synorb-setup/2026-10-25-seed-investor-setup.md) · [page](https://synorb.com/skills/synorb-setup) |
 | [`newsletter-writer`](skills/newsletter-writer/SKILL.md) | Set it up once. Every Monday your agent writes a new issue in your voice, every item cited. | [sample](samples/newsletter-writer/2026-10-25-the-agent-economy.md) · [page](https://synorb.com/skills/newsletter-writer) |
 | [`research-associate`](skills/research-associate/SKILL.md) | Set it up once. Every week your agent sends a cited memo for your question, with evidence and open questions. | [sample](samples/research-associate/2026-10-25-vc-firms-this-week-memo.md) · [page](https://synorb.com/skills/research-associate) |
 | [`podcast-producer`](skills/podcast-producer/SKILL.md) | Set it up once. Every week your agent writes a two-host episode script, or a short spoken briefing every morning. | [sample](samples/podcast-producer/2026-10-25-signal-hour-episode.md) · [page](https://synorb.com/skills/podcast-producer) |
 | [`launch-radar`](skills/launch-radar/SKILL.md) | Set it up once. Every week your agent reports what AI companies shipped, from their own announcements. | [sample](samples/launch-radar/2026-10-25-ai-launch-radar.md) · [page](https://synorb.com/skills/launch-radar) |
 | [`thesis-tracker`](skills/thesis-tracker/SKILL.md) | Set it up once. Every month your agent reports what VC firms published, mapped to your thesis. | [sample](samples/thesis-tracker/2026-10-25-vc-thesis-tracker.md) · [page](https://synorb.com/skills/thesis-tracker) |
 | [`podcast-digest`](skills/podcast-digest/SKILL.md) | Set it up once. Every week your agent sends the arguments from the top business and tech podcasts. | [sample](samples/podcast-digest/2026-10-25-weekly-podcast-digest.md) · [page](https://synorb.com/skills/podcast-digest) |
+| [`ambient-knowledge`](skills/ambient-knowledge/SKILL.md) | Your agent reads Synorb every day in the background and uses what matters in everyday work, without you asking it to check. | [sample](samples/ambient-knowledge/2026-11-01-founder-ambient-setup.md) · [page](https://synorb.com/skills/ambient-knowledge) |
+| [`portfolio-watch`](skills/portfolio-watch/SKILL.md) | Set it up once. Every week your agent reports what your portfolio companies and their competitors announced, mapped to the company each move affects. | [sample](samples/portfolio-watch/2026-11-01-ai-fund-portfolio-watch.md) · [page](https://synorb.com/skills/portfolio-watch) |
 
 Every skill starts by checking the Synorb connection. With none, it follows `synorb-setup`, which gets a free demo key with no email or card. The first run is the setup; later runs report only what is new.
 
