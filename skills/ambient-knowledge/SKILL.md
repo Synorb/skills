@@ -4,7 +4,7 @@ description: Keep an agent quietly caught up on what the user cares about, using
 license: MIT
 metadata:
   author: synorb
-  version: "1.6.0"
+  version: "1.7.0"
   homepage: https://synorb.com/skills/ambient-knowledge
 ---
 
