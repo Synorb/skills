@@ -4,7 +4,7 @@ description: Watch a VC firm's AI portfolio companies and their competitors thro
 license: MIT
 metadata:
   author: synorb
-  version: "1.6.0"
+  version: "1.7.0"
   homepage: https://synorb.com/skills/portfolio-watch
 ---
 

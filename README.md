@@ -26,6 +26,7 @@ No terminal? Paste a phrase into any agent that can read a link:
 - **Podcast Digest**: `Read https://synorb.com/skills/podcast-digest.md and follow it to set up my weekly podcast digest.`
 - **Ambient Knowledge**: `Read https://synorb.com/skills/ambient-knowledge.md and follow it to keep my agent caught up on my field every day.`
 - **Portfolio Watch**: `Read https://synorb.com/skills/portfolio-watch.md and follow it to watch my portfolio companies and their competitors every week.`
+- **Story Ideas**: `Read https://synorb.com/skills/story-ideas.md and follow it to send me weekly story ideas on the AI companies I cover.`
 
 ## Skills
 
@@ -39,6 +40,7 @@ No terminal? Paste a phrase into any agent that can read a link:
 | [`podcast-digest`](skills/podcast-digest/SKILL.md) | Set it up once. Every week your agent sends the arguments from the top business and tech podcasts. | [sample](samples/podcast-digest/2026-10-25-weekly-podcast-digest.md) · [page](https://synorb.com/skills/podcast-digest) |
 | [`ambient-knowledge`](skills/ambient-knowledge/SKILL.md) | Your agent reads Synorb every day in the background and uses what matters in everyday work, without you asking it to check. | [sample](samples/ambient-knowledge/2026-11-01-founder-ambient-setup.md) · [page](https://synorb.com/skills/ambient-knowledge) |
 | [`portfolio-watch`](skills/portfolio-watch/SKILL.md) | Set it up once. Every week your agent reports what your portfolio companies and their competitors announced, mapped to the company each move affects. | [sample](samples/portfolio-watch/2026-11-01-ai-fund-portfolio-watch.md) · [page](https://synorb.com/skills/portfolio-watch) |
+| [`story-ideas`](skills/story-ideas/SKILL.md) | Set it up once. Every week your agent sends story ideas from what AI companies published in the Segments you cover, every idea cited. | [sample](samples/story-ideas/2026-11-09-coding-beat-story-ideas.md) · [page](https://synorb.com/skills/story-ideas) |
 
 Every skill starts by checking the Synorb connection. With none, it follows `synorb-setup`, which gets a free demo key with no email or card. The first run is the setup; later runs report only what is new.
 
