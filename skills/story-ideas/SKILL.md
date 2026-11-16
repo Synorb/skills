@@ -4,7 +4,7 @@ description: Weekly story ideas for a journalist who covers AI companies. The us
 license: MIT
 metadata:
   author: synorb
-  version: "1.7.0"
+  version: "1.8.0"
   homepage: https://synorb.com/skills/story-ideas
 ---
 
@@ -71,12 +71,11 @@ This Skill runs on the AI Companies Beacon, narrowed to the Segments the journal
 
 ## Step 3: Turn the Segments into a Beacon
 
-1. For each Segment, list its Streams with `synorb-stream-search` (`segment="ai_companies:coding"`, `page_size=200`, no `query`) or `POST /streams/search` with `{"segment": "ai_companies:coding", "page_size": 200}`. Do not add a `query`: it keeps only Streams whose text has the words. Page with `page` until `pagination.has_more` is false. Collect each result's `id` as a string. The response can be large; if you have a file tool, save it and read only `results[].id`, `name` and `manifests_last7d`.
-2. If the search says the segment filter is not enabled, read the Segment's company tiles on https://synorb.com/market-map/ai-companies instead: each Segment is a section with that id, and each tile carries `data-stream-id`. Say which method you used.
+1. For each Segment, list its Streams with `synorb-stream-search` (`segment="ai_companies:coding"`, `page_size=200`, no `query`) or `POST /streams/search` with `{"segment": "ai_companies:coding", "page_size": 200}`. Do not add a `query`: it keeps only Streams whose text has the words. Page with `page` until `pagination.has_more` is false. Keep each result's `id` as a string; you need the ids only if you cannot save a Beacon. If you have a file tool, save the response and read only `results[].id`, `name` and `manifests_last7d`.
+2. If the search says the segment filter is not enabled, read the Segment's company tiles on https://synorb.com/market-map/ai-companies instead: each Segment is a section with that id, and each tile carries `data-stream-id`. Say which method you used. Then skip item 4 and pull with the `stream_ids` as in item 5.
 3. Tell the user how many companies the Segments hold and how many published in the last 7 days, for example "Coding & Software Engineering: 46 companies, 23 published this week."
-4. Propose one Beacon named for the beat, for example "Story Ideas: Coding & AI Security", with the combined Stream ids. Save it with `synorb-save-beacon` or `POST /v3/beacons` (`name`, `stream_ids`, `"status": "active"`) only after the user says yes. Check the Beacon limit first (section 4 of the reference).
-5. If there is no free Beacon slot, say so and ask whether to archive one. Until then, pull with the same `stream_ids` on `synorb-manifests` or `POST /manifests/query`, and tell the user the scope is not saved.
-6. **Never send `beacon_id` of the AI Companies starter together with `stream_ids` to narrow it.** The saved Beacon scope wins and the result is the whole AI Companies Beacon, not the Segments. Use your own Segment Beacon or the `stream_ids` alone.
+4. Propose one Beacon named for the beat, for example "Story Ideas: Coding & AI Security", that follows the picked Segment ids. Save it only after the user says yes: `synorb-save-beacon` with `name` and `manifest_config={"segment_ids": ["ai_companies:coding", "ai_companies:security_governance"]}`, or `POST /v3/beacons` with `name`, `"segment_ids": [...]` and `"status": "active"`. Do not send `stream_ids` with `segment_ids`. The Beacon finds the Segments' current companies on every pull, so a company added to a Segment later joins with no edit. Check the Beacon limit first (section 4 of the reference).
+5. If there is no free Beacon slot, say so and ask whether to archive one. Until then, pull with the `stream_ids` from item 1 on `synorb-manifests` or `POST /manifests/query`, and tell the user the scope is not saved. You can also send the AI Companies starter `beacon_id` with these `stream_ids`: a list inside the saved scope narrows the pull. Check that `executed_via_beacon.stream_scope_mode` is `caller_narrowed`. If it is not, pull with the `stream_ids` alone.
 
 ## Step 4: Gather the week
 
@@ -126,5 +125,5 @@ Say once, not after each idea, that every item is a company's own publication fo
 
 This first set of ideas is the setup run. Agree the day and where the ideas go; the default is every Monday at 8:00 in the user's time zone (`lookback_hours=192`). Then follow "Set it up once, then run on a schedule" in section 3 of the reference. Keep the brief, the Segment ids, the `beacon_id` or `stream_ids`, the delivered `manifest_id` values and the delivered idea headlines in the job state.
 
-After each delivery, ask at most one short question when it helps: which idea was useful, or what to drop. Update the brief from the answer. Once a month, search the Segments again and offer to add new companies to the Beacon (`synorb-update-beacon`, dry run first, then only after a yes).
+After each delivery, ask at most one short question when it helps: which idea was useful, or what to drop. Update the brief from the answer. A Segment Beacon picks up new companies in its Segments by itself. If the job pulls by `stream_ids` instead, search the Segments again once a month and offer to add the new companies (`synorb-update-beacon`, dry run first, then only after a yes).
 If `quota.account_notice.user_message` is in a response, give that sentence once, after the ideas.
